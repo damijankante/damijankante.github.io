@@ -1,0 +1,174 @@
+{
+  "navigation": {
+    "home": "Domov",
+    "about": "O meni",
+    "dataAnalysis": "Analiza podatkov",
+    "graphicDesign": "Grafično oblikovanje",
+    "coding": "Programiranje",
+    "contact": "Kontakt",
+    "portfolio": "Portfolio"
+  },
+  "hero": {
+    "title": "Multidisciplinarni",
+    "subtitle": "Strokovnjak",
+    "description": "Specializiran za analizo podatkov, grafično oblikovanje in razvoj programske opreme. Pretvarjam ideje v učinkovite rešitve skozi kreativno in analitično strokovnost.",
+    "exploreWork": "Razišči moje delo",
+    "getInTouch": "Stopi v stik"
+  },
+  "about": {
+    "title": "O",
+    "me": "meni",
+    "description": "Vsestranski strokovnjak s strokovnim znanjem na področju analize podatkov, grafičnega oblikovanja in razvoja programske opreme. V vsak projekt vnesem analitično razmišljanje, kreativno vizijo in tehnično odličnost.",
+    "dataAnalysisTitle": "Analiza podatkov in Data Science",
+    "dataAnalysisDescription": "Pretvarjam kompleksne podatke v uporabne vpoglede z uporabo statistične analize, strojnega učenja in naprednih vizualizacijskih tehnik.",
+    "graphicDesignTitle": "Grafično oblikovanje",
+    "graphicDesignDescription": "Ustvarjam prepričljive vizualne identitete, marketinške materiale in uporabniške vmesnike, ki učinkovito komunicirajo in pritegnejo občinstvo.",
+    "softwareDevelopmentTitle": "Razvoj programske opreme",
+    "softwareDevelopmentDescription": "Gradim robustne spletne aplikacije in programske rešitve z uporabo sodobnih tehnologij in najboljših praks za optimalno delovanje.",
+    "technicalSkills": "Tehnične veščine"
+  },
+  "dataAnalysis": {
+    "title": "Analiza podatkov in",
+    "science": "Data Science",
+    "description": "Izkoriščam podatke za sprejemanje poslovnih odločitev z uporabo statistične analize, strojnega učenja in prepričljivih vizualizacij, ki pripovedujejo pomembne zgodbe.",
+    "salesDashboard": {
+      "title": "Nadzorna plošča prodajne uspešnosti",
+      "description": "Interaktivna nadzorna plošča za analizo prodajnih trendov, vedenja strank in optimizacije prihodkov z uporabo Python in Tableau.",
+      "metrics": ["25% povečanje vpogledov v prihodke", "40% hitrejše poročanje"]
+    },
+    "customerSegmentation": {
+      "title": "Analiza segmentacije strank",
+      "description": "Segmentacija strank na osnovi strojnega učenja za izboljšanje marketinških strategij in zadržanja strank.",
+      "metrics": ["30% izboljšano ciljanje", "15% povečanje zadržanja"]
+    },
+    "predictiveAnalytics": {
+      "title": "Model napovedne analitike",
+      "description": "Model časovnih vrst za napovedovanje inventarja in povpraševanja z uporabo naprednih statističnih metod.",
+      "metrics": ["85% natančnost napovedi", "20% zmanjšanje stroškov"]
+    },
+    "keyResults": "Ključni rezultati:",
+    "demo": "Demo",
+    "code": "Koda"
+  },
+  "graphicDesign": {
+    "title": "Grafično",
+    "design": "oblikovanje",
+    "description": "Ustvarjam vizualno prepričljive dizajne, ki učinkovito komunicirajo in pustijo trajen vtis. Od blagovne identitete do digitalnih marketinških materialov.",
+    "brandIdentity": {
+      "title": "Sistem blagovne identitete",
+      "description": "Celovito oblikovanje blagovne identitete vključno z logotipom, barvno paleto, tipografijo in smernicami za blagovno znamko za tehnološki startup.",
+      "category": "Blagovna znamka",
+      "achievements": ["50+ konceptov logotipa", "Celoten stilski vodnik", "Dizajn vizitk"]
+    },
+    "marketingCampaign": {
+      "title": "Oblikovanje marketinške kampanje",
+      "description": "Večkanalni marketinški materiali vključno s tiskanimi oglasi, grafiko za družbena omrežja in spletnimi transparenti za lansiranje produkta.",
+      "category": "Marketing",
+      "achievements": ["15% povečanje angažiranosti", "Nagrajena kampanja", "Večplatformni dizajn"]
+    },
+    "uiUxDesign": {
+      "title": "UI/UX dizajn portfolio",
+      "description": "Dizajni uporabniških vmesnikov za mobilne in spletne aplikacije s poudarkom na uporabniški izkušnji in dostopnosti.",
+      "category": "UI/UX",
+      "achievements": ["5 aplikacijskih vmesnikov", "Izvedeno testiranje uporabnikov", "Skladno z dostopnostjo"]
+    },
+    "printDesign": {
+      "title": "Kolekcija tiskanega oblikovanja",
+      "description": "Tiskani materiali vključno z brošurami, plakati in dizajnom embalaže s pozornostjo na tipografijo in postavitev.",
+      "category": "Tiskano",
+      "achievements": ["Priznanje nagrade", "95% zadovoljstvo strank", "Fokus na trajnostni dizajn"]
+    },
+    "socialMedia": {
+      "title": "Grafike za družbena omrežja",
+      "description": "Privlačno oblikovanje vsebin za družbena omrežja za različne platforme vključno z Instagram, Facebook in LinkedIn kampanjami.",
+      "category": "Digitalno",
+      "achievements": ["200% povečanje angažiranosti", "Ustvarjena viralna vsebina", "Doslednost blagovne znamke"]
+    },
+    "illustration": {
+      "title": "Serija ilustracij",
+      "description": "Prilagojene ilustracije za uredniške vsebine, spletne strani in marketinške materiale z edinstvenim umetniškim slogom.",
+      "category": "Ilustracija",
+      "achievements": ["Prikazano v oblikovalskih blogih", "Licencirana umetnina", "Pričevanja strank"]
+    },
+    "achievements": "Dosežki:",
+    "view": "Poglej",
+    "behance": "Behance"
+  },
+  "coding": {
+    "title": "Programski",
+    "projects": "projekti",
+    "description": "Full-stack razvojni projekti, ki prikazujejo sodobne spletne tehnologije, čiste prakse kodiranja in načela oblikovanja, osredotočena na uporabnika.",
+    "ecommerce": {
+      "title": "E-trgovinska platforma",
+      "description": "Polno funkcionalna e-trgovinska spletna stran z avtentifikacijo uporabnikov, obdelavo plačil in administratorsko nadzorno ploščo.",
+      "features": ["Avtentifikacija uporabnikov", "Integracija plačil", "Administratorska nadzorna plošča", "Odzivni dizajn"]
+    },
+    "taskManager": {
+      "title": "Aplikacija za upravljanje nalog",
+      "description": "Sodelovalna aplikacija za upravljanje nalog z posodobitvami v realnem času in funkcijami za sodelovanje ekipe.",
+      "features": ["Posodobitve v realnem času", "Sodelovanje ekipe", "Drag & drop vmesnik", "Sledenje napredka"]
+    },
+    "dataViz": {
+      "title": "Orodje za vizualizacijo podatkov",
+      "description": "Interaktivna nadzorna plošča za vizualizacijo podatkov za analizo in predstavitev kompleksnih nizov podatkov.",
+      "features": ["Interaktivni grafikoni", "Filtriranje podatkov", "Funkcionalnost izvoza", "Prilagojene teme"]
+    },
+    "weatherApp": {
+      "title": "Aplikacija za vremensko napoved",
+      "description": "Vremenska aplikacija z geolokacijo, 7-dnevno napovedjo in čudovitimi animiranimi vremenskimi ikonami.",
+      "features": ["Podpora geolokacije", "7-dnevna napoved", "Animirane ikone", "Vremenska opozorila"]
+    },
+    "portfolio": {
+      "title": "Portfolio spletna stran",
+      "description": "Odzivna portfolio spletna stran, ki prikazuje projekte s sodobnim dizajnom in gladkimi animacijami.",
+      "features": ["Odzivni dizajn", "Gladke animacije", "Kontaktni obrazec", "SEO optimizirano"]
+    },
+    "chatApp": {
+      "title": "Aplikacija za klepet v realnem času",
+      "description": "Aplikacija za sporočanje v realnem času s sobami, deljenjem datotek in podporo za emotikone.",
+      "features": ["Sporočanje v realnem času", "Klepetalnice", "Deljenje datotek", "Podpora emotikon"]
+    },
+    "keyFeatures": "Ključne funkcije:",
+    "liveDemo": "Živ demo",
+    "github": "GitHub"
+  },
+  "contact": {
+    "title": "Stopi v",
+    "touch": "stik",
+    "description": "Pripravljen na sodelovanje? Pogovorimo se o tvojem naslednjem projektu in oživimo tvoje ideje.",
+    "form": {
+      "name": "Ime",
+      "namePlaceholder": "Tvoje ime",
+      "email": "E-pošta",
+      "emailPlaceholder": "tvoja.eposta@primer.si",
+      "subject": "Zadeva",
+      "subjectPlaceholder": "Povpraševanje o projektu",
+      "message": "Sporočilo",
+      "messagePlaceholder": "Povej mi o svojem projektu...",
+      "send": "Pošlji sporočilo"
+    },
+    "info": {
+      "email": "tvoja.eposta@primer.si",
+      "phone": "+386 (0) 12 345 678",
+      "location": "Tvoje mesto, Slovenija",
+      "availability": "Na voljo za freelance projekte"
+    },
+    "social": {
+      "title": "Sledi mi",
+      "description": "Ostani povezan in poglej moja najnovejša dela"
+    }
+  },
+  "footer": {
+    "description": "Multidisciplinarni strokovnjak specializiran za analizo podatkov, grafično oblikovanje in razvoj programske opreme.",
+    "quickLinks": "Hitre povezave",
+    "services": "Storitve",
+    "contact": "Kontakt",
+    "dataVisualization": "Vizualizacija podatkov",
+    "statisticalAnalysis": "Statistična analiza",
+    "brandDesign": "Oblikovanje blagovne znamke",
+    "webDevelopment": "Spletni razvoj",
+    "uiUxDesign": "UI/UX oblikovanje",
+    "backToTop": "Nazaj na vrh",
+    "copyright": "Portfolio. Vse pravice pridržane."
+  }
+}

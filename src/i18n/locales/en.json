@@ -1,0 +1,175 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "dataAnalysis": "Data Analysis",
+    "graphicDesign": "Graphic Design",
+    "coding": "Coding",
+    "cv": "CV",
+    "contact": "Contact",
+    "portfolio": "Portfolio"
+  },
+  "hero": {
+    "title": "Multi-Disciplinary",
+    "subtitle": "Professional",
+    "description": "Specializing in Data Analysis, Graphic Design, and Software Development. Transforming ideas into impactful solutions through creative and analytical expertise.",
+    "exploreWork": "Explore My Work",
+    "getInTouch": "Get In Touch"
+  },
+  "about": {
+    "title": "About",
+    "me": "Me",
+    "description": "A versatile professional with expertise spanning data analysis, graphic design, and software development. I bring analytical thinking, creative vision, and technical excellence to every project.",
+    "dataAnalysisTitle": "Data Analysis & Science",
+    "dataAnalysisDescription": "Transforming complex data into actionable insights using statistical analysis, machine learning, and advanced visualization techniques.",
+    "graphicDesignTitle": "Graphic Design",
+    "graphicDesignDescription": "Creating compelling visual identities, marketing materials, and user interfaces that communicate effectively and engage audiences.",
+    "softwareDevelopmentTitle": "Software Development",
+    "softwareDevelopmentDescription": "Building robust web applications and software solutions using modern technologies and best practices for optimal performance.",
+    "technicalSkills": "Technical Skills"
+  },
+  "dataAnalysis": {
+    "title": "Data Analysis &",
+    "science": "Science",
+    "description": "Leveraging data to drive business decisions through statistical analysis, machine learning, and compelling visualizations that tell meaningful stories.",
+    "salesDashboard": {
+      "title": "Sales Performance Dashboard",
+      "description": "Interactive dashboard analyzing sales trends, customer behavior, and revenue optimization using Python and Tableau.",
+      "metrics": ["25% increase in revenue insights", "40% faster reporting"]
+    },
+    "customerSegmentation": {
+      "title": "Customer Segmentation Analysis",
+      "description": "Machine learning-based customer segmentation to improve marketing strategies and customer retention.",
+      "metrics": ["30% improved targeting", "15% increase in retention"]
+    },
+    "predictiveAnalytics": {
+      "title": "Predictive Analytics Model",
+      "description": "Time series forecasting model for inventory management and demand prediction using advanced statistical methods.",
+      "metrics": ["85% prediction accuracy", "20% cost reduction"]
+    },
+    "keyResults": "Key Results:",
+    "demo": "Demo",
+    "code": "Code"
+  },
+  "graphicDesign": {
+    "title": "Graphic",
+    "design": "Design",
+    "description": "Creating visually compelling designs that communicate effectively and leave lasting impressions. From brand identity to digital marketing materials.",
+    "brandIdentity": {
+      "title": "Brand Identity System",
+      "description": "Complete brand identity design including logo, color palette, typography, and brand guidelines for a tech startup.",
+      "category": "Branding",
+      "achievements": ["50+ logo concepts", "Complete style guide", "Business card designs"]
+    },
+    "marketingCampaign": {
+      "title": "Marketing Campaign Design",
+      "description": "Multi-channel marketing materials including print ads, social media graphics, and web banners for product launch.",
+      "category": "Marketing",
+      "achievements": ["15% increase in engagement", "Award-winning campaign", "Multi-platform design"]
+    },
+    "uiUxDesign": {
+      "title": "UI/UX Design Portfolio",
+      "description": "User interface designs for mobile and web applications with focus on user experience and accessibility.",
+      "category": "UI/UX",
+      "achievements": ["5 app interfaces", "User testing conducted", "Accessibility compliant"]
+    },
+    "printDesign": {
+      "title": "Print Design Collection",
+      "description": "Print materials including brochures, posters, and packaging design with attention to typography and layout.",
+      "category": "Print",
+      "achievements": ["Award recognition", "Client satisfaction 95%", "Sustainable design focus"]
+    },
+    "socialMedia": {
+      "title": "Social Media Graphics",
+      "description": "Engaging social media content design for various platforms including Instagram, Facebook, and LinkedIn campaigns.",
+      "category": "Digital",
+      "achievements": ["200% engagement increase", "Viral content created", "Brand consistency"]
+    },
+    "illustration": {
+      "title": "Illustration Series",
+      "description": "Custom illustrations for editorial content, websites, and marketing materials with unique artistic style.",
+      "category": "Illustration",
+      "achievements": ["Featured in design blogs", "Licensed artwork", "Client testimonials"]
+    },
+    "achievements": "Achievements:",
+    "view": "View",
+    "behance": "Behance"
+  },
+  "coding": {
+    "title": "Coding",
+    "projects": "Projects",
+    "description": "Full-stack development projects showcasing modern web technologies, clean code practices, and user-centered design principles.",
+    "ecommerce": {
+      "title": "E-commerce Platform",
+      "description": "Full-featured e-commerce website with user authentication, payment processing, and admin dashboard.",
+      "features": ["User authentication", "Payment integration", "Admin dashboard", "Responsive design"]
+    },
+    "taskManager": {
+      "title": "Task Management App",
+      "description": "Collaborative task management application with real-time updates and team collaboration features.",
+      "features": ["Real-time updates", "Team collaboration", "Drag & drop interface", "Progress tracking"]
+    },
+    "dataViz": {
+      "title": "Data Visualization Tool",
+      "description": "Interactive data visualization dashboard for analyzing and presenting complex datasets.",
+      "features": ["Interactive charts", "Data filtering", "Export functionality", "Custom themes"]
+    },
+    "weatherApp": {
+      "title": "Weather Forecast App",
+      "description": "Weather application with geolocation, 7-day forecast, and beautiful animated weather icons.",
+      "features": ["Geolocation support", "7-day forecast", "Animated icons", "Weather alerts"]
+    },
+    "portfolio": {
+      "title": "Portfolio Website",
+      "description": "Responsive portfolio website showcasing projects with modern design and smooth animations.",
+      "features": ["Responsive design", "Smooth animations", "Contact form", "SEO optimized"]
+    },
+    "chatApp": {
+      "title": "Real-time Chat Application",
+      "description": "Real-time messaging application with rooms, file sharing, and emoji support.",
+      "features": ["Real-time messaging", "Chat rooms", "File sharing", "Emoji support"]
+    },
+    "keyFeatures": "Key Features:",
+    "liveDemo": "Live Demo",
+    "github": "GitHub"
+  },
+  "contact": {
+    "title": "Get In",
+    "touch": "Touch",
+    "description": "Ready to collaborate? Let's discuss your next project and bring your ideas to life.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Project inquiry",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "send": "Send Message"
+    },
+    "info": {
+      "email": "your.email@example.com",
+      "phone": "+1 (555) 123-4567",
+      "location": "Your City, Country",
+      "availability": "Available for freelance projects"
+    },
+    "social": {
+      "title": "Follow Me",
+      "description": "Stay connected and see my latest work"
+    }
+  },
+  "footer": {
+    "description": "Multi-disciplinary professional specializing in data analysis, graphic design, and software development.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact",
+    "dataVisualization": "Data Visualization",
+    "statisticalAnalysis": "Statistical Analysis",
+    "brandDesign": "Brand Design",
+    "webDevelopment": "Web Development",
+    "uiUxDesign": "UI/UX Design",
+    "backToTop": "Back to top",
+    "copyright": "Portfolio. All rights reserved."
+  }
+}
