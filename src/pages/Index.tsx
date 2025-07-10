@@ -1,4 +1,4 @@
-import Navigation from "@/components/ui/Navigation";
+import Navigation from "@/components/ui/navigation";
 import Intro from "@/components/sections/Intro";
 import About from "@/components/sections/About";
 import DataAnalysis from "@/components/sections/DataAnalysis";
