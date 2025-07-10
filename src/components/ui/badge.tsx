@@ -40,7 +40,6 @@ export interface BadgeProps
     VariantProps<typeof badgeVariants> {}
 
 // A reusable Badge component that renders a `div` with styles determined by the `variant` prop.
- */
 function Badge({ className, variant, ...props }: BadgeProps) {
   return (
     // The `cn` utility merges the classes from `badgeVariants` with any additional classes passed in.
