@@ -1,0 +1,85 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { BarChart3, Palette, Code2 } from "lucide-react";
+
+const About = () => {
+  const skills = [
+    "Python", "R", "SQL", "Tableau", "Power BI", "Excel",
+    "Adobe Creative Suite", "Figma", "Sketch", "InDesign",
+    "JavaScript", "React", "TypeScript", "Node.js", "Git"
+  ];
+
+  return (
+    <section id="about" className="py-20 bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            About <span className="bg-gradient-primary bg-clip-text text-transparent">Me</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            A versatile professional with expertise spanning data analysis, graphic design, and software development. 
+            I bring analytical thinking, creative vision, and technical excellence to every project.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          <Card className="p-6 hover:shadow-elegant transition-all duration-300 border-0 bg-gradient-subtle">
+            <CardContent className="text-center space-y-4 p-0">
+              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto">
+                <BarChart3 className="h-8 w-8 text-primary-foreground" />
+              </div>
+              <h3 className="text-xl font-semibold">Data Analysis & Science</h3>
+              <p className="text-muted-foreground">
+                Transforming complex data into actionable insights using statistical analysis, 
+                machine learning, and advanced visualization techniques.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="p-6 hover:shadow-elegant transition-all duration-300 border-0 bg-gradient-subtle">
+            <CardContent className="text-center space-y-4 p-0">
+              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto">
+                <Palette className="h-8 w-8 text-primary-foreground" />
+              </div>
+              <h3 className="text-xl font-semibold">Graphic Design</h3>
+              <p className="text-muted-foreground">
+                Creating compelling visual identities, marketing materials, and user interfaces 
+                that communicate effectively and engage audiences.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="p-6 hover:shadow-elegant transition-all duration-300 border-0 bg-gradient-subtle">
+            <CardContent className="text-center space-y-4 p-0">
+              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto">
+                <Code2 className="h-8 w-8 text-primary-foreground" />
+              </div>
+              <h3 className="text-xl font-semibold">Software Development</h3>
+              <p className="text-muted-foreground">
+                Building robust web applications and software solutions using modern technologies 
+                and best practices for optimal performance.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="bg-muted/50 rounded-lg p-8">
+          <h3 className="text-2xl font-semibold mb-6 text-center">Technical Skills</h3>
+          <div className="flex flex-wrap justify-center gap-3">
+            {skills.map((skill, index) => (
+              <Badge 
+                key={index} 
+                variant="secondary" 
+                className="text-sm py-2 px-4 hover:bg-primary hover:text-primary-foreground transition-colors"
+              >
+                {skill}
+              </Badge>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
