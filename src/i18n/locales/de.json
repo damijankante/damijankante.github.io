@@ -181,13 +181,19 @@
   "footer": {
     "description": "Multidisziplinärer Profi spezialisiert auf Datenanalyse, Grafikdesign und Softwareentwicklung.",
     "quickLinks": "Schnelllinks",
+    "about":"Über mich",
+    "dataAnalysis": "Datenanalyse",
+    "graphicDesign": "Grafikdesign",
+    "coding": "Programmierung",
+    "cv": "Lebenslauf",
     "services": "Dienstleistungen",
-    "contact": "Kontakt",
     "dataVisualization": "Datenvisualisierung",
     "statisticalAnalysis": "Statistische Analyse",
     "brandDesign": "Markendesign",
     "webDevelopment": "Webentwicklung",
     "uiUxDesign": "UI/UX Design",
+    "contact": "Kontakt",
+    "getInTouch": "Kontakt aufnehmen",
     "backToTop": "Nach oben",
     "copyright": "Portfolio. Alle Rechte vorbehalten."
   }

@@ -181,13 +181,19 @@
   "footer": {
     "description": "Multidisciplinarni strokovnjak specializiran za analizo podatkov, grafično oblikovanje in razvoj programske opreme.",
     "quickLinks": "Hitre povezave",
+    "about":"O meni",
+    "dataAnalysis": "Podatkovna analiza",
+    "graphicDesign": "Grafično oblikovanje",
+    "coding": "Programiranje",
+    "cv": "CV",
     "services": "Storitve",
-    "contact": "Kontakt",
     "dataVisualization": "Vizualizacija podatkov",
     "statisticalAnalysis": "Statistična analiza",
     "brandDesign": "Oblikovanje blagovne znamke",
     "webDevelopment": "Spletni razvoj",
     "uiUxDesign": "UI/UX oblikovanje",
+    "contact": "Kontakt",
+    "getInTouch": "Stopite v stik",
     "backToTop": "Nazaj na vrh",
     "copyright": "Portfolio. Vse pravice pridržane."
   }

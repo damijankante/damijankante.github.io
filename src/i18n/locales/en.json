@@ -181,13 +181,19 @@
   "footer": {
     "description": "Multi-disciplinary professional specializing in data analysis, graphic design, and software development.",
     "quickLinks": "Quick Links",
+    "about":"About",
+    "dataAnalysis": "Data Analysis",
+    "graphicDesign": "Graphic Design",
+    "coding": "Coding",
+    "cv": "CV",
     "services": "Services",
-    "contact": "Contact",
     "dataVisualization": "Data Visualization",
     "statisticalAnalysis": "Statistical Analysis",
     "brandDesign": "Brand Design",
     "webDevelopment": "Web Development",
     "uiUxDesign": "UI/UX Design",
+    "contact": "Contact",
+    "getInTouch": "Get in Touch",
     "backToTop": "Back to top",
     "copyright": "Portfolio. All rights reserved."
   }

@@ -25,7 +25,7 @@ const Contact = () => {
     // Send form data via email using EmailJS
     emailjs.send(
       "service_d0m8czq",
-      "template_xa5rycc", // replace with your EmailJS template ID
+      "template_xa5rycc",
       {
       from_name: formData.name,
       from_email: formData.email,
