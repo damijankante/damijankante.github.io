@@ -4,9 +4,8 @@ import { BarChart3, Palette, Code2 } from "lucide-react";
 
 const About = () => {
   const skills = [
-    "Python", "R", "SQL", "Tableau", "Power BI", "Excel",
-    "Adobe Creative Suite", "Figma", "Sketch", "InDesign",
-    "JavaScript", "React", "TypeScript", "Node.js", "Git"
+    "Excel", "VBA", "SQL", "Tableau", "Power BI", "PowerPoint", "Python", "Adobe Creative Suite", "Figma", "Canva", "Photoshop", "InDesign", "Illustrator",
+    "HTML", "CSS", "JavaScript", "React", "TypeScript", "Node.js", "Git", "GitHub"
   ];
 
   return (
