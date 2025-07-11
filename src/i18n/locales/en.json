@@ -98,7 +98,7 @@
   "coding": {
     "title": "Coding",
     "projects": "Projects",
-    "description": "Full-stack development projects showcasing modern web technologies, clean code practices, and user-centered design principles.",
+    "description": "Building robust, scalable applications using modern technologies and best practices. From web applications to mobile apps and data science tools.",
     "ecommerce": {
       "title": "E-commerce Platform",
       "description": "Full-featured e-commerce website with user authentication, payment processing, and admin dashboard.",
@@ -130,9 +130,12 @@
       "features": ["Real-time messaging", "Chat rooms", "File sharing", "Emoji support"]
     },
     "keyFeatures": "Key Features:",
-    "liveDemo": "Live Demo",
-    "github": "GitHub"
-  },
+    "software": "Software",
+    "development": "Development",
+    "visitGitHub": "View All Projects on GitHub",
+    "view": "View",
+    "code": "Code"
+  },  
   "contact": {
     "title": "Get In",
     "touch": "Touch",

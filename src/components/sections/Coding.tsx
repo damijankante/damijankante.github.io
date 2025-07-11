@@ -2,66 +2,99 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Code2, Github, ExternalLink, Star } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Coding = () => {
+  const { t } = useTranslation();
+  
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce application with user authentication, payment processing, and admin dashboard built with modern web technologies.",
+      title: t("coding.ecommerce.title"),
+      description: t("coding.ecommerce.description"),
       technologies: ["React", "Node.js", "PostgreSQL", "Stripe API", "TypeScript"],
-      features: ["User authentication", "Payment integration", "Admin dashboard", "Responsive design"],
+      features: [
+        t("coding.ecommerce.features.0"),
+        t("coding.ecommerce.features.1"),
+        t("coding.ecommerce.features.2"),
+        t("coding.ecommerce.features.3"),
+      ],
       // githubStars: 45,
-      liveDemo: "#",
+      view: "#",
       githubLink: "#",
       category: "Full-Stack"
     },
     {
-      title: "Data Visualization Dashboard",
-      description: "Interactive dashboard for business analytics with real-time data updates and customizable charts using D3.js and React.",
+      title: t("coding.dataViz.title"),
+      description: t("coding.dataViz.description"),
       technologies: ["React", "D3.js", "Express", "MongoDB", "WebSocket"],
-      features: ["Real-time updates", "Interactive charts", "Custom filters", "Export functionality"],
+      features: [
+        t("coding.dataViz.features.0"),
+        t("coding.dataViz.features.1"),
+        t("coding.dataViz.features.2"),
+        t("coding.dataViz.features.3"),
+      ],
       // githubStars: 32,
-      liveDemo: "#",
+      view: "#",
       githubLink: "#",
       category: "Frontend"
     },
     {
-      title: "Task Management API",
-      description: "RESTful API for task management with team collaboration features, built with Node.js and comprehensive testing suite.",
+      title: t("coding.taskManager.title"),
+      description: t("coding.taskManager.description"),
       technologies: ["Node.js", "Express", "MongoDB", "JWT", "Jest"],
-      features: ["RESTful design", "Team collaboration", "Authentication", "Comprehensive testing"],
+      features: [
+        t("coding.taskManager.features.0"),
+        t("coding.taskManager.features.1"),
+        t("coding.taskManager.features.2"),
+        t("coding.taskManager.features.3"),
+      ],
       // githubStars: 28,
-      liveDemo: "#",
+      view: "#",
       githubLink: "#",
       category: "Backend"
     },
     {
-      title: "Mobile Weather App",
-      description: "Cross-platform mobile application for weather forecasting with location services and offline capabilities.",
+      title: t("coding.weatherApp.title"),
+      description: t("coding.weatherApp.description"),
       technologies: ["React Native", "Redux", "APIs", "SQLite", "Expo"],
-      features: ["Cross-platform", "Offline support", "Location services", "Push notifications"],
+      features: [
+        t("coding.weatherApp.features.0"),
+        t("coding.weatherApp.features.1"),
+        t("coding.weatherApp.features.2"),
+        t("coding.weatherApp.features.3"),
+      ],
       // githubStars: 38,
-      liveDemo: "#",
+      view: "#",
       githubLink: "#",
       category: "Mobile"
     },
     {
-      title: "Portfolio Website",
-      description: "Modern portfolio website built with React and TypeScript featuring smooth animations and responsive design.",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Radix UI", "Vite","Zod", "i18next"],
-      features: ["Smooth animations", "Responsive design", "SEO optimized", "Performance focused"],
+      title: t("coding.portfolio.title"),
+      description: t("coding.portfolio.description"),
+      technologies: ["React", "Next.js", "TypoScript", "Tailwind CSS", "Vite", "Radix UI", "Zod", "i18next"],
+      features: [
+        t("coding.portfolio.features.0"),
+        t("coding.portfolio.features.1"),
+        t("coding.portfolio.features.2"),
+        t("coding.portfolio.features.3"),
+      ],
       // githubStars: 52,
-      liveDemo: "https://damijankante.github.io/",
+      view: "https://damijankante.github.io/",
       githubLink: "https://github.com/damijankante/damijankante.github.io",
       category: "Frontend"
     },
     {
-      title: "Machine Learning Pipeline",
-      description: "Automated ML pipeline for data preprocessing, model training, and deployment with monitoring capabilities.",
+      title: t("coding.chatApp.title"),
+      description: t("coding.chatApp.description"),
       technologies: ["Python", "Scikit-learn", "Docker", "FastAPI", "MLflow"],
-      features: ["Automated pipeline", "Model monitoring", "API deployment", "Version control"],
+      features: [
+        t("coding.chatApp.features.0"),
+        t("coding.chatApp.features.1"),
+        t("coding.chatApp.features.2"),
+        t("coding.chatApp.features.3"),
+      ],
       // githubStars: 41,
-      liveDemo: "#",
+      view: "#",
       githubLink: "#",
       category: "ML/AI"
     }
@@ -88,11 +121,10 @@ const Coding = () => {
             </div>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Software <span className="bg-gradient-primary bg-clip-text text-transparent">Development</span>
+            {t("coding.software")} <span className="bg-gradient-primary bg-clip-text text-transparent">{t("coding.development")}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Building robust, scalable applications using modern technologies and best practices. 
-            From web applications to mobile apps and data science tools.
+            {t("coding.description")}
           </p>
         </div>
 
@@ -122,7 +154,7 @@ const Coding = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <h4 className="font-medium text-sm">Key Features:</h4>
+                  <h4 className="font-medium text-sm">{t("coding.keyFeatures")}</h4>
                   <div className="grid grid-cols-2 gap-1">
                     {project.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="text-xs text-muted-foreground">
@@ -133,19 +165,21 @@ const Coding = () => {
                 </div>
 
                 <div className="flex items-center justify-between pt-4">
-                  <div className="flex items-center text-sm text-muted-foreground">
+                  {/* Uncomment the following block to display GitHub stars for each project
+                    <div className="flex items-center text-sm text-muted-foreground">
                     <Star className="h-4 w-4 mr-1 text-yellow-500" />
                     {project.githubStars}
                   </div>
-                  
+                  */}
+
                   <div className="flex gap-2">
                     <Button size="sm" variant="outline">
                       <ExternalLink className="h-4 w-4 mr-1" />
-                      Demo
+                      {t("coding.view")}
                     </Button>
                     <Button size="sm" variant="outline">
                       <Github className="h-4 w-4 mr-1" />
-                      Code
+                      {t("coding.code")}
                     </Button>
                   </div>
                 </div>
@@ -155,10 +189,16 @@ const Coding = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg">
-            <Github className="h-5 w-5 mr-2" />
-            View All Projects on GitHub
-          </Button>
+            <Button variant="outline" size="lg" asChild>
+            <a
+              href="https://github.com/damijankante?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="h-5 w-5 mr-2" />
+              {t("coding.visitGitHub")}
+            </a>
+            </Button>
         </div>
       </div>
     </section>

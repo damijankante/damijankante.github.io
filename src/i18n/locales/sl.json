@@ -98,7 +98,7 @@
   "coding": {
     "title": "Programski",
     "projects": "projekti",
-    "description": "Full-stack razvojni projekti, ki prikazujejo sodobne spletne tehnologije, čiste prakse kodiranja in načela oblikovanja, osredotočena na uporabnika.",
+    "description": "Razvijam robustne in odzivne spletne aplikacije z uporabo sodobnih tehnologij in najboljših praks. Od enostavnih strani do kompleksnih sistemov, moj cilj je ustvariti učinkovite in uporabniku prijazne rešitve.",
     "ecommerce": {
       "title": "E-trgovinska platforma",
       "description": "Polno funkcionalna e-trgovinska spletna stran z avtentifikacijo uporabnikov, obdelavo plačil in administratorsko nadzorno ploščo.",
@@ -121,7 +121,7 @@
     },
     "portfolio": {
       "title": "Portfolio spletna stran",
-      "description": "Odzivna portfolio spletna stran, ki prikazuje projekte s sodobnim dizajnom in gladkimi animacijami.",
+      "description": "Odzivna portfolio spletna stran, ki prikazuje projekte s sodobnim dizajnom in tekočimi animacijami.",
       "features": ["Odzivni dizajn", "Gladke animacije", "Kontaktni obrazec", "SEO optimizirano"]
     },
     "chatApp": {
@@ -130,8 +130,11 @@
       "features": ["Sporočanje v realnem času", "Klepetalnice", "Deljenje datotek", "Podpora emotikon"]
     },
     "keyFeatures": "Ključne funkcije:",
-    "liveDemo": "Živ demo",
-    "github": "GitHub"
+    "software": "Razvoj",
+    "development": "programske opreme",
+    "visitGitHub": "Oglejte si projekte na GitHubu",
+    "view": "Ogled",
+    "code": "Koda"
   },
   "contact": {
     "title": "Stopite v",

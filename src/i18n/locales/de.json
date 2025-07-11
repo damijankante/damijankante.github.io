@@ -98,7 +98,7 @@
   "coding": {
     "title": "Programmier",
     "projects": "Projekte",
-    "description": "Full-Stack-Entwicklungsprojekte, die moderne Webtechnologien, saubere Code-Praktiken und benutzerzentrierte Designprinzipien zeigen.",
+    "description": "Entwickle robuste Webanwendungen und Softwarelösungen mit modernen Technologien und bewährten Praktiken für optimale Leistung.",
     "ecommerce": {
       "title": "E-Commerce-Plattform",
       "description": "Vollwertige E-Commerce-Website mit Benutzerauthentifizierung, Zahlungsabwicklung und Admin-Dashboard.",
@@ -130,8 +130,11 @@
       "features": ["Echtzeit-Messaging", "Chat-Räume", "Dateifreigabe", "Emoji-Unterstützung"]
     },
     "keyFeatures": "Hauptfunktionen:",
-    "liveDemo": "Live Demo",
-    "github": "GitHub"
+    "software": "Software",
+    "development": "Entwicklung",
+    "visitGitHub": "Alle Projekte auf GitHub ansehen",
+    "view": "Ansehen",
+    "code": "Code"
   },
   "contact": {
     "title": "Kontakt",
@@ -168,9 +171,9 @@
       }
     },
     "info": {
-      "email": "deine.email@beispiel.de",
-      "phone": "+49 (0) 123 456789",
-      "location": "Deine Stadt, Deutschland",
+      "email": "damijan.kante@gmail.com",
+      "phone": "+386 (0) 40 525 827",
+      "location": "Ptuj, Slowenien",
       "availability": "Verfügbar für Freelance-Projekte"
     },
     "social": {
