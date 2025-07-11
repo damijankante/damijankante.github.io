@@ -7,6 +7,7 @@ import { Mail, Phone, MapPin, Linkedin, Github, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslation } from "react-i18next";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -21,10 +22,36 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
+    // Send form data via email using EmailJS
+    emailjs.send(
+      "service_d0m8czq",
+      "template_xa5rycc", // replace with your EmailJS template ID
+      {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      to_email: "damijan.kante@gmail.com"
+      },
+      "pDS6aagQ-HeBRBCP9"
+    ).then(
+      () => {
+        toast({
+          title: t("toast.title"),
+          description: t("toast.description"),
+          variant: "success",
+        });
+      },
+      (error) => {
+        toast({
+          title: t("toast.errorTitle"),
+          description: t("toast.errorMessage"),
+          variant: "error",
+        });
+      }
+    );
     toast({
-      title: t("toast.title"),
-      description: t("toast.description"),
+      
     });
     setFormData({ name: "", email: "", subject: "", message: "" });
   };

@@ -162,7 +162,9 @@
       "send": "Pošlji sporočilo",
       "toast": {
         "title": "Sporočilo uspešno poslano!",
-        "description": "Hvala za vaše sporočilo. Kmalu vam odgovorim."
+        "description": "Hvala za vaše sporočilo. Kmalu vam odgovorim.",
+        "errorTitle": "Napaka pri pošiljanju sporočila",
+        "errorMessage": "Poskusite znova pozneje ali me kontaktirajte neposredno."
       }
     },
     "info": {

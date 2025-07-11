@@ -162,7 +162,9 @@
       "send": "Send Message",
       "toast": {
         "title": "Message sent successfully!",
-        "description": "Thank you for your message. I'll get back to you soon."
+        "description": "Thank you for your message. I'll get back to you soon.",
+        "errorTitle": "Error sending message",
+        "errorMessage": "Please try again later or contact me directly."
       }
     },
     "info": {
