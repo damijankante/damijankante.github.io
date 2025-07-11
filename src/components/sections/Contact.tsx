@@ -95,13 +95,27 @@ const Contact = () => {
             </Card>
 
             <div className="flex space-x-4">
-              <Button variant="outline" size="lg" className="flex-1">
-                <Linkedin className="h-5 w-5 mr-2" />
-                LinkedIn
+              <Button variant="outline" size="lg" className="flex-1" asChild>
+                <a
+                  href="https://www.linkedin.com/in/damijankante/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  <Linkedin className="h-5 w-5 mr-2" />
+                  LinkedIn
+                </a>
               </Button>
-              <Button variant="outline" size="lg" className="flex-1">
-                <Github className="h-5 w-5 mr-2" />
-                GitHub
+              <Button variant="outline" size="lg" className="flex-1" asChild>
+                <a
+                  href="https://github.com/damijankante"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  <Github className="h-5 w-5 mr-2" />
+                  GitHub
+                </a>
               </Button>
             </div>
           </div>
