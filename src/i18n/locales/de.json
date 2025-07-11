@@ -4,7 +4,7 @@
     "about": "Über mich",
     "dataAnalysis": "Datenanalyse",
     "graphicDesign": "Grafikdesign",
-    "coding": "Programmierung",
+    "coding": "Softwareentwicklung",
     "cv": "Lebenslauf",
     "contact": "Kontakt",
     "portfolio": "Portfolio"
@@ -195,6 +195,6 @@
     "contact": "Kontakt",
     "getInTouch": "Kontakt aufnehmen",
     "backToTop": "Nach oben",
-    "copyright": "Damijan Kante. Alle Rechte vorbehalten."
+    "copyright": "Damijan Kante | Alle Rechte vorbehalten."
   }
 }
