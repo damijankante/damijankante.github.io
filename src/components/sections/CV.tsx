@@ -18,8 +18,8 @@ const CV = () => {
           <div className="bg-card p-6 rounded-lg shadow-md">
             <h3 className="text-lg font-semibold mb-2">Education</h3>
             <ul className="list-disc list-inside">
-              <li>B.Sc. in Computer Science - XYZ University (2015 - 2019)</li>
-              <li>M.Sc. in Data Science - ABC University (2020 - 2022)</li>
+              <li>B.B.A. in Business - Doba Faculty of Applied Business and Social Studies (2008 - 2012)</li>
+              <li>A.A.S. in Logistics - Vocational College of Traffic Maribor (2002 - 2006)</li>
             </ul>
           </div>
 
@@ -27,8 +27,11 @@ const CV = () => {
           <div className="bg-card p-6 rounded-lg shadow-md">
             <h3 className="text-lg font-semibold mb-2">Experience</h3>
             <ul className="list-disc list-inside">
-              <li>Software Engineer at Company A (2019 - 2021)</li>
-              <li>Data Scientist at Company B (2021 - Present)</li>
+              <li>Slovenian and Croatian Team Lead at Velocity Global (2024 - 2025)</li>
+              <li>Data Entry Team Lead at Velocity Global (2018 - 2024)</li>
+              <li>Data Entry Specialist at Upwork Enterprise Services (2012 - 2018)</li>
+              <li>Head of Graphics Studio (2010 - 2012)</li>
+              <li>Graphic Designer/Editor (2006 - 2010)</li>
             </ul>
           </div>
 
@@ -36,10 +39,10 @@ const CV = () => {
           <div className="bg-card p-6 rounded-lg shadow-md">
             <h3 className="text-lg font-semibold mb-2">Skills</h3>
             <ul className="list-disc list-inside">
-              <li>Programming Languages: Python, R, SQL</li>
-              <li>Data Visualization: Tableau, Power BI</li>
-              <li>Web Development: JavaScript, React, Node.js</li>
-              <li>Design Tools: Adobe Creative Suite, Figma</li>
+              <li>Programming Languages: Python, SQL, C++, Java</li>
+              <li>Data Analysis and Visualization: Excel, Powerpoint, Power BI, Tableau</li>
+              <li>Web Development: HTML, CSS, JavaScript, React.js, Node.js, Typescript, Git, GitHub</li>
+              <li>Design Tools: Adobe Creative Suite, Figma, Canva</li>
             </ul>
           </div>
         </div>
