@@ -10,7 +10,7 @@ const Coding = () => {
       description: "Full-stack e-commerce application with user authentication, payment processing, and admin dashboard built with modern web technologies.",
       technologies: ["React", "Node.js", "PostgreSQL", "Stripe API", "TypeScript"],
       features: ["User authentication", "Payment integration", "Admin dashboard", "Responsive design"],
-      githubStars: 45,
+      // githubStars: 45,
       liveDemo: "#",
       githubLink: "#",
       category: "Full-Stack"
@@ -20,7 +20,7 @@ const Coding = () => {
       description: "Interactive dashboard for business analytics with real-time data updates and customizable charts using D3.js and React.",
       technologies: ["React", "D3.js", "Express", "MongoDB", "WebSocket"],
       features: ["Real-time updates", "Interactive charts", "Custom filters", "Export functionality"],
-      githubStars: 32,
+      // githubStars: 32,
       liveDemo: "#",
       githubLink: "#",
       category: "Frontend"
@@ -30,7 +30,7 @@ const Coding = () => {
       description: "RESTful API for task management with team collaboration features, built with Node.js and comprehensive testing suite.",
       technologies: ["Node.js", "Express", "MongoDB", "JWT", "Jest"],
       features: ["RESTful design", "Team collaboration", "Authentication", "Comprehensive testing"],
-      githubStars: 28,
+      // githubStars: 28,
       liveDemo: "#",
       githubLink: "#",
       category: "Backend"
@@ -40,7 +40,7 @@ const Coding = () => {
       description: "Cross-platform mobile application for weather forecasting with location services and offline capabilities.",
       technologies: ["React Native", "Redux", "APIs", "SQLite", "Expo"],
       features: ["Cross-platform", "Offline support", "Location services", "Push notifications"],
-      githubStars: 38,
+      // githubStars: 38,
       liveDemo: "#",
       githubLink: "#",
       category: "Mobile"
@@ -48,11 +48,11 @@ const Coding = () => {
     {
       title: "Portfolio Website",
       description: "Modern portfolio website built with React and TypeScript featuring smooth animations and responsive design.",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite"],
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Radix UI", "Vite","Zod", "i18next"],
       features: ["Smooth animations", "Responsive design", "SEO optimized", "Performance focused"],
-      githubStars: 52,
-      liveDemo: "#",
-      githubLink: "#",
+      // githubStars: 52,
+      liveDemo: "https://damijankante.github.io/",
+      githubLink: "https://github.com/damijankante/damijankante.github.io",
       category: "Frontend"
     },
     {
@@ -60,7 +60,7 @@ const Coding = () => {
       description: "Automated ML pipeline for data preprocessing, model training, and deployment with monitoring capabilities.",
       technologies: ["Python", "Scikit-learn", "Docker", "FastAPI", "MLflow"],
       features: ["Automated pipeline", "Model monitoring", "API deployment", "Version control"],
-      githubStars: 41,
+      // githubStars: 41,
       liveDemo: "#",
       githubLink: "#",
       category: "ML/AI"
