@@ -41,7 +41,7 @@ const CV = () => {
             <ul className="list-disc list-inside">
               <li>Programming Languages: Python, SQL, C++, Java</li>
               <li>Data Analysis and Visualization: Excel, Powerpoint, Power BI, Tableau</li>
-              <li>Web Development: HTML, CSS, JavaScript, React.js, Node.js, Typescript, Git, GitHub</li>
+              <li>Web Development: HTML, CSS, JavaScript, React.js, Node.js, Typescript, Vite, Git, GitHub</li>
               <li>Design Tools: Adobe Creative Suite, Figma, Canva</li>
             </ul>
           </div>
