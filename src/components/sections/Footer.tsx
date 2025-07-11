@@ -24,15 +24,34 @@ const Footer = () => {
               {t("footer.description")}
             </p>
             <div className="flex space-x-3">
-              <Button variant="ghost" size="sm" className="p-2 hover:text-primary">
-                <Github className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="sm" className="p-2 hover:text-primary">
+                <Button variant="ghost" size="sm" className="p-2 hover:text-primary" asChild>
+                <a
+                  href="https://github.com/damijankante"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  <Github className="h-5 w-5" />
+                </a>
+                </Button>
+              <Button variant="ghost" size="sm" className="p-2 hover:text-primary" asChild>
+                <a
+                  href="https://www.linkedin.com/in/damijankante/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
                 <Linkedin className="h-5 w-5" />
+                </a>
               </Button>
-              <Button variant="ghost" size="sm" className="p-2 hover:text-primary">
-                <Mail className="h-5 w-5" />
-              </Button>
+                <Button variant="ghost" size="sm" className="p-2 hover:text-primary" asChild>
+                <a
+                  href="mailto:damijan.kante@gmail.com"
+                  aria-label="Email"
+                >
+                  <Mail className="h-5 w-5" />
+                </a>
+                </Button>
             </div>
           </div>
 
@@ -78,7 +97,9 @@ const Footer = () => {
               <p className="text-muted-foreground text-sm">+386 (40) 525 827</p>
               <p className="text-muted-foreground text-sm">Ptuj, Slovenia</p>
               <Button variant="outline" size="sm" className="mt-2">
-                {t("footer.getInTouch")}
+                <a href="#contact" className="w-full h-full flex items-center justify-center">
+                  {t("footer.getInTouch")}
+                </a>
               </Button>
             </div>
           </div>

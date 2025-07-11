@@ -47,13 +47,32 @@ const Intro = () => {
 
           <div className="flex justify-center space-x-6 mb-12">
             <Button variant="ghost" size="sm" className="p-3 hover:text-primary">
-              <Github className="h-6 w-6" />
+              <a
+                href="https://github.com/damijankante"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <Github className="h-5 w-5" />
+              </a>
             </Button>
             <Button variant="ghost" size="sm" className="p-3 hover:text-primary">
-              <Linkedin className="h-6 w-6" />
+              <a
+                href="https://www.linkedin.com/in/damijankante/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
             </Button>
             <Button variant="ghost" size="sm" className="p-3 hover:text-primary">
-              <Mail className="h-6 w-6" />
+              <a
+                href="mailto:damijan.kante@gmail.com"
+                aria-label="Email"
+              >
+                <Mail className="h-5 w-5" />
+              </a>
             </Button>
           </div>
         </div>
