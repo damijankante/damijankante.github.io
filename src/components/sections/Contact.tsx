@@ -6,8 +6,11 @@ import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Linkedin, Github, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -38,11 +41,10 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Get In <span className="bg-gradient-primary bg-clip-text text-transparent">Touch</span>
+            {t("contact.title")} <span className="bg-gradient-primary bg-clip-text text-transparent">{t("contact.touch")}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to collaborate on your next project? Let's discuss how my expertise in data analysis, 
-            graphic design, and software development can help bring your ideas to life.
+            {t("contact.description")}
           </p>
         </div>
 
@@ -53,13 +55,13 @@ const Contact = () => {
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <Mail className="h-5 w-5 mr-2 text-primary" />
-                  Email
+                  {t("contact.email.title")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">damijan.kante@gmail.com</p>
                 <Button variant="ghost" size="sm" className="mt-2 p-0 h-auto text-primary hover:text-primary-hover">
-                  Send an email
+                  {t("contact.email.sendEmail")}
                 </Button>
               </CardContent>
             </Card>
@@ -68,13 +70,13 @@ const Contact = () => {
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <Phone className="h-5 w-5 mr-2 text-primary" />
-                  Phone
+                  {t("contact.phone.title")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">+386 (40) 525 827</p>
                 <Button variant="ghost" size="sm" className="mt-2 p-0 h-auto text-primary hover:text-primary-hover">
-                  Call me
+                  {t("contact.phone.callMe")}
                 </Button>
               </CardContent>
             </Card>
@@ -83,12 +85,12 @@ const Contact = () => {
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <MapPin className="h-5 w-5 mr-2 text-primary" />
-                  Location
+                  {t("contact.location.title")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">Ptuj, Slovenia</p>
-                <p className="text-sm text-muted-foreground mt-1">Available for remote work</p>
+                <p className="text-sm text-muted-foreground mt-1">{t("contact.location.remoteWork")}</p>
               </CardContent>
             </Card>
 
@@ -108,56 +110,56 @@ const Contact = () => {
           <div className="lg:col-span-2">
             <Card className="border-0 bg-gradient-subtle">
               <CardHeader>
-                <CardTitle>Send me a message</CardTitle>
+                <CardTitle>{t("contact.form.title")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Name</Label>
+                      <Label htmlFor="name">{t("contact.form.name")}</Label>
                       <Input
                         id="name"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="Your name"
+                        placeholder={t("contact.form.namePlaceholder")}
                         required
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
+                      <Label htmlFor="email">{t("contact.form.email")}</Label>
                       <Input
                         id="email"
                         name="email"
                         type="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="your.email@example.com"
+                        placeholder={t("contact.form.emailPlaceholder")}
                         required
                       />
                     </div>
                   </div>
                   
                   <div className="space-y-2">
-                    <Label htmlFor="subject">Subject</Label>
+                    <Label htmlFor="subject">{t("contact.form.subject")}</Label>
                     <Input
                       id="subject"
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      placeholder="Project inquiry, collaboration, etc."
+                      placeholder={t("contact.form.subjectPlaceholder")}
                       required
                     />
                   </div>
                   
                   <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
+                    <Label htmlFor="message">{t("contact.form.message")}</Label>
                     <Textarea
                       id="message"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Tell me about your project or how I can help..."
+                      placeholder={t("contact.form.messagePlaceholder")}
                       rows={6}
                       required
                     />
@@ -165,7 +167,7 @@ const Contact = () => {
                   
                   <Button type="submit" size="lg" className="w-full bg-gradient-primary hover:opacity-90">
                     <Send className="h-5 w-5 mr-2" />
-                    Send Message
+                    {t("contact.form.send")}
                   </Button>
                 </form>
               </CardContent>

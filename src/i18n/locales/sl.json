@@ -11,7 +11,7 @@
   },
   "intro": {
     "title": "Multidisciplinarni",
-    "subtitle": "Strokovnjak",
+    "subtitle": "strokovnjak",
     "description": "Specializiran za analizo podatkov, grafično oblikovanje in razvoj programske opreme. Pretvarjam ideje v učinkovite rešitve skozi kreativno in analitično strokovnost.",
     "exploreWork": "Razišči moje delo",
     "getInTouch": "Stopi v stik"
@@ -20,7 +20,7 @@
     "title": "O",
     "me": "meni",
     "description": "Vsestranski strokovnjak s strokovnim znanjem na področju analize podatkov, grafičnega oblikovanja in razvoja programske opreme. V vsak projekt vnesem analitično razmišljanje, kreativno vizijo in tehnično odličnost.",
-    "dataAnalysisTitle": "Analiza podatkov in Data Science",
+    "dataAnalysisTitle": "Analiza podatkov in pod. znanost",
     "dataAnalysisDescription": "Pretvarjam kompleksne podatke v uporabne vpoglede z uporabo statistične analize, strojnega učenja in naprednih vizualizacijskih tehnik.",
     "graphicDesignTitle": "Grafično oblikovanje",
     "graphicDesignDescription": "Ustvarjam prepričljive vizualne identitete, marketinške materiale in uporabniške vmesnike, ki učinkovito komunicirajo in pritegnejo občinstvo.",
@@ -31,7 +31,7 @@
   "dataAnalysis": {
     "title": "Analiza podatkov in",
     "science": "podatkovna znanost",
-    "description": "Izkoriščam podatke za sprejemanje poslovnih odločitev z uporabo statistične analize, strojnega učenja in prepričljivih vizualizacij, ki pripovedujejo pomembne zgodbe.",
+    "description": "Uporabljam podatke za sprejemanje poslovnih odločitev z uporabo statistične analize, strojnega učenja in prepričljivih vizualizacij, ki pripovedujejo pomembne zgodbe.",
     "salesDashboard": {
       "title": "Nadzorna plošča prodajne uspešnosti",
       "description": "Interaktivna nadzorna plošča za analizo prodajnih trendov, vedenja strank in optimizacije prihodkov z uporabo Python in Tableau.",
@@ -134,29 +134,42 @@
     "github": "GitHub"
   },
   "contact": {
-    "title": "Stopi v",
+    "title": "Stopite v",
     "touch": "stik",
-    "description": "Pripravljen na sodelovanje? Pogovorimo se o tvojem naslednjem projektu in oživimo tvoje ideje.",
+    "description": "Pripravljeni na sodelovanje? Pogovorimo se o vašem naslednjem projektu in oživimo vaše ideje.",
+    "email": {
+      "title": "E-pošta",
+      "sendEmail": "Pošlite e-pošto"
+    },
+    "phone": {
+      "title": "Telefon",
+      "callMe": "Pokličite me"
+    },
+    "location": {
+      "title": "Lokacija",
+      "remoteWork": "Na voljo za delo na daljavo"
+    },
     "form": {
+      "title": "Pošljite mi sporočilo",
       "name": "Ime",
-      "namePlaceholder": "Tvoje ime",
+      "namePlaceholder": "Vaše ime",
       "email": "E-pošta",
-      "emailPlaceholder": "tvoja.eposta@primer.si",
+      "emailPlaceholder": "ime.priimek@primer.si",
       "subject": "Zadeva",
       "subjectPlaceholder": "Povpraševanje o projektu",
       "message": "Sporočilo",
-      "messagePlaceholder": "Povej mi o svojem projektu...",
+      "messagePlaceholder": "Povejte mi o vašem projektu...",
       "send": "Pošlji sporočilo"
     },
     "info": {
-      "email": "tvoja.eposta@primer.si",
+      "email": "ime.priimek@primer.si",
       "phone": "+386 (0) 12 345 678",
-      "location": "Tvoje mesto, Slovenija",
+      "location": "Vaše mesto, Slovenija",
       "availability": "Na voljo za freelance projekte"
     },
     "social": {
       "title": "Sledi mi",
-      "description": "Ostani povezan in poglej moja najnovejša dela"
+      "description": "Ostanite povezani in poglejte moja najnovejša dela"
     }
   },
   "footer": {

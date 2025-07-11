@@ -136,16 +136,29 @@
   "contact": {
     "title": "Kontakt",
     "touch": "aufnehmen",
-    "description": "Bereit zur Zusammenarbeit? Lass uns über dein nächstes Projekt sprechen und deine Ideen zum Leben erwecken.",
+    "description": "Bereit zur Zusammenarbeit? Lass uns über ihr nächstes Projekt sprechen und ihre Ideen zum Leben erwecken.",
+    "email": {
+      "title": "E-Mail",
+      "sendEmail": "E-Mail senden"
+    },
+    "phone": {
+      "title": "Telefon",
+      "callMe": "Ruf mich an"
+    },
+    "location": {
+      "title": "Standort",
+      "remoteWork": "Verfügbar für Remote-Arbeit"
+    },
     "form": {
+      "title": "Senden Sie mir eine Nachricht",
       "name": "Name",
-      "namePlaceholder": "Dein Name",
+      "namePlaceholder": "Ihr Name",
       "email": "E-Mail",
-      "emailPlaceholder": "deine.email@beispiel.de",
+      "emailPlaceholder": "name.vorname@beispiel.de",
       "subject": "Betreff",
       "subjectPlaceholder": "Projektanfrage",
       "message": "Nachricht",
-      "messagePlaceholder": "Erzähle mir von deinem Projekt...",
+      "messagePlaceholder": "Erzählen Sie mir von ihrem Projekt...",
       "send": "Nachricht senden"
     },
     "info": {
