@@ -39,7 +39,7 @@ jobs:
       - name: Install dependencies
         run: npm install # or 'yarn install'
       - name: Build
-        run: npm run build # or 'yarn build'
+        run: npm run build -- --base=/damijankante.github.io/
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
