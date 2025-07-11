@@ -60,7 +60,7 @@ const Footer = () => {
 
           {/* Services */}
           <div className="space-y-4">
-            <h4 className="font-semibold">Services</h4>
+            <h4 className="font-semibold">{t("footer.services")}</h4>
             <div className="space-y-2">
               <p className="text-muted-foreground text-sm">{t("footer.dataVisualization")}</p>
               <p className="text-muted-foreground text-sm">{t("footer.statisticalAnalysis")}</p>
