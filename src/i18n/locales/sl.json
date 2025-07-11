@@ -159,7 +159,11 @@
       "subjectPlaceholder": "Povpraševanje o projektu",
       "message": "Sporočilo",
       "messagePlaceholder": "Povejte mi o vašem projektu...",
-      "send": "Pošlji sporočilo"
+      "send": "Pošlji sporočilo",
+      "toast": {
+        "title": "Sporočilo uspešno poslano!",
+        "description": "Hvala za vaše sporočilo. Kmalu vam odgovorim."
+      }
     },
     "info": {
       "email": "ime.priimek@primer.si",

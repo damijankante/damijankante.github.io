@@ -23,8 +23,8 @@ const Contact = () => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
     toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
+      title: t("toast.title"),
+      description: t("toast.description"),
     });
     setFormData({ name: "", email: "", subject: "", message: "" });
   };

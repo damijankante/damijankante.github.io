@@ -159,7 +159,11 @@
       "subjectPlaceholder": "Projektanfrage",
       "message": "Nachricht",
       "messagePlaceholder": "Erzählen Sie mir von ihrem Projekt...",
-      "send": "Nachricht senden"
+      "send": "Nachricht senden",
+      "toast": {
+        "title": "Nachricht erfolgreich gesendet!",
+        "description": "Vielen Dank für Ihre Nachricht. Ich werde mich bald bei Ihnen melden."
+      }
     },
     "info": {
       "email": "deine.email@beispiel.de",
@@ -168,8 +172,8 @@
       "availability": "Verfügbar für Freelance-Projekte"
     },
     "social": {
-      "title": "Folge mir",
-      "description": "Bleibe verbunden und sieh meine neuesten Arbeiten"
+      "title": "Folgen Sie mir",
+      "description": "Bleiben Sie verbunden und sehen Sie meine neuesten Arbeiten"
     }
   },
   "footer": {
