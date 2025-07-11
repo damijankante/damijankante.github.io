@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Intro = () => {
+  const { t } = useTranslation();
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -15,15 +18,14 @@ const Intro = () => {
         <div className="animate-fade-in">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Multi-Disciplinary
+              {t("intro.title")}
             </span>
             <br />
-            Professional
+            {t("intro.subtitle")}
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Specializing in Data Analysis, Graphic Design, and Software Development. 
-            Transforming ideas into impactful solutions through creative and analytical expertise.
+            {t("intro.description")}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -39,7 +41,7 @@ const Intro = () => {
               size="lg"
               onClick={() => scrollToSection("contact")}
             >
-              Get In Touch
+              {t("intro.getInTouch")}
             </Button>
           </div>
 

@@ -30,7 +30,7 @@
   },
   "dataAnalysis": {
     "title": "Analiza podatkov in",
-    "science": "Data Science",
+    "science": "podatkovna znanost",
     "description": "Izkoriščam podatke za sprejemanje poslovnih odločitev z uporabo statistične analize, strojnega učenja in prepričljivih vizualizacij, ki pripovedujejo pomembne zgodbe.",
     "salesDashboard": {
       "title": "Nadzorna plošča prodajne uspešnosti",
