@@ -2,32 +2,35 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { BarChart3, TrendingUp, Database, ExternalLink } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const DataAnalysis = () => {
+  const { t } = useTranslation();
+
   const projects = [
     {
-      title: "Sales Performance Dashboard",
-      description: "Interactive dashboard analyzing sales trends, customer behavior, and revenue optimization using Python and Tableau.",
+      title: t("dataAnalysis.salesDashboard.title"),
+      description: t("dataAnalysis.salesDashboard.description"),
       technologies: ["Python", "Pandas", "Tableau", "SQL"],
-      metrics: ["25% increase in revenue insights", "40% faster reporting"],
+      metrics: t("dataAnalysis.salesDashboard.metrics", { returnObjects: true }) as string[],
       image: "/api/placeholder/400/250",
       demoLink: "#",
       codeLink: "#"
     },
     {
-      title: "Customer Segmentation Analysis",
-      description: "Machine learning-based customer segmentation to improve marketing strategies and customer retention.",
+      title: t("dataAnalysis.customerSegmentation.title"),
+      description: t("dataAnalysis.customerSegmentation.description"),
       technologies: ["R", "Machine Learning", "ggplot2", "Power BI"],
-      metrics: ["30% improved targeting", "15% increase in retention"],
+      metrics: t("dataAnalysis.customerSegmentation.metrics", { returnObjects: true }) as string[],
       image: "/api/placeholder/400/250",
       demoLink: "#",
       codeLink: "#"
     },
     {
-      title: "Predictive Analytics Model",
-      description: "Time series forecasting model for inventory management and demand prediction using advanced statistical methods.",
+      title: t("dataAnalysis.predictiveAnalytics.title"),
+      description: t("dataAnalysis.predictiveAnalytics.description"),
       technologies: ["Python", "Scikit-learn", "TensorFlow", "Jupyter"],
-      metrics: ["85% prediction accuracy", "20% cost reduction"],
+      metrics: t("dataAnalysis.predictiveAnalytics.metrics", { returnObjects: true }) as string[],
       image: "/api/placeholder/400/250",
       demoLink: "#",
       codeLink: "#"
@@ -44,11 +47,10 @@ const DataAnalysis = () => {
             </div>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Data Analysis & <span className="bg-gradient-primary bg-clip-text text-transparent">Science</span>
+            {t("dataAnalysis.title")} <span className="bg-gradient-primary bg-clip-text text-transparent">{t("dataAnalysis.science")}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Leveraging data to drive business decisions through statistical analysis, machine learning, 
-            and compelling visualizations that tell meaningful stories.
+            {t("dataAnalysis.description")}
           </p>
         </div>
 
@@ -77,7 +79,7 @@ const DataAnalysis = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <h4 className="font-medium text-sm">Key Results:</h4>
+                  <h4 className="font-medium text-sm">{t("dataAnalysis.keyResults")}</h4>
                   {project.metrics.map((metric, metricIndex) => (
                     <div key={metricIndex} className="flex items-center text-sm text-muted-foreground">
                       <TrendingUp className="h-3 w-3 mr-2 text-accent" />
@@ -89,10 +91,10 @@ const DataAnalysis = () => {
                 <div className="flex gap-2 pt-4">
                   <Button size="sm" variant="outline" className="flex-1">
                     <ExternalLink className="h-4 w-4 mr-2" />
-                    Demo
+                    {t("dataAnalysis.demo")}
                   </Button>
                   <Button size="sm" variant="outline" className="flex-1">
-                    Code
+                    {t("dataAnalysis.code")}
                   </Button>
                 </div>
               </CardContent>
