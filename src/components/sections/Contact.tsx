@@ -201,7 +201,7 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       placeholder={t("contact.form.messagePlaceholder")}
-                      rows={6}
+                      rows={7}
                       required
                     />
                   </div>
