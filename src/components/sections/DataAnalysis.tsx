@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { BarChart3, TrendingUp, Database, ExternalLink } from "lucide-react";
+import { BarChart3, TrendingUp, Database, ExternalLink, Github, Lock } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const DataAnalysis = () => {
@@ -14,8 +14,8 @@ const DataAnalysis = () => {
       technologies: ["Python", "Pandas", "Tableau", "SQL"],
       metrics: t("dataAnalysis.salesDashboard.metrics", { returnObjects: true }) as string[],
       image: "/api/placeholder/400/250",
-      demoLink: "#",
-      codeLink: "#"
+      view: "#",
+      githubLink: "#"
     },
     {
       title: t("dataAnalysis.customerSegmentation.title"),
@@ -23,8 +23,8 @@ const DataAnalysis = () => {
       technologies: ["R", "Machine Learning", "ggplot2", "Power BI"],
       metrics: t("dataAnalysis.customerSegmentation.metrics", { returnObjects: true }) as string[],
       image: "/api/placeholder/400/250",
-      demoLink: "#",
-      codeLink: "#"
+      view: "#",
+      githubLink: "#"
     },
     {
       title: t("dataAnalysis.predictiveAnalytics.title"),
@@ -32,8 +32,8 @@ const DataAnalysis = () => {
       technologies: ["Python", "Scikit-learn", "TensorFlow", "Jupyter"],
       metrics: t("dataAnalysis.predictiveAnalytics.metrics", { returnObjects: true }) as string[],
       image: "/api/placeholder/400/250",
-      demoLink: "#",
-      codeLink: "#"
+      view: "#",
+      githubLink: "#"
     }
   ];
 
@@ -89,13 +89,30 @@ const DataAnalysis = () => {
                 </div>
 
                 <div className="flex gap-2 pt-4">
-                  <Button size="sm" variant="outline" className="flex-1">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    {t("dataAnalysis.demo")}
-                  </Button>
-                  <Button size="sm" variant="outline" className="flex-1">
-                    {t("dataAnalysis.code")}
-                  </Button>
+                    {/* Check if either of the links is a placeholder */}
+                    {project.view === "#" || project.githubLink === "#" ? (
+                      // If yes, render a single "In Progress" button
+                      <Button size="sm" variant="outline" disabled>
+                        <Lock className="h-4 w-4 mr-1" />
+                        {t("coding.inProgress")}
+                      </Button>
+                    ) : (
+                      // If not (both links are valid) and we render both buttons
+                      <>
+                        <Button size="sm" variant="outline" className="flex-1" asChild disabled={project.view === "#"}>
+                        <a href={project.view} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          {t("dataAnalysis.view")}
+                        </a>
+                        </Button>
+                        <Button size="sm" variant="outline" className="flex-1" asChild disabled={project.githubLink === "#"}>
+                          <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                            <Github className="h-4 w-4 mr-2" />
+                            {t("dataAnalysis.githubLink")}
+                          </a>
+                        </Button>
+                      </>
+                    )}
                 </div>
               </CardContent>
             </Card>
