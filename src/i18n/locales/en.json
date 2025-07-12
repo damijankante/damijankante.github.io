@@ -135,7 +135,63 @@
     "visitGitHub": "View All Projects on GitHub",
     "view": "View",
     "code": "Code"
-  },  
+  },
+  "cv": {
+    "title": "Curriculum Vitae",
+    "description": "A comprehensive overview of my professional journey, skills, and accomplishments.",
+    "education": "Education",
+    "experience": "Experience",
+    "skills": "Skills",
+    "bachelor": {
+      "degree": "Bachelor of Business Management",
+      "institution": "Doba Faculty",
+      "years": "2008 - 2012",
+      "subjects": ["Communication", "Marketing", "Finance", "Organization", "Management", "Economics", "HR", "Innovation", "Project Management", "Accounting", "Macroeconomics", "Law", "Mathematics", "Statistics", "Informatics", "Multimedia", "Design", "Support Systems"]
+    },
+    "associate": {
+      "degree": "Associate in Logistics",
+      "institution": "Vocational College of Traffic Maribor",
+      "years": "2002 - 2006",
+      "subjects": ["Communication", "English", "Economics", "Management", "Traffic Security", "Law", "Traffic Technology", "Logistic Systems", "Shipping", "Transport Planning", "Traffic Flow Regulation", "Mathematics", "Statistics", "Informatics"]
+    },
+    "teamLead": {
+      "position": "Slovenian and Croatian Team Lead",
+      "company": "Velocity Global",
+      "years": "2024 - 2025"
+    },
+    "dataEntryLead": {
+      "position": "Data Entry Lead",
+      "company": "Velocity Global",
+      "years": "2018 - 2024"
+    },
+    "dataEntrySpecialist": {
+      "position": "Data Entry Specialist",
+      "company": "Upwork Enterprise Services",
+      "years": "2012 - 2018"
+    },
+     "graphicsStudioHead": {
+      "position": "Head of Graphics Studio",
+      "company": "Videotop Color Media d.o.o.",
+      "years": "2010 - 2012"
+    },
+     "graphicDesigner": {
+      "position": "Graphic Designer/Editor",
+      "company": "Videotop Color Media d.o.o.",
+      "years": "2006 - 2010"
+    },
+    "receptionist": {
+      "position": "Receptionist",
+      "company": "Varnost Maribor d.d.",
+      "years": "2005 - 2006"
+    },
+
+    "programmingLanguages": "Programming Languages",
+    "dataAnalysis": "Data Analysis and Visualization",
+    "webDevelopment": "Web Development",
+    "designTools": "Design Tools",
+    "googleWorkspace": "Google Workspace",
+    "viewFullCV": "View Full CV"
+  },
   "contact": {
     "title": "Get In",
     "touch": "Touch",
