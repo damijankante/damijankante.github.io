@@ -21,11 +21,11 @@
     "me": "meni",
     "description": "Vsestranski strokovnjak s strokovnim znanjem na področju analize podatkov, grafičnega oblikovanja in razvoja programske opreme. V vsak projekt vnesem analitično razmišljanje, kreativno vizijo in tehnično odličnost.",
     "dataAnalysisTitle": "Analiza podatkov in pod. znanost",
-    "dataAnalysisDescription": "Pretvarjam kompleksne podatke v uporabne vpoglede z uporabo statistične analize, strojnega učenja in naprednih vizualizacijskih tehnik.",
+    "dataAnalysisDescription": "Pretvarjam kompleksne podatke v uporabne vpoglede z uporabo statistične analize, strojnega učenja in naprednih sodobnih vizualizacijskih tehnik.",
     "graphicDesignTitle": "Grafično oblikovanje",
     "graphicDesignDescription": "Ustvarjam prepričljive vizualne identitete, marketinške materiale in uporabniške vmesnike, ki učinkovito komunicirajo in pritegnejo občinstvo.",
     "softwareDevelopmentTitle": "Razvoj programske opreme",
-    "softwareDevelopmentDescription": "Gradim robustne spletne aplikacije in programske rešitve z uporabo sodobnih tehnologij in najboljših praks za optimalno delovanje.",
+    "softwareDevelopmentDescription": "Gradim robustne spletne aplikacije in programske rešitve z uporabo sodobnih tehnologij in najboljših praks za optimalno delovanje in uporabniško izkušnjo.",
     "technicalSkills": "Tehnične veščine"
   },
   "dataAnalysis": {
@@ -48,8 +48,8 @@
       "metrics": ["85% natančnost napovedi", "20% zmanjšanje stroškov"]
     },
     "keyResults": "Ključni rezultati:",
-    "demo": "Demo",
-    "code": "Koda"
+    "view": "Ogled",
+    "githubLink": "GitHub povezava"
   },
   "graphicDesign": {
     "title": "Grafično",

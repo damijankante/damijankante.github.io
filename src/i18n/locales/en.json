@@ -21,11 +21,11 @@
     "me": "Me",
     "description": "A versatile professional with expertise spanning data analysis, graphic design, and software development. I bring analytical thinking, creative vision, and technical excellence to every project.",
     "dataAnalysisTitle": "Data Analysis & Science",
-    "dataAnalysisDescription": "Transforming complex data into actionable insights using statistical analysis, machine learning, and advanced visualization techniques.",
+    "dataAnalysisDescription": "Transforming complex data into actionable insights using statistical analysis, machine learning, and advanced modern visualization techniques.",
     "graphicDesignTitle": "Graphic Design",
     "graphicDesignDescription": "Creating compelling visual identities, marketing materials, and user interfaces that communicate effectively and engage audiences.",
     "softwareDevelopmentTitle": "Software Development",
-    "softwareDevelopmentDescription": "Building robust web applications and software solutions using modern technologies and best practices for optimal performance.",
+    "softwareDevelopmentDescription": "Building robust web applications and software solutions using modern technologies and best practices for optimal performance and user experience.",
     "technicalSkills": "Technical Skills"
   },
   "dataAnalysis": {
@@ -48,8 +48,8 @@
       "metrics": ["85% prediction accuracy", "20% cost reduction"]
     },
     "keyResults": "Key Results:",
-    "demo": "Demo",
-    "code": "Code"
+    "view": "View",
+    "githubLink": "GitHub Link"
   },
   "graphicDesign": {
     "title": "Graphic",

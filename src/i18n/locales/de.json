@@ -21,11 +21,11 @@
     "me": "mich",
     "description": "Ein vielseitiger Profi mit Expertise in Datenanalyse, Grafikdesign und Softwareentwicklung. Ich bringe analytisches Denken, kreative Vision und technische Exzellenz in jedes Projekt ein.",
     "dataAnalysisTitle": "Datenanalyse & Data Science",
-    "dataAnalysisDescription": "Verwandle komplexe Daten in umsetzbare Erkenntnisse durch statistische Analyse, maschinelles Lernen und fortgeschrittene Visualisierungstechniken.",
+    "dataAnalysisDescription": "Verwandle komplexe Daten in umsetzbare Erkenntnisse durch statistische Analyse, maschinelles Lernen und fortgeschrittene modernen Visualisierungstechniken.",
     "graphicDesignTitle": "Grafikdesign",
     "graphicDesignDescription": "Erstelle überzeugende visuelle Identitäten, Marketingmaterialien und Benutzeroberflächen, die effektiv kommunizieren und Zielgruppen ansprechen.",
     "softwareDevelopmentTitle": "Softwareentwicklung",
-    "softwareDevelopmentDescription": "Entwickle robuste Webanwendungen und Softwarelösungen mit modernen Technologien und bewährten Praktiken für optimale Leistung.",
+    "softwareDevelopmentDescription": "Entwickle robuste Webanwendungen und Softwarelösungen mit modernen Technologien und bewährten Praktiken für optimale Leistung und Benutzererfahrung.",
     "technicalSkills": "Technische Fähigkeiten"
   },
   "dataAnalysis": {
@@ -48,8 +48,8 @@
       "metrics": ["85% Prognosegenauigkeit", "20% Kostenreduzierung"]
     },
     "keyResults": "Wichtige Ergebnisse:",
-    "demo": "Demo",
-    "code": "Code"
+    "view": "Ansehen",
+    "githubLink": "GitHub-Link"
   },
   "graphicDesign": {
     "title": "Grafik",
