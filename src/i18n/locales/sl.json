@@ -106,26 +106,26 @@
     },
     "ecommerce": {
       "title": "E-trgovina",
-      "description": "Polno funkcionalna e-trgovinska spletna stran z avtentifikacijo uporabnikov, obdelavo plačil in administratorsko nadzorno ploščo.",
+      "description": "e-trgovinska spletna stran z avtentifikacijo uporabnikov, obdelavo plačil in nadzorno ploščo.",
       "features": ["Avtentifikacija uporabnikov", "Integracija plačil", "Administratorska nadzorna plošča", "Odzivni dizajn"]
     },
     "taskManager": {
       "title": "Aplikacija za upravljanje nalog",
-      "description": "Sodelovalna aplikacija za upravljanje nalog z posodobitvami v realnem času in funkcijami za sodelovanje ekipe.",
+      "description": "Aplikacija za upravljanje nalog z posodobitvami v realnem času in funkcijami za hkratno uporabo.",
       "features": ["Posodobitve v realnem času", "Sodelovanje ekipe", "Drag & drop vmesnik", "Sledenje napredka"]
     },
     "cvBuilder": {
-      "title": "Orodje za ustvarjanje življenjepisov",
+      "title": "Ustvarjalec življenjepisov",
       "description": "Interaktivno orodje za ustvarjanje in upravljanje profesionalnih življenjepisov.",
       "features": ["Izbira predloge", "Predogled v realnem času", "Možnosti izvoza", "Prilagodljivi razdelki"]
     },
     "gameStats": {
-        "title": "Aplikacija za statistiko košarkarskih tekem",
-        "description": "Aplikacija za statistiko košarkarskih tekem z vizualizacijo podatkov v realnem času in analitiko uporabnikov.",
+        "title": "Statistika košarkarskih tekem",
+        "description": "Aplikacija za statistiko košarkarskih tekem z vizualizacijo podatkov v realnem času.",
         "features": ["Vizualizacija podatkov v realnem času", "Analitika uporabnikov", "Interaktivne nadzorne plošče", "Integracija API"]
       },
     "chatApp": {
-      "title": "Aplikacija za klepet v realnem času",
+      "title": "Klepetalnica v realnem času",
       "description": "Aplikacija za sporočanje v realnem času s sobami, deljenjem datotek in podporo za emotikone.",
       "features": ["Sporočanje v realnem času", "Klepetalnice", "Deljenje datotek", "Podpora smeškotov"]
     },
@@ -134,7 +134,8 @@
     "development": "programske opreme",
     "visitGitHub": "Oglejte si projekte na GitHubu",
     "view": "Ogled",
-    "code": "Koda"
+    "code": "Koda",
+    "inProgress": "V teku"
   },
   "cv": {
     "title": "Življenjepis",

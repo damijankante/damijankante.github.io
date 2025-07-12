@@ -101,7 +101,7 @@
     "description": "Entwickle robuste Webanwendungen und Softwarelösungen mit modernen Technologien und bewährten Praktiken für optimale Leistung.",
     "ecommerce": {
       "title": "E-Commerce-Plattform",
-      "description": "Vollwertige E-Commerce-Website mit Benutzerauthentifizierung, Zahlungsabwicklung und Admin-Dashboard.",
+      "description": "E-Commerce-Website mit Benutzerauthentifizierung, Zahlungsabwicklung und Admin-Dashboard.",
       "features": ["Benutzerauthentifizierung", "Zahlungsintegration", "Admin-Dashboard", "Responsive Design"]
     },
     "taskManager": {
@@ -109,10 +109,10 @@
       "description": "Kollaborative Aufgabenverwaltungsanwendung mit Echtzeit-Updates und Team-Kollaborationsfunktionen.",
       "features": ["Echtzeit-Updates", "Team-Kollaboration", "Drag & Drop Interface", "Fortschrittsverfolgung"]
     },
-    "dataViz": {
-      "title": "Datenvisualisierungs-Tool",
-      "description": "Interaktives Datenvisualisierungs-Dashboard zur Analyse und Präsentation komplexer Datensätze.",
-      "features": ["Interaktive Charts", "Datenfilterung", "Export-Funktionalität", "Benutzerdefinierte Themes"]
+    "cvBuilder": {
+      "title": "CV Builder Tool",
+      "description": "Interaktives CV-Tool zum Erstellen und Verwalten professioneller Lebensläufe.",
+      "features": ["Vorlagenauswahl", "Echtzeitvorschau", "Exportoptionen", "Anpassbare Abschnitte"]
     },
     "gameStats": {
       "title": "Basketball Spielstatistik App",
@@ -121,7 +121,7 @@
     },
     "portfolio": {
       "title": "Portfolio-Website",
-      "description": "Responsive Portfolio-Website, die Projekte mit modernem Design und flüssigen Animationen präsentiert.",
+      "description": "Responsive Portfolio-Website mit modernem Design und flüssigen Animationen.",
       "features": ["Responsive Design", "Flüssige Animationen", "Kontaktformular", "SEO-optimiert"]
     },
     "chatApp": {
@@ -134,7 +134,8 @@
     "development": "Entwicklung",
     "visitGitHub": "Alle Projekte auf GitHub ansehen",
     "view": "Ansehen",
-    "code": "Code"
+    "code": "Code",
+    "inProgress": "In Bearbeitung"
   },
   "cv": {
     "title": "Lebenslauf",
