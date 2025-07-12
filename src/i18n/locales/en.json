@@ -99,35 +99,35 @@
     "title": "Coding",
     "projects": "Projects",
     "description": "Building robust, scalable applications using modern technologies and best practices. From web applications to mobile apps and data science tools.",
-    "ecommerce": {
-      "title": "E-commerce Platform",
-      "description": "Full-featured e-commerce website with user authentication, payment processing, and admin dashboard.",
-      "features": ["User authentication", "Payment integration", "Admin dashboard", "Responsive design"]
-    },
-    "taskManager": {
-      "title": "Task Management App",
-      "description": "Collaborative task management application with real-time updates and team collaboration features.",
-      "features": ["Real-time updates", "Team collaboration", "Drag & drop interface", "Progress tracking"]
-    },
-    "dataViz": {
-      "title": "Data Visualization Tool",
-      "description": "Interactive data visualization dashboard for analyzing and presenting complex datasets.",
-      "features": ["Interactive charts", "Data filtering", "Export functionality", "Custom themes"]
-    },
-    "weatherApp": {
-      "title": "Weather Forecast App",
-      "description": "Weather application with geolocation, 7-day forecast, and beautiful animated weather icons.",
-      "features": ["Geolocation support", "7-day forecast", "Animated icons", "Weather alerts"]
-    },
     "portfolio": {
       "title": "Portfolio Website",
       "description": "Responsive portfolio website showcasing projects with modern design and smooth animations.",
-      "features": ["Responsive design", "Smooth animations", "Contact form", "SEO optimized"]
+      "features": ["Responsive design", "Smooth animations", "Contact form", "SEO optimized", "Internationalization", "Data visualization"]
+    },
+    "ecommerce": {
+      "title": "E-commerce Platform",
+      "description": "Full-featured e-commerce website with user authentication, payments, and admin dashboard.",
+      "features": ["User authentication", "Product search & filtering", "Customer Reviews", "Payment integration", "Admin dashboard", "Responsive design"]
+    },
+    "taskManager": {
+      "title": "Task Management System",
+      "description": "Collaborative task management application with real-time updates and team collaboration features.",
+      "features": ["Real-time updates", "Team collaboration", "Drag & drop interface", "Progress tracking", "Advanced Notifications", "Time Tracking & Reporting"]
+    },
+    "cvBuilder": {
+      "title": "CV Builder Tool",
+      "description": "Interactive CV builder for creating and managing professional resumes.",
+      "features": ["Template selection", "Real-time preview", "Export as PDF", "Customizable sections", "Drag & drop interface", "AI suggestions"]
+    },
+    "gameStats": {
+        "title": "Basketball Game Stats Application",
+        "description": "Basketball game statistics application with real-time data visualization and user analytics.",
+        "features": ["Real-time data visualization", "User analytics", "Interactive dashboards", "API integration", "Predictive Analytics", "Customizable notifications"]
     },
     "chatApp": {
       "title": "Real-time Chat Application",
       "description": "Real-time messaging application with rooms, file sharing, and emoji support.",
-      "features": ["Real-time messaging", "Chat rooms", "File sharing", "Emoji support"]
+      "features": ["Real-time messaging", "Chat rooms", "File sharing", "Message Categorization", "Chatbot Assistant", "Emoji support"]
     },
     "keyFeatures": "Key Features:",
     "software": "Software",
