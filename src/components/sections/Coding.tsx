@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 // Import icons from the lucide-react library for visual elements.
-import { Code2, Github, ExternalLink, Star } from "lucide-react";
+import { Code2, Github, ExternalLink, Star, Lock } from "lucide-react";
 // Import the translation hook from react-i18next for internationalization.
 import { useTranslation } from "react-i18next";
 
@@ -204,14 +204,34 @@ const Coding = () => {
                   
                   {/* Project Links */}
                   <div className="flex gap-2">
-                    <Button size="sm" variant="outline">
-                      <ExternalLink className="h-4 w-4 mr-1" />
-                      {t("coding.view")}
-                    </Button>
-                    <Button size="sm" variant="outline">
-                      <Github className="h-4 w-4 mr-1" />
-                      {t("coding.code")}
-                    </Button>
+                    {/* Check if either of the links is a placeholder */}
+                    {project.view === "#" || project.githubLink === "#" ? (
+                      // If yes, render a single "In Progress" button
+                      <Button size="sm" variant="outline" disabled>
+                        <Lock className="h-4 w-4 mr-1" />
+                        {t("coding.inProgress")} {/* Don't forget to add this to your translation files */}
+                      </Button>
+                    ) : (
+                      // If not (both links are valid) and we render both buttons
+                      <>
+                        <Button size="sm" variant="outline" asChild>
+                          <a href={project.view} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="h-4 w-4 mr-1" />
+                            {t("coding.view")}
+                          </a>
+                        </Button>
+                        <Button size="sm" variant="outline" asChild>
+                          <a
+                            href={project.githubLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Github className="h-4 w-4 mr-1" />
+                            {t("coding.code")}
+                          </a>
+                        </Button>
+                      </>
+                    )}
                   </div>
                 </div>
               </CardContent>
