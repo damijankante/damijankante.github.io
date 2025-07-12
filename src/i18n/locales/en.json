@@ -134,7 +134,8 @@
     "development": "Development",
     "visitGitHub": "View All Projects on GitHub",
     "view": "View",
-    "code": "Code"
+    "code": "Code",
+    "inProgress": "In Progress"
   },
   "cv": {
     "title": "Curriculum Vitae",
