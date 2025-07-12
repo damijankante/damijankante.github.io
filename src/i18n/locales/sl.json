@@ -138,7 +138,59 @@
   },
   "cv": {
     "title": "Življenjepis",
-    "description": "Celovit pregled moje poklicne poti, veščin in dosežkov."
+    "description": "Celovit pregled moje poklicne poti, veščin in dosežkov.",
+    "education": "Izobrazba",
+    "experience": "Izkušnje",
+    "skills": "Veščine",
+    "bachelor": {
+      "degree": "Diplomirani ekonomist",
+      "institution": "Doba Fakulteta",
+      "years": "2008 - 2012",
+      "subjects": ["Komunikacija", "Marketing", "Finance", "Organizacija", "Management", "Ekonomija", "HR", "Inovacije", "Projektno vodenje", "Računovodstvo", "Makroekonomija", "Pravo", "Matematika", "Statistika", "Informatika", "Multimedija", "Oblikovanje", "Podporni sistemi"]
+    },
+    "associate": {
+      "degree": "Tehnolog prometa",
+      "institution": "Višja prometna šola Maribor",
+      "years": "2002 - 2006",
+      "subjects": ["Komunikacija", "Angleščina", "Ekonomija", "Management", "Varnost prometa", "Pravo", "Tehnologija prometa", "Logistični sistemi", "Transport", "Načrtovanje prometa", "Urejanje prometa", "Matematika", "Statistika", "Informatika"]
+    },
+    "teamLead": {
+      "position": "Vodja slovenske in hrvaške ekipe",
+      "company": "Velocity Global",
+      "years": "2024 - 2025"
+    },
+    "dataEntryLead": {
+      "position": "Vodja vnosa podatkov",
+      "company": "Velocity Global",
+      "years": "2018 - 2024"
+    },
+    "dataEntrySpecialist": {
+      "position": "Specialist za vnos podatkov",
+      "company": "Upwork Enterprise Services",
+      "years": "2012 - 2018"
+    },
+     "graphicsStudioHead": {
+      "position": "Vodja grafičnega studia",
+      "company": "Videotop Color Media d.o.o.",
+      "years": "2010 - 2012"
+    },
+     "graphicDesigner": {
+      "position": "Grafični oblikovalec/urednik",
+      "company": "Videotop Color Media d.o.o.",
+      "years": "2006 - 2010"
+    },
+    "receptionist": {
+      "position": "Receptor",
+      "company": "Varnost Maribor d.d.",
+      "years": "2005 - 2006"
+    },
+
+    "programmingLanguages": "Programski jeziki",
+    "dataAnalysis": "Analiza in vizualizacija podatkov",
+    "webDevelopment": "Razvoj spletnih aplikacij",
+    "designTools": "Grafično oblikovanje",
+    "googleWorkspace": "Google Workspace",
+    "viewFullCV": "Oglejte si celoten CV"
   },
   "contact": {
     "title": "Stopite v",
