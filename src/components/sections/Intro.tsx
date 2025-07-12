@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { FaBehance } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 const Intro = () => {
@@ -34,7 +35,7 @@ const Intro = () => {
               className="bg-gradient-primary hover:opacity-90 shadow-glow transition-all duration-300"
               onClick={() => scrollToSection("about")}
             >
-              Explore My Work
+              {t("intro.exploreWork")}
             </Button>
             <Button 
               variant="outline" 
@@ -45,6 +46,7 @@ const Intro = () => {
             </Button>
           </div>
 
+          {/* Social media links */}
           <div className="flex justify-center space-x-6 mb-12">
             <Button variant="ghost" size="sm" className="p-3 hover:text-primary">
               <a
@@ -64,6 +66,16 @@ const Intro = () => {
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="sm" className="p-3 hover:text-primary">
+              <a
+                href="https://www.behance.net/damijankante"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Behance"
+              >
+                <FaBehance className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="ghost" size="sm" className="p-3 hover:text-primary">
