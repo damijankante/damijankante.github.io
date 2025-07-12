@@ -7,8 +7,8 @@ const About = () => {
   const { t } = useTranslation();
 
   const skills = [
-    "Excel", "VBA", "SQL", "Tableau", "Power BI", "PowerPoint", "Python", "Adobe Creative Suite", "Figma", "Canva", "Photoshop", "InDesign", "Illustrator",
-    "HTML", "CSS", "JavaScript", "React", "TypeScript", "Node.js", "Git", "GitHub"
+    "Excel", "VBA", "SQL", "Tableau", "Power BI", "PowerPoint", "Python", "R", "InDesign", "Photoshop", "Illustrator", "Premiere", "Dreamweaver", "XD", "Figma", "Canva",
+    "HTML", "CSS", "JavaScript", "React", "TypeScript", "Vite", "Node.js", "Git", "GitHub"
   ];
 
   return (
