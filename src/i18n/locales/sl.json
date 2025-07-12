@@ -136,6 +136,10 @@
     "view": "Ogled",
     "code": "Koda"
   },
+  "cv": {
+    "title": "Življenjepis",
+    "description": "Celovit pregled moje poklicne poti, veščin in dosežkov."
+  },
   "contact": {
     "title": "Stopite v",
     "touch": "stik",

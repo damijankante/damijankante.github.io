@@ -136,6 +136,10 @@
     "view": "Ansehen",
     "code": "Code"
   },
+  "cv": {
+    "title": "Lebenslauf",
+    "description": "Eine umfassende Übersicht über meine berufliche Laufbahn, Fähigkeiten und Erfolge."
+  },
   "contact": {
     "title": "Kontakt",
     "touch": "aufnehmen",
