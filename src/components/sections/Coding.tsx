@@ -1,12 +1,18 @@
+// Import UI components from the shadcn/ui library.
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+// Import icons from the lucide-react library for visual elements.
 import { Code2, Github, ExternalLink, Star } from "lucide-react";
+// Import the translation hook from react-i18next for internationalization.
 import { useTranslation } from "react-i18next";
 
+// Defines the Coding component which showcases software development projects.
 const Coding = () => {
+  // Initialize the translation function 't' from the useTranslation hook.
   const { t } = useTranslation();
   
+  // An array of project objects, with content populated by the translation function.
   const projects = [
     {
       title: t("coding.ecommerce.title"),
@@ -18,7 +24,7 @@ const Coding = () => {
         t("coding.ecommerce.features.2"),
         t("coding.ecommerce.features.3"),
       ],
-      // githubStars: 45,
+      // githubStars: 45, // Example data for GitHub stars, currently commented out.
       view: "#",
       githubLink: "#",
       category: "Full-Stack"
@@ -100,6 +106,7 @@ const Coding = () => {
     }
   ];
 
+  // A helper function to determine the background color of a category badge.
   const getCategoryColor = (category: string) => {
     const colors = {
       "Full-Stack": "bg-purple-500",
@@ -108,12 +115,15 @@ const Coding = () => {
       "Mobile": "bg-orange-500",
       "ML/AI": "bg-red-500"
     };
+    // Return the corresponding color or a default gray color if not found.
     return colors[category as keyof typeof colors] || "bg-gray-500";
   };
 
+  // Component Rendering
   return (
     <section id="coding" className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
         <div className="text-center mb-16">
           <div className="flex justify-center mb-4">
             <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center">
@@ -128,7 +138,9 @@ const Coding = () => {
           </p>
         </div>
 
+        {/* A responsive grid to display the project cards. */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Map over the projects array to render a Card for each project. */}
           {projects.map((project, index) => (
             <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card">
               <CardHeader>
@@ -136,6 +148,7 @@ const Coding = () => {
                   <CardTitle className="group-hover:text-primary transition-colors text-lg">
                     {project.title}
                   </CardTitle>
+                  {/* Category Badge */}
                   <div className={`px-2 py-1 rounded text-white text-xs font-medium ${getCategoryColor(project.category)}`}>
                     {project.category}
                   </div>
@@ -143,8 +156,10 @@ const Coding = () => {
               </CardHeader>
               
               <CardContent className="space-y-4">
+                {/* Project Description */}
                 <p className="text-muted-foreground text-sm">{project.description}</p>
                 
+                {/* Technologies Used */}
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, techIndex) => (
                     <Badge key={techIndex} variant="outline" className="text-xs">
@@ -153,6 +168,7 @@ const Coding = () => {
                   ))}
                 </div>
 
+                {/* Key Features */}
                 <div className="space-y-2">
                   <h4 className="font-medium text-sm">{t("coding.keyFeatures")}</h4>
                   <div className="grid grid-cols-2 gap-1">
@@ -164,14 +180,17 @@ const Coding = () => {
                   </div>
                 </div>
 
+                {/* Action Buttons */}
                 <div className="flex items-center justify-between pt-4">
-                  {/* Uncomment the following block to display GitHub stars for each project
+                  {/* Uncomment the following block to display GitHub stars for each project */}
+                  {/* 
                     <div className="flex items-center text-sm text-muted-foreground">
-                    <Star className="h-4 w-4 mr-1 text-yellow-500" />
-                    {project.githubStars}
-                  </div>
+                      <Star className="h-4 w-4 mr-1 text-yellow-500" />
+                      {project.githubStars}
+                    </div>
                   */}
-
+                  
+                  {/* Project Links */}
                   <div className="flex gap-2">
                     <Button size="sm" variant="outline">
                       <ExternalLink className="h-4 w-4 mr-1" />
@@ -188,6 +207,7 @@ const Coding = () => {
           ))}
         </div>
 
+        {/* GitHub Call to Action */}
         <div className="text-center mt-12">
             <Button variant="outline" size="lg" asChild>
             <a
@@ -205,4 +225,5 @@ const Coding = () => {
   );
 };
 
+// Export the component for use in other parts of the application.
 export default Coding;
