@@ -114,10 +114,10 @@
       "description": "Interaktives Datenvisualisierungs-Dashboard zur Analyse und Präsentation komplexer Datensätze.",
       "features": ["Interaktive Charts", "Datenfilterung", "Export-Funktionalität", "Benutzerdefinierte Themes"]
     },
-    "weatherApp": {
-      "title": "Wetter-Vorhersage-App",
-      "description": "Wetter-Anwendung mit Geolocation, 7-Tage-Vorhersage und schönen animierten Wetter-Icons.",
-      "features": ["Geolocation-Unterstützung", "7-Tage-Vorhersage", "Animierte Icons", "Wetter-Warnungen"]
+    "gameStats": {
+      "title": "Basketball Spielstatistik App",
+      "description": "Basketball Spielstatistik-Anwendung mit Echtzeit-Datenvisualisierung und Benutzeranalysen.",
+      "features": ["Echtzeit-Datenvisualisierung", "Benutzeranalysen", "Interaktive Dashboards", "API-Integration"]
     },
     "portfolio": {
       "title": "Portfolio-Website",
