@@ -15,74 +15,16 @@ const Coding = () => {
   // An array of project objects, with content populated by the translation function.
   const projects = [
     {
-      title: t("coding.ecommerce.title"),
-      description: t("coding.ecommerce.description"),
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe API", "TypeScript"],
-      features: [
-        t("coding.ecommerce.features.0"),
-        t("coding.ecommerce.features.1"),
-        t("coding.ecommerce.features.2"),
-        t("coding.ecommerce.features.3"),
-      ],
-      // githubStars: 45, // Example data for GitHub stars, currently commented out.
-      view: "#",
-      githubLink: "#",
-      category: "Full-Stack"
-    },
-    {
-      title: t("coding.dataViz.title"),
-      description: t("coding.dataViz.description"),
-      technologies: ["React", "D3.js", "Express", "MongoDB", "WebSocket"],
-      features: [
-        t("coding.dataViz.features.0"),
-        t("coding.dataViz.features.1"),
-        t("coding.dataViz.features.2"),
-        t("coding.dataViz.features.3"),
-      ],
-      // githubStars: 32,
-      view: "#",
-      githubLink: "#",
-      category: "Frontend"
-    },
-    {
-      title: t("coding.taskManager.title"),
-      description: t("coding.taskManager.description"),
-      technologies: ["Node.js", "Express", "MongoDB", "JWT", "Jest"],
-      features: [
-        t("coding.taskManager.features.0"),
-        t("coding.taskManager.features.1"),
-        t("coding.taskManager.features.2"),
-        t("coding.taskManager.features.3"),
-      ],
-      // githubStars: 28,
-      view: "#",
-      githubLink: "#",
-      category: "Backend"
-    },
-    {
-      title: t("coding.weatherApp.title"),
-      description: t("coding.weatherApp.description"),
-      technologies: ["React Native", "Redux", "APIs", "SQLite", "Expo"],
-      features: [
-        t("coding.weatherApp.features.0"),
-        t("coding.weatherApp.features.1"),
-        t("coding.weatherApp.features.2"),
-        t("coding.weatherApp.features.3"),
-      ],
-      // githubStars: 38,
-      view: "#",
-      githubLink: "#",
-      category: "Mobile"
-    },
-    {
       title: t("coding.portfolio.title"),
       description: t("coding.portfolio.description"),
-      technologies: ["React", "Next.js", "TypoScript", "Tailwind CSS", "Vite", "Radix UI", "Zod", "i18next"],
+      technologies: ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Tailwind CSS", "Radix UI", "shadcn/ui", "Node.js", "Vite"],
       features: [
         t("coding.portfolio.features.0"),
         t("coding.portfolio.features.1"),
         t("coding.portfolio.features.2"),
         t("coding.portfolio.features.3"),
+        t("coding.portfolio.features.4"),
+        t("coding.portfolio.features.5"),
       ],
       // githubStars: 52,
       view: "https://damijankante.github.io/",
@@ -90,14 +32,84 @@ const Coding = () => {
       category: "Frontend"
     },
     {
+      title: t("coding.taskManager.title"),
+      description: t("coding.taskManager.description"),
+      technologies: ["JavaScript", "TypeScript", "React", "Next.js", "Python", "React Native", "Fast API", "Flutter", "Material-UI", "PostgreSQL", "Celery"],
+      features: [
+        t("coding.taskManager.features.0"),
+        t("coding.taskManager.features.1"),
+        t("coding.taskManager.features.2"),
+        t("coding.taskManager.features.3"),
+        t("coding.taskManager.features.4"),
+        t("coding.taskManager.features.5"),
+      ],
+      // githubStars: 28,
+      view: "#",
+      githubLink: "#",
+      category: "Full-Stack"
+    },
+    {
+      title: t("coding.ecommerce.title"),
+      description: t("coding.ecommerce.description"),
+      technologies: ["React", "TypeScript", "Next.js", "Node.js", "PostgreSQL", "Stripe API", "Tailwind CSS", "Chakra UI", "Express.js", "Passport.js"],
+      features: [
+        t("coding.ecommerce.features.0"),
+        t("coding.ecommerce.features.1"),
+        t("coding.ecommerce.features.2"),
+        t("coding.ecommerce.features.3"),
+        t("coding.ecommerce.features.4"),
+        t("coding.ecommerce.features.5"),
+      ],
+      // githubStars: 45, // Example data for GitHub stars, currently commented out.
+      view: "#",
+      githubLink: "#",
+      category: "Full-Stack"
+    },
+    {
+      title: t("coding.cvBuilder.title"),
+      description: t("coding.cvBuilder.description"),
+      technologies: ["HTML", "CSS","JavaScript", "React", "Next.js", "TypeScript", "Node.js", "Bootstrap", "Python", "Node.js", "MongoDB", "Puppeteer"],
+      features: [
+        t("coding.cvBuilder.features.0"),
+        t("coding.cvBuilder.features.1"),
+        t("coding.cvBuilder.features.2"),
+        t("coding.cvBuilder.features.3"),
+        t("coding.cvBuilder.features.4"),
+        t("coding.cvBuilder.features.5"),
+      ],
+      // githubStars: 32,
+      view: "#",
+      githubLink: "#",
+      category: "Full-Stack"
+    },
+    {
+      title: t("coding.gameStats.title"),
+      description: t("coding.gameStats.description"),
+      technologies: ["Python", "React Native", "Flutter", "FastAPI", "PostgreSQL", "Celery", "Redis", "AWS S3", "BigQuery", "Firebase Analytics", "Sentry", "GCP"],
+      features: [
+        t("coding.gameStats.features.0"),
+        t("coding.gameStats.features.1"),
+        t("coding.gameStats.features.2"),
+        t("coding.gameStats.features.3"),
+        t("coding.gameStats.features.4"),
+        t("coding.gameStats.features.5"),
+      ],
+      // githubStars: 38,
+      view: "#",
+      githubLink: "#",
+      category: "Mobile"
+    },
+    {
       title: t("coding.chatApp.title"),
       description: t("coding.chatApp.description"),
-      technologies: ["Python", "Scikit-learn", "Docker", "FastAPI", "MLflow"],
+      technologies: ["React","TypeScript", "Next.js", "React Native", "Flutter", "Tailwind CSS", "Python", "PostgreSQL", "Scikit-learn", "PyTorch", "Azure", "Docker"],
       features: [
         t("coding.chatApp.features.0"),
         t("coding.chatApp.features.1"),
         t("coding.chatApp.features.2"),
         t("coding.chatApp.features.3"),
+        t("coding.chatApp.features.4"),
+        t("coding.chatApp.features.5"),
       ],
       // githubStars: 41,
       view: "#",
