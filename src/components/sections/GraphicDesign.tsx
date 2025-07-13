@@ -96,7 +96,7 @@ const GraphicDesign = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card overflow-hidden">
-              <div className="aspect-[4/3] bg-gradient-subtle flex items-center justify-center relative overflow-hidden">
+              <div className="aspect-[4/2.25] bg-gradient-subtle flex items-center justify-center relative overflow-hidden">
                 <Palette className="h-12 w-12 text-muted-foreground" />
                 {/* Conditionally render image or placeholder icon */}
                 {project.image ? (
