@@ -2,9 +2,27 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Palette, Eye, Award, ExternalLink } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import imgIntPortfolio from "../../assets/images/interactive-portfolio.png";
 
 const GraphicDesign = () => {
+  const { t } = useTranslation();
+
   const projects = [
+    {
+      title: t("graphicDesign.interactivePortfolio.title"),
+      description: t("graphicDesign.interactivePortfolio.description"),
+      category: t("graphicDesign.interactivePortfolio.category"),
+      tools: ["Adobe InDesign", "Adobe Photoshop", "Adobe Illustrator","Acrobat Reader"],
+      achievements: [
+        t("graphicDesign.interactivePortfolio.achievements.0"),
+        t("graphicDesign.interactivePortfolio.achievements.1"),
+        t("graphicDesign.interactivePortfolio.achievements.2"),
+      ],
+      image: imgIntPortfolio,
+      behanceLink: "https://www.behance.net/gallery/230210571/Interactive-Portfolio",
+      category_color: "bg-green-500"
+    },
     {
       title: "Brand Identity System",
       description: "Complete brand identity design including logo, color palette, typography, and brand guidelines for a tech startup.",
@@ -24,16 +42,6 @@ const GraphicDesign = () => {
       image: "/api/placeholder/400/300",
       behanceLink: "#",
       category_color: "bg-blue-500"
-    },
-    {
-      title: "UI/UX Design Portfolio",
-      description: "User interface designs for mobile and web applications with focus on user experience and accessibility.",
-      category: "UI/UX",
-      tools: ["Figma", "Sketch", "Principle", "Adobe XD"],
-      achievements: ["5 app interfaces", "User testing conducted", "Accessibility compliant"],
-      image: "/api/placeholder/400/300",
-      behanceLink: "#",
-      category_color: "bg-green-500"
     },
     {
       title: "Print Design Collection",
@@ -90,6 +98,16 @@ const GraphicDesign = () => {
             <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card overflow-hidden">
               <div className="aspect-[4/3] bg-gradient-subtle flex items-center justify-center relative overflow-hidden">
                 <Palette className="h-12 w-12 text-muted-foreground" />
+                {/* Conditionally render image or placeholder icon */}
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                ) : (
+                  <Palette className="h-12 w-12 text-muted-foreground" />
+                )}
                 <div className={`absolute top-4 left-4 px-3 py-1 rounded-full text-white text-xs font-medium ${project.category_color}`}>
                   {project.category}
                 </div>
