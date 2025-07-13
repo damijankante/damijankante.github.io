@@ -1,6 +1,5 @@
 // A reusable modal component for displaying a project's image gallery which uses shadcn/ui's Dialog.
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogClose } from "@/components/ui/dialog";
-import { X } from "lucide-react";
 
 // Type definition for a single image within the gallery.
 interface GalleryImage {
@@ -34,17 +33,6 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
             <DialogContent className="max-w-6xl w-[95%] bg-card p-0 border-border">
                 <DialogHeader className="p-6 pb-4">
                     <DialogTitle className="text-2xl text-foreground">{project.title}</DialogTitle>
-                    {/* The DialogClose component provides a styled and accessible close button. */}
-                    <DialogClose asChild>
-                        <button className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background 
-                            transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring 
-                            focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent 
-                            data-[state=open]:text-muted-foreground"
-                        >
-                            <X className="h-6 w-6" />
-                            <span className="sr-only">Close</span>
-                        </button>
-                    </DialogClose>
                 </DialogHeader>
                 
                 {/* This container makes the gallery scrollable if content exceeds 80% of the viewport height. */}
