@@ -67,11 +67,11 @@
       "category": "Marketing",
       "achievements": ["15% increase in engagement", "Award-winning campaign", "Multi-platform design"]
     },
-    "uiUxDesign": {
-      "title": "UI/UX Design Portfolio",
-      "description": "User interface designs for mobile and web applications with focus on user experience and accessibility.",
-      "category": "UI/UX",
-      "achievements": ["5 app interfaces", "User testing conducted", "Accessibility compliant"]
+    "interactivePortfolio": {
+      "title": "Interactive Portfolio",
+      "description": "Interactive PDF portfolio showcasing a curated selection of my best work. Focused on intuitive navigation and an engaging user experience.",
+      "category": "Portfolio Design",
+      "achievements": ["Enhanced interactivity", "Optimized file size", "Professional presentation"]
     },
     "printDesign": {
       "title": "Print Design Collection",
