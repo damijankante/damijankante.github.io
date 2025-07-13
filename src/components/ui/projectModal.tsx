@@ -34,7 +34,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
             <DialogContent className="max-w-6xl w-[95%] bg-card p-0 border-border">
                 <DialogHeader className="p-6 pb-4">
                     <DialogTitle className="text-2xl text-foreground">{project.title}</DialogTitle>
-                    // The DialogClose component provides a styled and accessible close button.
+                    {/* The DialogClose component provides a styled and accessible close button. */}
                     <DialogClose asChild>
                         <button className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background 
                             transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring 
