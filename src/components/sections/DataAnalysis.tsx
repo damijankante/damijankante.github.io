@@ -1,13 +1,32 @@
+import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { BarChart3, TrendingUp, Database, ExternalLink, Github, Lock } from "lucide-react";
+import { BarChart3, TrendingUp, Database, ExternalLink, Github, Lock, Eye } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import ProjectModal from "@/components/ui/projectModal";
+
+// Define the Project interface.
+interface Project {
+  title: string;
+  description: string;
+  technologies: string[];
+  metrics: string[];
+  image: string | null;
+  view: string;
+  githubLink: string;
+  gallery: { src: string; description: string }[];
+}
 
 const DataAnalysis = () => {
+  // Hook for handling internationalization (i18n)
   const { t } = useTranslation();
 
-  const projects = [
+  // State to manage the currently selected project for the modal. Null when closed.
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  // An array of project objects
+  const projects: Project[] = [
     {
       title: t("dataAnalysis.salesDashboard.title"),
       description: t("dataAnalysis.salesDashboard.description"),
@@ -15,7 +34,15 @@ const DataAnalysis = () => {
       metrics: t("dataAnalysis.salesDashboard.metrics", { returnObjects: true }) as string[],
       image: "/api/placeholder/400/250",
       view: "#",
-      githubLink: "#"
+      githubLink: "#",
+      gallery: [
+        { src: "/api/placeholder/800/600?text=Model+Accuracy", description: "Confusion matrix and accuracy metrics for the predictive model." },
+        { src: "/api/placeholder/800/600?text=Feature+Importance", description: "Chart showing the most influential factors in the prediction." },
+        { src: "/api/placeholder/800/600?text=Model+Accuracy", description: "Confusion matrix and accuracy metrics for the predictive model." },
+        { src: "/api/placeholder/800/600?text=Feature+Importance", description: "Chart showing the most influential factors in the prediction." },
+        { src: "/api/placeholder/800/600?text=Model+Accuracy", description: "Confusion matrix and accuracy metrics for the predictive model." },
+        { src: "/api/placeholder/800/600?text=Feature+Importance", description: "Chart showing the most influential factors in the prediction." },
+      ]
     },
     {
       title: t("dataAnalysis.customerSegmentation.title"),
@@ -24,7 +51,15 @@ const DataAnalysis = () => {
       metrics: t("dataAnalysis.customerSegmentation.metrics", { returnObjects: true }) as string[],
       image: "/api/placeholder/400/250",
       view: "#",
-      githubLink: "#"
+      githubLink: "#",
+      gallery: [
+        { src: "/api/placeholder/800/600?text=Model+Accuracy", description: "Confusion matrix and accuracy metrics for the predictive model." },
+        { src: "/api/placeholder/800/600?text=Feature+Importance", description: "Chart showing the most influential factors in the prediction." },
+        { src: "/api/placeholder/800/600?text=Model+Accuracy", description: "Confusion matrix and accuracy metrics for the predictive model." },
+        { src: "/api/placeholder/800/600?text=Feature+Importance", description: "Chart showing the most influential factors in the prediction." },
+        { src: "/api/placeholder/800/600?text=Model+Accuracy", description: "Confusion matrix and accuracy metrics for the predictive model." },
+        { src: "/api/placeholder/800/600?text=Feature+Importance", description: "Chart showing the most influential factors in the prediction." },
+      ]
     },
     {
       title: t("dataAnalysis.predictiveAnalytics.title"),
@@ -33,93 +68,120 @@ const DataAnalysis = () => {
       metrics: t("dataAnalysis.predictiveAnalytics.metrics", { returnObjects: true }) as string[],
       image: "/api/placeholder/400/250",
       view: "#",
-      githubLink: "#"
+      githubLink: "#",
+      gallery: [
+        { src: "/api/placeholder/800/600?text=Model+Accuracy", description: "Confusion matrix and accuracy metrics for the predictive model." },
+        { src: "/api/placeholder/800/600?text=Feature+Importance", description: "Chart showing the most influential factors in the prediction." },
+        { src: "/api/placeholder/800/600?text=Model+Accuracy", description: "Confusion matrix and accuracy metrics for the predictive model." },
+        { src: "/api/placeholder/800/600?text=Feature+Importance", description: "Chart showing the most influential factors in the prediction." },
+        { src: "/api/placeholder/800/600?text=Model+Accuracy", description: "Confusion matrix and accuracy metrics for the predictive model." },
+        { src: "/api/placeholder/800/600?text=Feature+Importance", description: "Chart showing the most influential factors in the prediction." },
+      ]
     }
   ];
 
   return (
-    <section id="data-analysis" className="py-20 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="flex justify-center mb-4">
-            <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center">
-              <BarChart3 className="h-8 w-8 text-primary-foreground" />
-            </div>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            {t("dataAnalysis.title")} <span className="bg-gradient-primary bg-clip-text text-transparent">{t("dataAnalysis.science")}</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t("dataAnalysis.description")}
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card overflow-hidden">
-              <div className="aspect-video bg-gradient-subtle flex items-center justify-center">
-                <Database className="h-12 w-12 text-muted-foreground" />
+    <>
+      <section id="data-analysis" className="py-20 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="flex justify-center mb-4">
+              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center">
+                <BarChart3 className="h-8 w-8 text-primary-foreground" />
               </div>
-              
-              <CardHeader>
-                <CardTitle className="group-hover:text-primary transition-colors">
-                  {project.title}
-                </CardTitle>
-              </CardHeader>
-              
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground">{project.description}</p>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              {t("dataAnalysis.title")} <span className="bg-gradient-primary bg-clip-text text-transparent">{t("dataAnalysis.science")}</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              {t("dataAnalysis.description")}
+            </p>
+          </div>
+
+          {/* Grid container for project cards. */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card overflow-hidden flex flex-col">
+                {/* Image container for the project. */}
+                <div className="aspect-video bg-gradient-subtle flex items-center justify-center">
+                  {/* Conditionally render the image or a fallback icon if the image is null. */}
+                  {project.image ? (
+                    <img src={project.image} alt={project.title} className="h-full w-full object-cover"/>
+                  ) : (
+                    <Database className="h-12 w-12 text-muted-foreground" />
+                  )}
+                </div>
                 
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="outline" className="text-xs">
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
+                {/* Card header containing the project title. */}
+                <CardHeader>
+                  <CardTitle className="group-hover:text-primary transition-colors">
+                    {project.title}
+                  </CardTitle>
+                </CardHeader>
+                
+                {/* Main content area. `flex-grow` makes it expand, pushing buttons to the bottom. */}
+                <CardContent className="space-y-4">
+                  <p className="text-muted-foreground">{project.description}</p>
+                  
+                  {/* A wrapper for technology badges. */}
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, techIndex) => (
+                      <Badge key={techIndex} variant="outline" className="text-xs">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                  
+                  {/* A wrapper for key metrics/results. */}
+                  <div className="space-y-2">
+                    <h4 className="font-medium text-sm">{t("dataAnalysis.keyResults")}</h4>
+                    {project.metrics.map((metric, metricIndex) => (
+                      <div key={metricIndex} className="flex items-center text-sm text-muted-foreground">
+                        <TrendingUp className="h-3 w-3 mr-2 text-accent" />
+                        {metric}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+                
+                {/* Button container */}
+                <div className="flex gap-2 p-6 pt-0">
+                  {/* Conditionally render the View button if a valid link exists. */}
+                  {project.view !== "#" && (
+                    <Button size="sm" variant="outline" className="flex-1" onClick={() => setSelectedProject(project)}>
+                      <Eye className="h-4 w-4 mr-2" />
+                      {t("dataAnalysis.view")}
+                    </Button>
+                  )}
 
-                <div className="space-y-2">
-                  <h4 className="font-medium text-sm">{t("dataAnalysis.keyResults")}</h4>
-                  {project.metrics.map((metric, metricIndex) => (
-                    <div key={metricIndex} className="flex items-center text-sm text-muted-foreground">
-                      <TrendingUp className="h-3 w-3 mr-2 text-accent" />
-                      {metric}
-                    </div>
-                  ))}
-                </div>
+                  {/* Conditionally render the GitHub button if a valid link exists. */}
+                  {project.githubLink !== "#" && (
+                    <Button size="sm" variant="outline" className="flex-1" asChild>
+                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                        <Github className="h-4 w-4 mr-2" />
+                        {t("dataAnalysis.githubLink")}
+                      </a>
+                    </Button>
+                  )}
 
-                <div className="flex gap-2 pt-4">
-                    {/* Check if either of the links is a placeholder */}
-                    {project.view === "#" || project.githubLink === "#" ? (
-                      // If yes, render a single "In Progress" button
-                      <Button size="sm" variant="outline" disabled>
-                        <Lock className="h-4 w-4 mr-1" />
-                        {t("coding.inProgress")}
-                      </Button>
-                    ) : (
-                      // If not (both links are valid) and we render both buttons
-                      <>
-                        <Button size="sm" variant="outline" className="flex-1" asChild disabled={project.view === "#"}>
-                        <a href={project.view} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="h-4 w-4 mr-2" />
-                          {t("dataAnalysis.view")}
-                        </a>
-                        </Button>
-                        <Button size="sm" variant="outline" className="flex-1" asChild disabled={project.githubLink === "#"}>
-                          <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                            <Github className="h-4 w-4 mr-2" />
-                            {t("dataAnalysis.githubLink")}
-                          </a>
-                        </Button>
-                      </>
-                    )}
+                  {/* Fallback "In Progress" button if no valid links exist. */}
+                  {project.view === "#" && project.githubLink === "#" && (
+                    <Button size="sm" variant="outline" disabled className="flex-1">
+                      <Lock className="h-4 w-4 mr-1" />
+                      {t("coding.inProgress")}
+                    </Button>
+                  )}
                 </div>
-              </CardContent>
-            </Card>
-          ))}
+              </Card>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Render the modal, passing its state and the selected project data. */}
+      <ProjectModal isOpen={!!selectedProject} onClose={() => setSelectedProject(null)} project={selectedProject}/>
+    </>
   );
 };
 
