@@ -93,7 +93,7 @@
     },
     "achievements": "Dosežki:",
     "view": "Poglej",
-    "behance": "Behance"
+    "visitBehance": "Oglejte si projekte na Behance"
   },
   "coding": {
     "title": "Programski",
@@ -191,7 +191,8 @@
     "webDevelopment": "Razvoj spletnih aplikacij",
     "designTools": "Grafično oblikovanje",
     "googleWorkspace": "Google Workspace",
-    "viewFullCV": "Oglejte si celoten CV"
+    "viewFullCV": "Oglejte si celoten CV",
+    "cvLink": "https://europa.eu/europass/eportfolio/screen/share/documents/0a81f891-1fe9-4857-ac48-63b104feaff2?lang=en"
   },
   "contact": {
     "title": "Stopite v",

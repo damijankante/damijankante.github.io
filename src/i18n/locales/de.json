@@ -93,7 +93,7 @@
     },
     "achievements": "Erfolge:",
     "view": "Ansehen",
-    "behance": "Behance"
+    "visitBehance": "Alle Projekte auf Behance ansehen"
   },
   "coding": {
     "title": "Programmier",
@@ -191,7 +191,8 @@
     "webDevelopment": "Webentwicklung",
     "designTools": "Gestaltungswerkzeuge",
     "googleWorkspace": "Google Workspace",
-    "viewFullCV": "Vollständigen Lebenslauf ansehen"
+    "viewFullCV": "Vollständigen Lebenslauf ansehen",
+    "cvLink": "https://europa.eu/europass/eportfolio/screen/share/documents/3229c209-2c0a-4d1e-9acf-00a0a2e1d758?lang=en"
   },
   "contact": {
     "title": "Kontakt",

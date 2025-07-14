@@ -93,7 +93,7 @@
     },
     "achievements": "Achievements:",
     "view": "View",
-    "behance": "Behance"
+    "visitBehance": "View All Projects on Behance"
   },
   "coding": {
     "title": "Coding",
@@ -191,7 +191,8 @@
     "webDevelopment": "Web Development",
     "designTools": "Design Tools",
     "googleWorkspace": "Google Workspace",
-    "viewFullCV": "View Full CV"
+    "viewFullCV": "View Full CV",
+    "cvLink": "https://europa.eu/europass/eportfolio/screen/share/documents/cc15276a-a9b8-43f9-a943-c2c3dba44023?lang=en"
   },
   "contact": {
     "title": "Get In",
