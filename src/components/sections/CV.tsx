@@ -1,8 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FileUser, GraduationCap, Briefcase, Wrench } from "lucide-react";
-import { useTranslation } from "react-i18next";
 import { Timeline, TimelineItem, TimelineTime, TimelineTitle, TimelineSubtitle, TimelineDescription } from "@/components/ui/timeline";
+import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
+import { Button } from "@/components/ui/button";
+import { FileUser, GraduationCap, Briefcase, Wrench, FileText } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const CV = () => {
   const { t } = useTranslation();
@@ -108,7 +110,7 @@ const CV = () => {
   ];
 
   return (
-    <section id="cv" className="py-20 bg-muted/30">
+    <section id="cv" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* The main header for the entire CV section. */}
         <div className="text-center mb-16">
@@ -196,6 +198,26 @@ const CV = () => {
             </Card>
           ))}
         </div>
+
+        <div className="relative mt-16">
+            {/* CV Call to Action */}
+            <div className="text-center mt-12">
+              <Button variant="outline" size="lg" asChild>
+              <a
+                href={t("cv.cvLink")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FileText className="h-5 w-5 mr-2" />
+                {t("cv.viewFullCV")}
+              </a>
+              </Button>
+
+              <div className="absolute right-0 top-0 h-full flex items-center">
+                <ScrollToTopButton />
+              </div>
+            </div>
+          </div>
       </div>
     </section>
   );
