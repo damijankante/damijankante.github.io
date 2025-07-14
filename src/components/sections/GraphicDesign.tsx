@@ -3,8 +3,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import ProjectModal from "@/components/ui/projectModal";
+import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
 import imgIntPortfolio from "@/assets/images/interactive-portfolio.png";
 import { Palette, Eye, Award, ExternalLink } from "lucide-react";
+import { FaBehance } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 // Define the types for our project data
@@ -216,13 +218,31 @@ const GraphicDesign = () => {
                   </Button>
                   <a href={project.behanceLink} target="_blank" rel="noopener noreferrer" className="flex-1">
                     <Button size="sm" variant="outline" className="w-full">
-                      <ExternalLink className="h-4 w-4 mr-2" />
+                      <FaBehance className="h-4 w-4 mr-2" />
                       Behance
                     </Button>
                   </a>
                 </div>
               </Card>
             ))}
+          </div>
+          <div className="relative mt-16">
+            <div className="text-center">
+              <Button variant="outline" size="lg" asChild>
+                {/* 3. Adapt the link, icon, and text for Behance */}
+                <a
+                  href="https://www.behance.net/damijankante"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaBehance className="h-5 w-5 mr-2" />
+                  {t("graphicDesign.visitBehance")}
+                </a>
+              </Button>
+            </div>
+            <div className="absolute right-0 top-0 h-full flex items-center">
+              <ScrollToTopButton />
+            </div>
           </div>
         </div>
       </section>
