@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
+import ScrollToTopButton from "@/components/ui/scrollToTopButton";
 import ProjectModal from "@/components/ui/projectModal";
 // Import icons from the lucide-react library for visual elements.
 import { Code2, Github, ExternalLink, Star, Eye, Lock } from "lucide-react";

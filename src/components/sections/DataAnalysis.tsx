@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import ProjectModal from "@/components/ui/projectModal";
-import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
+import ScrollToTopButton from "@/components/ui/scrollToTopButton";
 import { BarChart3, TrendingUp, Database, ExternalLink, Github, Lock, Eye } from "lucide-react";
 import { useTranslation } from "react-i18next";
 

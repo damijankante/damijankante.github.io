@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
+import ScrollToTopButton from "@/components/ui/scrollToTopButton";
 import { BarChart3, Palette, Code2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 

@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import ProjectModal from "@/components/ui/projectModal";
-import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
+import ScrollToTopButton from "@/components/ui/scrollToTopButton";
 import imgIntPortfolio from "@/assets/images/interactive-portfolio.png";
 import { Palette, Eye, Award, ExternalLink } from "lucide-react";
 import { FaBehance } from "react-icons/fa";
