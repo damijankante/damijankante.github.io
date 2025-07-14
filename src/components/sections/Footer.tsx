@@ -12,7 +12,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-muted/50 border-t border-border">
+    <footer className="bg-muted/90 border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -59,21 +59,21 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-semibold">{t("footer.quickLinks")}</h4>
             <div className="space-y-2">
-              <button className="block text-muted-foreground hover:text-primary transition-colors text-sm">
+              <a href="#about" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
                 {t("footer.about")}
-              </button>
-              <button className="block text-muted-foreground hover:text-primary transition-colors text-sm">
+              </a>
+              <a href="#data-analysis" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
                 {t("footer.dataAnalysis")}
-              </button>
-              <button className="block text-muted-foreground hover:text-primary transition-colors text-sm">
+              </a>
+              <a href="#graphic-design" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
                 {t("footer.graphicDesign")}
-              </button>
-              <button className="block text-muted-foreground hover:text-primary transition-colors text-sm">
+              </a>
+              <a href="#coding" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
                 {t("footer.coding")}
-              </button>
-              <button className="block text-muted-foreground hover:text-primary transition-colors text-sm">
+              </a>
+              <a href="#cv" className="block text-muted-foreground hover:text-primary transition-colors text-sm">
                 {t("footer.cv")}
-              </button>
+              </a>
             </div>
           </div>
 
@@ -90,14 +90,17 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div className="space-y-4">
-            <h4 className="font-semibold">{t("footer.contact")}</h4>
-            <div className="space-y-2">
-              <p className="text-muted-foreground text-sm">damijan.kante@gmail.com</p>
-              <p className="text-muted-foreground text-sm">+386 (40) 525 827</p>
-              <p className="text-muted-foreground text-sm">Ptuj, Slovenia</p>
-              <Button variant="outline" size="sm" className="mt-2">
-                <a href="#contact" className="w-full h-full flex items-center justify-center">
+          <div className="flex flex-col">
+            <h4 className="font-semibold mb-4">{t("footer.contact")}</h4>
+            <div className="flex-grow flex flex-col">
+              <div className="space-y-2">
+                <p className="text-muted-foreground text-sm">damijan.kante@gmail.com</p>
+                <p className="text-muted-foreground text-sm">+386 (40) 525 827</p>
+                <p className="text-muted-foreground text-sm">Ptuj, Slovenia</p>
+              </div>
+              
+              <Button variant="outline" size="sm" className="mt-auto md:w-1/2" asChild>
+                <a href="#contact">
                   {t("footer.getInTouch")}
                 </a>
               </Button>
@@ -111,10 +114,10 @@ const Footer = () => {
           </p>
           
           <Button
-            variant="ghost"
+            variant="link"
             size="sm"
             onClick={scrollToTop}
-            className="mt-4 md:mt-0 p-2 hover:text-primary"
+            className="mt-4 md:mt-0 p-2 text-muted-foreground hover:text-primary hover:no-underline"
           >
             <ArrowUp className="h-4 w-4 mr-2" />
             {t("footer.backToTop")}
