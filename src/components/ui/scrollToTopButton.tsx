@@ -4,10 +4,10 @@ import { useTranslation } from "react-i18next";
 
 // A reusable button component that, when clicked, smoothly scrolls the user to the top of the page.
 const ScrollToTopButton = () => {
-  // Hook for getting the translated text.
+  // Hook for getting the translated text
   const { t } = useTranslation();
 
-  // The function that handles the smooth scroll behavior.
+  // The function that handles the smooth scroll behavior
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
