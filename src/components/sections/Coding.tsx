@@ -1,19 +1,38 @@
+import { useState } from "react";
 // Import UI components from the shadcn/ui library.
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
+import ProjectModal from "@/components/ui/projectModal";
 // Import icons from the lucide-react library for visual elements.
-import { Code2, Github, ExternalLink, Star, Lock } from "lucide-react";
+import { Code2, Github, ExternalLink, Star, Eye, Lock } from "lucide-react";
 // Import the translation hook from react-i18next for internationalization.
 import { useTranslation } from "react-i18next";
+
+interface Project {
+  title: string;
+  description: string;
+  technologies: string[];
+  // githubStars?: number
+  features: string[];
+  image: string | null;
+  view: string;
+  githubLink: string;
+  category: string;
+  gallery: { src: string; description: string }[];
+}
 
 // Defines the Coding component which showcases software development projects.
 const Coding = () => {
   // Initialize the translation function 't' from the useTranslation hook.
   const { t } = useTranslation();
+
+  // State to manage the currently selected project for the modal. Null when closed.
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   
-  // An array of project objects, with content populated by the translation function.
-  const projects = [
+  // An array of project objects with content populated by the translation function.
+  const projects: Project [] = [
     {
       title: t("coding.portfolio.title"),
       description: t("coding.portfolio.description"),
@@ -27,9 +46,15 @@ const Coding = () => {
         t("coding.portfolio.features.5"),
       ],
       // githubStars: 52,
+      image: null,
       view: "https://damijankante.github.io/",
       githubLink: "https://github.com/damijankante/damijankante.github.io",
-      category: "Frontend"
+      category: "Frontend",
+      gallery: [
+        { src: "/api/placeholder/800/600?text=Home+Page", description: "The main landing page of the portfolio." },
+        { src: "/api/placeholder/800/600?text=Dark+Mode", description: "A preview of the portfolio in dark mode." },
+        { src: "/api/placeholder/800/600?text=Project+Section", description: "A close-up of the project card layout." },
+      ]
     },
     {
       title: t("coding.taskManager.title"),
@@ -44,9 +69,11 @@ const Coding = () => {
         t("coding.taskManager.features.5"),
       ],
       // githubStars: 28,
+      image: null,
       view: "#",
       githubLink: "#",
-      category: "Full-Stack"
+      category: "Full-Stack",
+      gallery: []
     },
     {
       title: t("coding.ecommerce.title"),
@@ -61,9 +88,11 @@ const Coding = () => {
         t("coding.ecommerce.features.5"),
       ],
       // githubStars: 45, // Example data for GitHub stars, currently commented out.
+      image: null,
       view: "#",
       githubLink: "#",
-      category: "Full-Stack"
+      category: "Full-Stack",
+      gallery: []
     },
     {
       title: t("coding.cvBuilder.title"),
@@ -78,9 +107,11 @@ const Coding = () => {
         t("coding.cvBuilder.features.5"),
       ],
       // githubStars: 32,
+      image: null,
       view: "#",
       githubLink: "#",
-      category: "Full-Stack"
+      category: "Full-Stack",
+      gallery: []
     },
     {
       title: t("coding.gameStats.title"),
@@ -95,9 +126,11 @@ const Coding = () => {
         t("coding.gameStats.features.5"),
       ],
       // githubStars: 38,
+      image: null,
       view: "#",
       githubLink: "#",
-      category: "Mobile"
+      category: "Mobile",
+      gallery: []
     },
     {
       title: t("coding.chatApp.title"),
@@ -112,9 +145,11 @@ const Coding = () => {
         t("coding.chatApp.features.5"),
       ],
       // githubStars: 41,
+      image: null,
       view: "#",
       githubLink: "#",
-      category: "ML/AI"
+      category: "ML/AI",
+      gallery: []
     }
   ];
 
@@ -133,127 +168,134 @@ const Coding = () => {
 
   // Component Rendering
   return (
-    <section id="coding" className="py-20 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="flex justify-center mb-4">
-            <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center">
-              <Code2 className="h-8 w-8 text-primary-foreground" />
+    <>
+      <section id="coding" className="py-20 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="flex justify-center mb-4">
+              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center">
+                <Code2 className="h-8 w-8 text-primary-foreground" />
+              </div>
             </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              {t("coding.software")} <span className="bg-gradient-primary bg-clip-text text-transparent">{t("coding.development")}</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              {t("coding.description")}
+            </p>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            {t("coding.software")} <span className="bg-gradient-primary bg-clip-text text-transparent">{t("coding.development")}</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t("coding.description")}
-          </p>
-        </div>
 
-        {/* A responsive grid to display the project cards. */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Map over the projects array to render a Card for each project. */}
-          {projects.map((project, index) => (
-            <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card">
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <CardTitle className="group-hover:text-primary transition-colors text-lg">
-                    {project.title}
-                  </CardTitle>
-                  {/* Category Badge */}
-                  <div className={`px-2 py-1 rounded text-white text-xs font-medium ${getCategoryColor(project.category)}`}>
+          {/* A responsive grid to display the project cards. */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Map over the projects array to render a Card for each project. */}
+            {projects.map((project, index) => (
+              <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card flex flex-col">
+                {/* A consistent image container*/} 
+                <div className="aspect-[4/3] bg-gradient-subtle flex items-center justify-center relative overflow-hidden">
+                  {project.image ? (
+                    <img src={project.image} alt={project.title} className="h-full w-full object-cover"/>
+                  ) : (
+                    <Code2 className="h-12 w-12 text-muted-foreground" /> // Thematic placeholder icon.
+                  )}
+                  <div className={`absolute top-4 left-4 px-3 py-1 rounded-full text-white text-xs font-medium ${getCategoryColor(project.category)}`}>
                     {project.category}
                   </div>
                 </div>
-              </CardHeader>
-              
-              <CardContent className="space-y-4">
-                {/* Project Description */}
-                <p className="text-muted-foreground text-sm">{project.description}</p>
-                
-                {/* Technologies Used */}
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="outline" className="text-xs">
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
 
-                {/* Key Features */}
-                <div className="space-y-2">
-                  <h4 className="font-medium text-sm">{t("coding.keyFeatures")}</h4>
-                  <div className="grid grid-cols-2 gap-1">
-                    {project.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="text-xs text-muted-foreground">
-                        • {feature}
-                      </div>
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <CardTitle className="group-hover:text-primary transition-colors text-lg">
+                      {project.title}
+                    </CardTitle>
+                    {/* Category Badge */}
+                  </div>
+                </CardHeader>
+                
+                <CardContent className="space-y-4 flex-grow">
+                  {/* Project Description */}
+                  <p className="text-muted-foreground text-sm">{project.description}</p>
+                  
+                  {/* Technologies Used */}
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, techIndex) => (
+                      <Badge key={techIndex} variant="outline" className="text-xs">
+                        {tech}
+                      </Badge>
                     ))}
                   </div>
-                </div>
+
+                  {/* Key Features */}
+                  <div className="space-y-2">
+                    <h4 className="font-medium text-sm">{t("coding.keyFeatures")}</h4>
+                    <div className="grid grid-cols-2 gap-1">
+                      {project.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="text-xs text-muted-foreground">
+                          • {feature}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </CardContent>
 
                 {/* Action Buttons */}
-                <div className="flex items-center justify-between pt-4">
-                  {/* Uncomment the following block to display GitHub stars for each project */}
-                  {/* 
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Star className="h-4 w-4 mr-1 text-yellow-500" />
-                      {project.githubStars}
-                    </div>
-                  */}
-                  
-                  {/* Project Links */}
-                  <div className="flex gap-2">
-                    {/* Check if either of the links is a placeholder */}
-                    {project.view === "#" || project.githubLink === "#" ? (
-                      // If yes, render a single "In Progress" button
-                      <Button size="sm" variant="outline" disabled>
-                        <Lock className="h-4 w-4 mr-1" />
-                        {t("coding.inProgress")} {/* Don't forget to add this to your translation files */}
-                      </Button>
-                    ) : (
-                      // If not (both links are valid) and we render both buttons
-                      <>
-                        <Button size="sm" variant="outline" asChild>
-                          <a href={project.view} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="h-4 w-4 mr-1" />
-                            {t("coding.view")}
-                          </a>
-                        </Button>
-                        <Button size="sm" variant="outline" asChild>
-                          <a
-                            href={project.githubLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <Github className="h-4 w-4 mr-1" />
-                            {t("coding.code")}
-                          </a>
-                        </Button>
-                      </>
-                    )}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                <div className="flex gap-2 p-6 pt-0">
+                  {/* This "View" button handles the modal. It's disabled if the gallery is empty. */}
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="flex-1"
+                    onClick={() => setSelectedProject(project)}
+                    disabled={project.gallery.length === 0}
+                  >
+                    <Eye className="h-4 w-4 mr-2" />
+                    {t("coding.view")}
+                  </Button>
 
-        {/* GitHub Call to Action */}
-        <div className="text-center mt-12">
-            <Button variant="outline" size="lg" asChild>
-            <a
-              href="https://github.com/damijankante?tab=repositories"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Github className="h-5 w-5 mr-2" />
-              {t("coding.visitGitHub")}
-            </a>
-            </Button>
-        </div>
-      </div>
-    </section>
+                  {/* Render GitHub or a locked button based on link validity. */}
+                  {project.githubLink !== "#" ? (
+                    <Button size="sm" variant="outline" className="flex-1" asChild>
+                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                        <Github className="h-4 w-4 mr-2" />
+                        {t("coding.code")}
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button size="sm" variant="outline" disabled className="flex-1">
+                      <Lock className="h-4 w-4 mr-2" />
+                      {t("coding.code")}
+                    </Button>
+                  )}
+                  
+                </div>
+              </Card>
+            ))}
+          </div>
+          
+          <div className="relative mt-16">
+            {/* GitHub Call to Action */}
+            <div className="text-center mt-12">
+              <Button variant="outline" size="lg" asChild>
+              <a
+                href="https://github.com/damijankante?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="h-5 w-5 mr-2" />
+                {t("coding.visitGitHub")}
+              </a>
+              </Button>
+
+              <div className="absolute right-0 top-0 h-full flex items-center">
+                <ScrollToTopButton />
+              </div>
+            </div>
+          </div>
+         </div>
+      </section>
+
+      <ProjectModal isOpen={!!selectedProject} onClose={() => setSelectedProject(null)} project={selectedProject}/>
+    </>
   );
 };
 
