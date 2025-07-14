@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
 import { BarChart3, Palette, Code2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
@@ -73,6 +74,12 @@ const About = () => {
                 {skill}
               </Badge>
             ))}
+          </div>
+        </div>
+        
+        <div className="relative mt-16">
+          <div className="absolute right-0 top-0 h-full flex items-center">
+            <ScrollToTopButton />
           </div>
         </div>
       </div>
