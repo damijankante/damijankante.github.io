@@ -2,9 +2,10 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import ProjectModal from "@/components/ui/projectModal";
+import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
 import { BarChart3, TrendingUp, Database, ExternalLink, Github, Lock, Eye } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import ProjectModal from "@/components/ui/projectModal";
 
 // Define the Project interface.
 interface Project {
@@ -32,16 +33,16 @@ const DataAnalysis = () => {
       description: t("dataAnalysis.salesDashboard.description"),
       technologies: ["Python", "Pandas", "Tableau", "SQL"],
       metrics: t("dataAnalysis.salesDashboard.metrics", { returnObjects: true }) as string[],
-      image: "/api/placeholder/400/250",
+      image: null,
       view: "#",
       githubLink: "#",
       gallery: [
-        { src: "/api/placeholder/800/600?text=Model+Accuracy", description: "Confusion matrix and accuracy metrics for the predictive model." },
-        { src: "/api/placeholder/800/600?text=Feature+Importance", description: "Chart showing the most influential factors in the prediction." },
-        { src: "/api/placeholder/800/600?text=Model+Accuracy", description: "Confusion matrix and accuracy metrics for the predictive model." },
-        { src: "/api/placeholder/800/600?text=Feature+Importance", description: "Chart showing the most influential factors in the prediction." },
-        { src: "/api/placeholder/800/600?text=Model+Accuracy", description: "Confusion matrix and accuracy metrics for the predictive model." },
-        { src: "/api/placeholder/800/600?text=Feature+Importance", description: "Chart showing the most influential factors in the prediction." },
+        { src: "/api/placeholder/800/600?text=Dashboard+Overview", description: "Main dashboard view showing key KPIs like total revenue, units sold, and profit margin." },
+        { src: "/api/placeholder/800/600?text=Sales+Trend+Chart", description: "A time-series analysis of sales performance, allowing drill-down by month, quarter, or year." },
+        { src: "/api/placeholder/800/600?text=Geographic+Data", description: "An interactive map visualization (heatmap) showing sales distribution by region or state." },
+        { src: "/api/placeholder/800/600?text=Product+Performance", description: "A detailed table breaking down the performance of individual products or categories." },
+        { src: "/api/placeholder/800/600?text=Sales+Rep+Leaderboard", description: "Leaderboard ranking top sales representatives by revenue generated and deals closed." },
+        { src: "/api/placeholder/800/600?text=Interactive+Filters", description: "Close-up on the interactive filters for date ranges, regions, and product categories." },
       ]
     },
     {
@@ -49,16 +50,16 @@ const DataAnalysis = () => {
       description: t("dataAnalysis.customerSegmentation.description"),
       technologies: ["R", "Machine Learning", "ggplot2", "Power BI"],
       metrics: t("dataAnalysis.customerSegmentation.metrics", { returnObjects: true }) as string[],
-      image: "/api/placeholder/400/250",
+      image: null,
       view: "#",
       githubLink: "#",
       gallery: [
-        { src: "/api/placeholder/800/600?text=Model+Accuracy", description: "Confusion matrix and accuracy metrics for the predictive model." },
-        { src: "/api/placeholder/800/600?text=Feature+Importance", description: "Chart showing the most influential factors in the prediction." },
-        { src: "/api/placeholder/800/600?text=Model+Accuracy", description: "Confusion matrix and accuracy metrics for the predictive model." },
-        { src: "/api/placeholder/800/600?text=Feature+Importance", description: "Chart showing the most influential factors in the prediction." },
-        { src: "/api/placeholder/800/600?text=Model+Accuracy", description: "Confusion matrix and accuracy metrics for the predictive model." },
-        { src: "/api/placeholder/800/600?text=Feature+Importance", description: "Chart showing the most influential factors in the prediction." },
+        { src: "/api/placeholder/800/600?text=Customer+Clusters", description: "Visualization of distinct customer segments using a K-Means clustering scatter plot." },
+        { src: "/api/placeholder/800/600?text=Segment+Profiles", description: "Detailed profiles for each segment, including demographics and purchasing behavior." },
+        { src: "/api/placeholder/800/600?text=Data+Preprocessing", description: "A snippet from the R script showing data cleaning and feature scaling before modeling." },
+        { src: "/api/placeholder/800/600?text=Elbow+Method", description: "The elbow method plot used to determine the optimal number of clusters (K) for the model." },
+        { src: "/api/placeholder/800/600?text=Segment+Spending", description: "Bar chart comparing the average spending habits across the identified customer segments." },
+        { src: "/api/placeholder/800/600?text=Marketing+Strategies", description: "A summary slide of actionable marketing strategies tailored to each specific segment." },
       ]
     },
     {
@@ -66,16 +67,16 @@ const DataAnalysis = () => {
       description: t("dataAnalysis.predictiveAnalytics.description"),
       technologies: ["Python", "Scikit-learn", "TensorFlow", "Jupyter"],
       metrics: t("dataAnalysis.predictiveAnalytics.metrics", { returnObjects: true }) as string[],
-      image: "/api/placeholder/400/250",
+      image: null,
       view: "#",
       githubLink: "#",
       gallery: [
-        { src: "/api/placeholder/800/600?text=Model+Accuracy", description: "Confusion matrix and accuracy metrics for the predictive model." },
-        { src: "/api/placeholder/800/600?text=Feature+Importance", description: "Chart showing the most influential factors in the prediction." },
-        { src: "/api/placeholder/800/600?text=Model+Accuracy", description: "Confusion matrix and accuracy metrics for the predictive model." },
-        { src: "/api/placeholder/800/600?text=Feature+Importance", description: "Chart showing the most influential factors in the prediction." },
-        { src: "/api/placeholder/800/600?text=Model+Accuracy", description: "Confusion matrix and accuracy metrics for the predictive model." },
-        { src: "/api/placeholder/800/600?text=Feature+Importance", description: "Chart showing the most influential factors in the prediction." },
+        { src: "/api/placeholder/800/600?text=Model+Accuracy", description: "A confusion matrix and key accuracy metrics (Precision, Recall, F1-Score) for the model." },
+        { src: "/api/placeholder/800/600?text=Feature+Importance", description: "A bar chart showing the most influential features used by the model for its predictions." },
+        { src: "/api/placeholder/800/600?text=ROC+Curve", description: "The Receiver Operating Characteristic (ROC) curve, visualizing the model's diagnostic ability." },
+        { src: "/api/placeholder/800/600?text=Time-Series+Forecast", description: "A plot showing historical data alongside the model's future value predictions." },
+        { src: "/api/placeholder/800/600?text=Jupyter+Notebook", description: "A screenshot of the Jupyter Notebook environment where the model was developed and tested." },
+        { src: "/api/placeholder/800/600?text=Model+Comparison", description: "A table comparing the performance of different algorithms (e.g., Logistic Regression vs. Random Forest)." },
       ]
     }
   ];
@@ -104,7 +105,7 @@ const DataAnalysis = () => {
             {projects.map((project, index) => (
               <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card overflow-hidden flex flex-col">
                 {/* Image container for the project. */}
-                <div className="aspect-video bg-gradient-subtle flex items-center justify-center">
+                <div className="aspect-[4/3] bg-gradient-subtle flex items-center justify-center">
                   {/* Conditionally render the image or a fallback icon if the image is null. */}
                   {project.image ? (
                     <img src={project.image} alt={project.title} className="h-full w-full object-cover"/>
@@ -121,7 +122,7 @@ const DataAnalysis = () => {
                 </CardHeader>
                 
                 {/* Main content area. `flex-grow` makes it expand, pushing buttons to the bottom. */}
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-4 flex-grow">
                   <p className="text-muted-foreground">{project.description}</p>
                   
                   {/* A wrapper for technology badges. */}
@@ -175,6 +176,26 @@ const DataAnalysis = () => {
                 </div>
               </Card>
             ))}
+          </div>
+
+          <div className="relative mt-16">
+            {/* GitHub Call to Action */}
+            <div className="text-center mt-12">
+              <Button variant="outline" size="lg" asChild>
+              <a
+                href="https://github.com/damijankante?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="h-5 w-5 mr-2" />
+                {t("coding.visitGitHub")}
+              </a>
+              </Button>
+
+              <div className="absolute right-0 top-0 h-full flex items-center">
+                <ScrollToTopButton />
+              </div>
+            </div>
           </div>
         </div>
       </section>
