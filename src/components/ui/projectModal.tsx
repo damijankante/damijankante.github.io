@@ -33,7 +33,7 @@ const GalleryImageItem = ({ image, projectTitle, index }: GalleryImageItemProps)
   // State to track if the image has failed to load.
   const [hasError, setHasError] = useState(false);
 
-  // If the image fails to load (e.g., broken link), render a placeholder.
+  // If the image fails to load (e.g., broken link), renders a placeholder.
   if (hasError) {
     return (
       <div className="aspect-[4/3] flex items-center justify-center rounded-lg bg-gradient-subtle text-muted-foreground">
@@ -74,7 +74,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
         // The Dialog component manages state, accessibility (focus-trapping), and the overlay.
         // onOpenChange calls our onClose function when the user tries to close the dialog.
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="max-w-6xl w-[95%] bg-card p-0 border-border">
+            <DialogContent className="max-w-7xl w-[95%] bg-card p-0 border-border">
                 <DialogHeader className="p-6 pb-4">
                     <DialogTitle className="text-2xl text-foreground">{project.title}</DialogTitle>
                 </DialogHeader>
