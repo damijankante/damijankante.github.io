@@ -12,6 +12,8 @@ const About = () => {
     "HTML", "CSS", "JavaScript", "React", "TypeScript", "Vite", "Node.js", "Git", "GitHub"
   ];
 
+  const softSkills = t("about.softSkillsList", { returnObjects: true }) as string[];
+
   return (
     <section id="about" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,22 +63,41 @@ const About = () => {
             </CardContent>
           </Card>
         </div>
-
-        <div className="bg-muted/50 rounded-lg p-8">
-          <h3 className="text-2xl font-semibold mb-6 text-center">{t("about.technicalSkills")}</h3>
-          <div className="flex flex-wrap justify-center gap-3">
-            {technicalSkills.map((skill, index) => (
-              <Badge 
-                key={index} 
-                variant="secondary" 
-                className="text-sm py-2 px-4 hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
-                {skill}
-              </Badge>
-            ))}
+        
+        <div className="space-y-12">
+          {/* Soft Skills Section */}      
+          <div className="bg-muted/50 rounded-lg p-8">
+            <h3 className="text-2xl font-semibold mb-6 text-center">{t("about.softSkills")}</h3>
+              <div className="flex flex-wrap justify-center gap-3">
+                {softSkills.map((skill, index) => (
+                  <Badge 
+                    key={index} 
+                    variant="secondary" 
+                    className="text-sm py-2 px-4 hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
+          </div>
+          
+          {/* Technical Skills Section */}
+          <div className="bg-muted/50 rounded-lg p-8">
+            <h3 className="text-2xl font-semibold mb-6 text-center">{t("about.technicalSkills")}</h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              {technicalSkills.map((skill, index) => (
+                <Badge 
+                  key={index} 
+                  variant="secondary" 
+                  className="text-sm py-2 px-4 hover:bg-primary hover:text-primary-foreground transition-colors"
+                >
+                  {skill}
+                </Badge>
+              ))}
+            </div>
           </div>
         </div>
-        
+
         <div className="relative mt-16">
           <div className="absolute right-0 top-0 h-full flex items-center">
             <ScrollToTopButton />
