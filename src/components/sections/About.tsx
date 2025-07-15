@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 const About = () => {
   const { t } = useTranslation();
 
-  const skills = [
+  const technicalSkills = [
     "Excel", "VBA", "SQL", "Tableau", "Power BI", "PowerPoint", "Python", "R", "InDesign", "Photoshop", "Illustrator", "Premiere", "Dreamweaver", "XD", "Figma", "Canva",
     "HTML", "CSS", "JavaScript", "React", "TypeScript", "Vite", "Node.js", "Git", "GitHub"
   ];
@@ -65,7 +65,7 @@ const About = () => {
         <div className="bg-muted/50 rounded-lg p-8">
           <h3 className="text-2xl font-semibold mb-6 text-center">{t("about.technicalSkills")}</h3>
           <div className="flex flex-wrap justify-center gap-3">
-            {skills.map((skill, index) => (
+            {technicalSkills.map((skill, index) => (
               <Badge 
                 key={index} 
                 variant="secondary" 
