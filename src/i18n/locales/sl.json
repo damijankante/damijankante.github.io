@@ -19,14 +19,30 @@
   "about": {
     "title": "O",
     "me": "meni",
-    "description": "Vsestranski strokovnjak s strokovnim znanjem na področju analize podatkov, grafičnega oblikovanja in razvoja programske opreme. V vsak projekt vnesem analitično razmišljanje, kreativno vizijo in tehnično odličnost.",
+    "description": "Vsestranski strokovnjak s strokovnim znanjem na področju analize podatkov, grafičnega oblikovanja, razvoja programske opreme in vodenja projektov. V vsak projekt vnesem analitično razmišljanje, kreativno vizijo in tehnično odličnost.",
     "dataAnalysisTitle": "Analiza podatkov in pod. znanost",
     "dataAnalysisDescription": "Pretvarjam kompleksne podatke v uporabne vpoglede z uporabo statistične analize, strojnega učenja in naprednih sodobnih vizualizacijskih tehnik.",
     "graphicDesignTitle": "Grafično oblikovanje",
     "graphicDesignDescription": "Ustvarjam prepričljive vizualne identitete, marketinške materiale in uporabniške vmesnike, ki učinkovito komunicirajo in pritegnejo občinstvo.",
     "softwareDevelopmentTitle": "Razvoj programske opreme",
     "softwareDevelopmentDescription": "Gradim robustne spletne aplikacije in programske rešitve z uporabo sodobnih tehnologij in najboljših praks za optimalno delovanje in uporabniško izkušnjo.",
-    "technicalSkills": "Tehnične veščine"
+    "technicalSkills": "Tehnične veščine",
+    "softSkills": "Mehke veščine",
+    "softSkillsList": [ 
+      "Pozornost na podrobnosti",
+      "Analitično reševanje problemov",
+      "Samoiniciativnost",
+      "Prilagodljivost",
+      "Vsestranskost",
+      "Timsko delo",
+      "Hitro osvajanje veščin",
+      "Nenehno učenje",
+      "Projektno vodenje",
+      "Vodenje",
+      "Optimizacija procesov",      
+      "Mentorstvo",
+      "Komunikativnost"
+    ]
   },
   "dataAnalysis": {
     "title": "Analiza podatkov in",

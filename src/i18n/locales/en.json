@@ -26,7 +26,23 @@
     "graphicDesignDescription": "Creating compelling visual identities, marketing materials, and user interfaces that communicate effectively and engage audiences.",
     "softwareDevelopmentTitle": "Software Development",
     "softwareDevelopmentDescription": "Building robust web applications and software solutions using modern technologies and best practices for optimal performance and user experience.",
-    "technicalSkills": "Technical Skills"
+    "technicalSkills": "Technical Skills",
+    "softSkills": "Soft Skills",
+    "softSkillsList": [ 
+      "Attention to Detail",
+      "Analytical Problem-Solving",
+      "Proactive Initiative",
+      "Adaptability",
+      "Versatility",
+      "Teamwork",
+      "Rapid Skill Acquisition",
+      "Continuous Learning",
+      "Project Management",
+      "Leadership",
+      "Process Optimization",      
+      "Mentorship",
+      "Communication"
+    ]
   },
   "dataAnalysis": {
     "title": "Data Analysis &",

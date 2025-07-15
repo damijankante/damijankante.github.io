@@ -26,7 +26,23 @@
     "graphicDesignDescription": "Erstelle überzeugende visuelle Identitäten, Marketingmaterialien und Benutzeroberflächen, die effektiv kommunizieren und Zielgruppen ansprechen.",
     "softwareDevelopmentTitle": "Softwareentwicklung",
     "softwareDevelopmentDescription": "Entwickle robuste Webanwendungen und Softwarelösungen mit modernen Technologien und bewährten Praktiken für optimale Leistung und Benutzererfahrung.",
-    "technicalSkills": "Technische Fähigkeiten"
+    "technicalSkills": "Technische Fähigkeiten",
+    "softSkills": "Soziale Kompetenzen",
+    "softSkillsList": [ 
+      "Detailorientierung",
+      "Analytische Problemlösung",
+      "Eigeninitiative",
+      "Anpassungsfähigkeit",
+      "Vielseitigkeit",
+      "Teamfähigkeit",
+      "Lernbereitschaft",
+      "Schnelle Auffassungsgabe",
+      "Projektmanagement",
+      "Führungskompetenz",
+      "Prozessoptimierung",      
+      "Mentoring",
+      "Kommunikationsfähigkeit"
+    ]
   },
   "dataAnalysis": {
     "title": "Datenanalyse &",
