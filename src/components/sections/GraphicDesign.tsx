@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { loadGalleryImages } from "@/lib/galleryLoader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -45,14 +46,7 @@ const GraphicDesign = () => {
       image: imgIntPortfolio,
       behanceLink: "https://www.behance.net/gallery/230210571/Interactive-Portfolio",
       category_color: "bg-green-500",
-      gallery: [
-        { src: "/api/placeholder/800/600?text=Cover+Page", description: "The dynamic and engaging cover page design." },
-        { src: "/api/placeholder/800/600?text=Project+Spread", description: "A two-page spread showcasing a detailed project view with interactive elements." },
-        { src: "/api/placeholder/800/600?text=Clickable+Buttons", description: "Close-up on the custom-designed interactive buttons and navigation." },
-        { src: "/api/placeholder/800/600?text=Typography+Details", description: "Detail of the typographic hierarchy and layout structure." },
-        { src: "/api/placeholder/800/600?text=Image+Gallery", description: "An example of an embedded image gallery within the portfolio." },
-        { src: "/api/placeholder/800/600?text=Contact+Page", description: "The final page with clear, clickable contact information." },
-      ]
+      gallery: loadGalleryImages("interactive-portfolio"),
     },
     {
       title: "Brand Identity System",
