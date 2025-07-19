@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import ProjectModal from "@/components/ui/projectModal";
 import ScrollToTopButton from "@/components/ui/scrollToTopButton";
+import imgMagazineDesign from "@/assets/images/magazines.png";
 import imgIntPortfolio from "@/assets/images/interactive-portfolio.png";
 import imgBusinessCards from "@/assets/images/business-cards.png";
 import { Palette, Eye, Award, ExternalLink } from "lucide-react";
@@ -35,25 +36,25 @@ const GraphicDesign = () => {
 
   const projects: Project[] = [
     {
-      title: t("graphicDesign.interactivePortfolio.title"),
-      description: t("graphicDesign.interactivePortfolio.description"),
-      category: t("graphicDesign.interactivePortfolio.category"),
-      tools: ["Adobe InDesign", "Adobe Photoshop", "Adobe Illustrator","Acrobat Reader"],
+      title: t("graphicDesign.magazineDesign.title"),
+      description: t("graphicDesign.magazineDesign.description"),
+      category: t("graphicDesign.magazineDesign.category"),
+      tools: ["InDesign", "Illustrator", "Photoshop", "Acrobat Pro", "InCopy", "Bridge"],
       achievements: [
-        t("graphicDesign.interactivePortfolio.achievements.0"),
-        t("graphicDesign.interactivePortfolio.achievements.1"),
-        t("graphicDesign.interactivePortfolio.achievements.2"),
+        t("graphicDesign.magazineDesign.achievements.0"),
+        t("graphicDesign.magazineDesign.achievements.1"),
+        t("graphicDesign.magazineDesign.achievements.2"),
       ],
-      image: imgIntPortfolio,
-      behanceLink: "https://www.behance.net/gallery/230210571/Interactive-Portfolio",
-      category_color: "bg-green-500",
-      gallery: loadGalleryImages("interactive-portfolio"),
+      image: imgMagazineDesign,
+      behanceLink: "https://www.behance.net/portfolio/editor?project_id=230721947",
+      category_color: "bg-orange-500",
+      gallery: loadGalleryImages("magazine-design"),
     },
     {
-      title: "Business Cards",
+      title: t("graphicDesign.businessCards.title"),
       description: t("graphicDesign.businessCards.description"),
       category: t("graphicDesign.businessCards.category"),
-      tools: ["Adobe InDesign", "Adobe Illustrator", "Adobe Photoshop"],
+      tools: ["InDesign", "Illustrator", "Photoshop"],
       achievements: [
         t("graphicDesign.businessCards.achievements.0"),
         t("graphicDesign.businessCards.achievements.1"),
@@ -65,22 +66,19 @@ const GraphicDesign = () => {
       gallery: loadGalleryImages("business-cards"),
     },
     {
-      title: "Marketing Campaign Design",
-      description: "Multi-channel marketing materials including print ads, social media graphics, and web banners for product launch.",
-      category: "Marketing",
-      tools: ["Adobe Creative Suite", "InDesign", "After Effects"],
-      achievements: ["15% increase in engagement", "Award-winning campaign", "Multi-platform design"],
-      image: null,
-      behanceLink: "#",
-      category_color: "bg-blue-500",
-      gallery: [
-        { src: "/api/placeholder/800/600?text=Print+Ad", description: "Magazine advertisement designed for the campaign." },
-        { src: "/api/placeholder/800/600?text=Social+Media+Post", description: "Example of an engaging Instagram post." },
-        { src: "/api/placeholder/800/600?text=Web+Banner", description: "Animated web banner created with After Effects." },
-        { src: "/api/placeholder/800/600?text=Print+Ad", description: "Magazine advertisement designed for the campaign." },
-        { src: "/api/placeholder/800/600?text=Social+Media+Post", description: "Example of an engaging Instagram post." },
-        { src: "/api/placeholder/800/600?text=Web+Banner", description: "Animated web banner created with After Effects." },
-      ]
+      title: t("graphicDesign.interactivePortfolio.title"),
+      description: t("graphicDesign.interactivePortfolio.description"),
+      category: t("graphicDesign.interactivePortfolio.category"),
+      tools: ["InDesign", "Photoshop", "Illustrator"],
+      achievements: [
+        t("graphicDesign.interactivePortfolio.achievements.0"),
+        t("graphicDesign.interactivePortfolio.achievements.1"),
+        t("graphicDesign.interactivePortfolio.achievements.2"),
+      ],
+      image: imgIntPortfolio,
+      behanceLink: "https://www.behance.net/gallery/230210571/Interactive-Portfolio",
+      category_color: "bg-pink-500",
+      gallery: loadGalleryImages("interactive-portfolio"),
     },
     {
       title: "Print Design Collection",
