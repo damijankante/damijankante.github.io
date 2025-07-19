@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import ProjectModal from "@/components/ui/projectModal";
 import ScrollToTopButton from "@/components/ui/scrollToTopButton";
 import imgIntPortfolio from "@/assets/images/interactive-portfolio.png";
+import imgBusinessCards from "@/assets/images/business-cards.png";
 import { Palette, Eye, Award, ExternalLink } from "lucide-react";
 import { FaBehance } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
@@ -49,22 +50,19 @@ const GraphicDesign = () => {
       gallery: loadGalleryImages("interactive-portfolio"),
     },
     {
-      title: "Brand Identity System",
-      description: "Complete brand identity design including logo, color palette, typography, and brand guidelines for a tech startup.",
-      category: "Branding",
-      tools: ["Adobe Illustrator", "Figma", "Photoshop"],
-      achievements: ["50+ logo concepts", "Complete style guide", "Business card designs"],
-      image: null,
-      behanceLink: "#",
-      category_color: "bg-purple-500",
-      gallery: [
-        { src: "/api/placeholder/800/600?text=Logo+Concepts", description: "Initial sketches and final vector logo designs." },
-        { src: "/api/placeholder/800/600?text=Color+Palette", description: "The primary and secondary color palettes defined for the brand." },
-        { src: "/api/placeholder/800/600?text=Typography+System", description: "Chosen typefaces for headings, subheadings, and body text." },
-        { src: "/api/placeholder/800/600?text=Business+Cards", description: "Mockup of the final business card design." },
-        { src: "/api/placeholder/800/600?text=Brand+Guidelines", description: "A page from the comprehensive brand style guide." },
-        { src: "/api/placeholder/800/600?text=Social+Media+Templates", description: "Templates for consistent branding on social platforms." },
-      ]
+      title: "Business Cards",
+      description: t("graphicDesign.businessCards.description"),
+      category: t("graphicDesign.businessCards.category"),
+      tools: ["Adobe InDesign", "Adobe Illustrator", "Adobe Photoshop"],
+      achievements: [
+        t("graphicDesign.businessCards.achievements.0"),
+        t("graphicDesign.businessCards.achievements.1"),
+        t("graphicDesign.businessCards.achievements.2"),
+      ],
+      image: imgBusinessCards,
+      behanceLink: "https://www.behance.net/gallery/230677923/Business-Cards",
+      category_color: "bg-blue-500",
+      gallery: loadGalleryImages("business-cards"),
     },
     {
       title: "Marketing Campaign Design",
