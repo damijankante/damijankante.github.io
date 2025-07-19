@@ -77,6 +77,18 @@
       "category": "Blagovna znamka",
       "achievements": ["50+ konceptov logotipa", "Celoten stilski vodnik", "Dizajn vizitk"]
     },
+    "interactivePortfolio": {
+      "title": "Interaktivni portfelj",
+      "description": "Interaktivni PDF portfelj z izbrano zbirko mojih najboljših del. Poudarek je na intuitivni navigaciji in privlačni uporabniški izkušnji.",
+      "category": "Oblikovanje portfelja",
+      "achievements": ["Izboljšana interaktivnosst", "Optimizirana velikost datoteke", "Profesionalna predstavitev"]
+    },
+    "businessCards": {
+      "title": "Vizitke",
+      "description": "Oblikovanje unikatnih vizitk od zasnove do izvedbe - od minimalističnih do luksuznih, z uporabo posebnih tiskarskih tehnik in materialov.",
+      "category": "Marketing",
+      "achievements": ["Več kot 20 unikatnih konceptov vizitk po meri", "Posebne tiskarske tehnike in materiali", "QR kode za skeniranje"]
+    },
     "marketingCampaign": {
       "title": "Oblikovanje marketinške kampanje",
       "description": "Večkanalni marketinški materiali vključno s tiskanimi oglasi, grafiko za družbena omrežja in spletnimi transparenti za lansiranje produkta.",

@@ -77,6 +77,18 @@
       "category": "Branding",
       "achievements": ["50+ Logo-Konzepte", "Vollständiger Style Guide", "Visitenkartendesigns"]
     },
+    "interactivePortfolio": {
+      "title": "Interaktives Portfolio",
+      "description": "Interaktives PDF-Portfolio mit einer kuratierten Auswahl meiner besten Arbeiten. Fokus auf intuitiver Navigation und ansprechendem Benutzererlebnis.",
+      "category": "Portfolio-Design",
+      "achievements": ["Verbesserte Interaktivität", "Optimierte Dateigröße", "Professionelle Präsentation"]
+    },
+    "businessCards": {
+      "title": "Visitenkarten",
+      "description": "Gestaltung einzigartiger Visitenkarten vom Konzept bis zur Fertigstellung - von minimalistisch bis luxuriös, mit spezieller Druckveredelungen und Materialien.",
+      "category": "Marketing",
+      "achievements": ["Über 20 einzigartige Konzepte", "Spezielle Veredelungen und Materialien", "Scanbare QR-Codes"]
+    },
     "marketingCampaign": {
       "title": "Marketing-Kampagnen-Design",
       "description": "Multikanal-Marketingmaterialien einschließlich Printanzeigen, Social-Media-Grafiken und Web-Banner für Produktlaunches.",
