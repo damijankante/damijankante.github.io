@@ -77,17 +77,23 @@
       "category": "Branding",
       "achievements": ["50+ Logo-Konzepte", "Vollständiger Style Guide", "Visitenkartendesigns"]
     },
-    "interactivePortfolio": {
-      "title": "Interaktives Portfolio",
-      "description": "Interaktives PDF-Portfolio mit einer kuratierten Auswahl meiner besten Arbeiten. Fokus auf intuitiver Navigation und ansprechendem Benutzererlebnis.",
-      "category": "Portfolio-Design",
-      "achievements": ["Verbesserte Interaktivität", "Optimierte Dateigröße", "Professionelle Präsentation"]
+    "magazineDesign": {
+      "title": "Magazin-Design",
+      "description": "Gestaltung, Layout und Redaktion slowenischer Ausgaben renommierter globaler Marken, bei Gewährleistung konsistenter Markenqualität unter engen Terminvorgaben.",
+      "category": "Print",
+      "achievements": ["Mitarbeit an über 20 slowenischen Magazinen", "Erstellung von über 100 slowenischen Ausgaben", " Über 50 wirkungsvollen Printanzeigen"]
     },
     "businessCards": {
       "title": "Visitenkarten",
       "description": "Gestaltung einzigartiger Visitenkarten vom Konzept bis zur Fertigstellung - von minimalistisch bis luxuriös, mit spezieller Druckveredelungen und Materialien.",
       "category": "Marketing",
       "achievements": ["Über 20 einzigartige Konzepte", "Spezielle Veredelungen und Materialien", "Scanbare QR-Codes"]
+    },
+    "interactivePortfolio": {
+      "title": "Interaktives Portfolio",
+      "description": "Interaktives PDF-Portfolio mit einer kuratierten Auswahl meiner besten Arbeiten. Fokus auf intuitiver Navigation und ansprechendem Benutzererlebnis.",
+      "category": "Digital",
+      "achievements": ["Verbesserte Interaktivität", "Optimierte Dateigröße", "Professionelle Präsentation"]
     },
     "marketingCampaign": {
       "title": "Marketing-Kampagnen-Design",

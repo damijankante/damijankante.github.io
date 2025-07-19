@@ -77,23 +77,23 @@
       "category": "Branding",
       "achievements": ["50+ logo concepts", "Complete style guide", "Business card designs"]
     },
-    "marketingCampaign": {
-      "title": "Marketing Campaign Design",
-      "description": "Multi-channel marketing materials including print ads, social media graphics, and web banners for product launch.",
-      "category": "Marketing",
-      "achievements": ["15% increase in engagement", "Award-winning campaign", "Multi-platform design"]
-    },
-    "interactivePortfolio": {
-      "title": "Interactive Portfolio",
-      "description": "Interactive PDF portfolio showcasing a curated selection of my best work. Focused on intuitive navigation and an engaging user experience.",
-      "category": "Portfolio Design",
-      "achievements": ["Enhanced interactivity", "Optimized file size", "Professional presentation"]
+    "magazineDesign": {
+      "title": "Magazine Design",
+      "description": "Designed, laid out, and edited Slovenian editions of renowned global brands, ensuring consistent brand quality under tight deadlines.",
+      "category": "Print",
+      "achievements": ["Collaborated on 20+ Slovenian magazines", "Delivered 100+ Slovenian editions", "50+ high-impact print advertisements"]
     },
     "businessCards": {
       "title": "Business Cards",
       "description": "Designing unique business cards from concept to completion, from minimalist to luxurious, incorporating special print finishes and materials.",
       "category": "Marketing",
-      "achievements": ["20+ unique card concepts", "Special finishes and materials", "Scannable QR codes"]
+      "achievements": ["Crafted 20+ unique card concepts", "Used special finishes and materials", "Included scannable QR codes"]
+    },
+    "interactivePortfolio": {
+      "title": "Interactive Portfolio",
+      "description": "Interactive PDF portfolio showcasing a curated selection of my best work. Focused on intuitive navigation and an engaging user experience.",
+      "category": "Digital",
+      "achievements": ["Enhanced interactivity", "Optimized file size", "Professional presentation"]
     },
     "printDesign": {
       "title": "Print Design Collection",

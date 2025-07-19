@@ -77,17 +77,23 @@
       "category": "Blagovna znamka",
       "achievements": ["50+ konceptov logotipa", "Celoten stilski vodnik", "Dizajn vizitk"]
     },
-    "interactivePortfolio": {
-      "title": "Interaktivni portfelj",
-      "description": "Interaktivni PDF portfelj z izbrano zbirko mojih najboljših del. Poudarek je na intuitivni navigaciji in privlačni uporabniški izkušnji.",
-      "category": "Oblikovanje portfelja",
-      "achievements": ["Izboljšana interaktivnosst", "Optimizirana velikost datoteke", "Profesionalna predstavitev"]
+    "magazineDesign": {
+      "title": "Oblikovanje revij",
+      "description": "Oblikovanje, prelom in urejanje slovenskih izdaj priznanih svetovnih blagovnih znamk z zagotavljanjem dosledne kakovosti ob kratkih rokih.",
+      "category": "Tiskovine",
+      "achievements": ["Sodelovanje pri več kot 20 slovenskih revijah", "Priprava več kot 100 slovenskih izdaj", "Več kot 50 visoko učinkovitih tiskanih oglasov"]
     },
     "businessCards": {
       "title": "Vizitke",
       "description": "Oblikovanje unikatnih vizitk od zasnove do izvedbe - od minimalističnih do luksuznih, z uporabo posebnih tiskarskih tehnik in materialov.",
       "category": "Marketing",
       "achievements": ["Več kot 20 unikatnih konceptov vizitk po meri", "Posebne tiskarske tehnike in materiali", "QR kode za skeniranje"]
+    },
+    "interactivePortfolio": {
+      "title": "Interaktivni portfelj",
+      "description": "Interaktivni PDF portfelj z izbrano zbirko mojih najboljših del. Poudarek je na intuitivni navigaciji in privlačni uporabniški izkušnji.",
+      "category": "Digitalno",
+      "achievements": ["Izboljšana interaktivnosst", "Optimizirana velikost datoteke", "Profesionalna predstavitev"]
     },
     "marketingCampaign": {
       "title": "Oblikovanje marketinške kampanje",
