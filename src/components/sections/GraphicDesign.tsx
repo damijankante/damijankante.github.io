@@ -1,13 +1,11 @@
 import { useState } from "react";
+import { loadCoverImages} from "@/lib/coverImageLoader";
 import { loadGalleryImages } from "@/lib/galleryLoader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import ProjectModal from "@/components/ui/projectModal";
 import ScrollToTopButton from "@/components/ui/scrollToTopButton";
-import imgMagazineDesign from "@/assets/images/magazines.png";
-import imgIntPortfolio from "@/assets/images/interactive-portfolio.png";
-import imgBusinessCards from "@/assets/images/business-cards.png";
 import { Palette, Eye, Award, ExternalLink } from "lucide-react";
 import { FaBehance } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
@@ -18,16 +16,19 @@ interface GalleryImage {
   description: string;
 }
 interface Project {
+  id: string;
   title: string;
   description: string;
   category: string;
   tools: string[];
   achievements: string[];
-  image: string | null;
   behanceLink: string;
   category_color: string;
   gallery: GalleryImage[];
+  image?: string | null;
 }
+
+const coverImages = loadCoverImages();
 
 const GraphicDesign = () => {
   const { t } = useTranslation();
@@ -36,6 +37,7 @@ const GraphicDesign = () => {
 
   const projects: Project[] = [
     {
+      id: "graphic-magazine-design",
       title: t("graphicDesign.magazineDesign.title"),
       description: t("graphicDesign.magazineDesign.description"),
       category: t("graphicDesign.magazineDesign.category"),
@@ -45,12 +47,12 @@ const GraphicDesign = () => {
         t("graphicDesign.magazineDesign.achievements.1"),
         t("graphicDesign.magazineDesign.achievements.2"),
       ],
-      image: imgMagazineDesign,
       behanceLink: "https://www.behance.net/portfolio/editor?project_id=230721947",
       category_color: "bg-orange-500",
       gallery: loadGalleryImages("magazine-design"),
     },
-    {
+    { 
+      id: "graphic-business-cards",
       title: t("graphicDesign.businessCards.title"),
       description: t("graphicDesign.businessCards.description"),
       category: t("graphicDesign.businessCards.category"),
@@ -60,12 +62,12 @@ const GraphicDesign = () => {
         t("graphicDesign.businessCards.achievements.1"),
         t("graphicDesign.businessCards.achievements.2"),
       ],
-      image: imgBusinessCards,
       behanceLink: "https://www.behance.net/gallery/230677923/Business-Cards",
       category_color: "bg-blue-500",
       gallery: loadGalleryImages("business-cards"),
     },
     {
+      id: "graphic-interactive-portfolio",
       title: t("graphicDesign.interactivePortfolio.title"),
       description: t("graphicDesign.interactivePortfolio.description"),
       category: t("graphicDesign.interactivePortfolio.category"),
@@ -75,18 +77,17 @@ const GraphicDesign = () => {
         t("graphicDesign.interactivePortfolio.achievements.1"),
         t("graphicDesign.interactivePortfolio.achievements.2"),
       ],
-      image: imgIntPortfolio,
       behanceLink: "https://www.behance.net/gallery/230210571/Interactive-Portfolio",
       category_color: "bg-pink-500",
       gallery: loadGalleryImages("interactive-portfolio"),
     },
     {
+      id: "graphic-print-design-collection",
       title: "Print Design Collection",
       description: "Print materials including brochures, posters, and packaging design with attention to typography and layout.",
       category: "Print",
       tools: ["InDesign", "Illustrator", "Photoshop"],
       achievements: ["Award recognition", "Client satisfaction 95%", "Sustainable design focus"],
-      image: null,
       behanceLink: "#",
       category_color: "bg-orange-500",
        gallery: [
@@ -99,12 +100,12 @@ const GraphicDesign = () => {
       ]
     },
     {
+      id: "graphic-social-media-graphics",
       title: "Social Media Graphics",
       description: "Engaging social media content design for various platforms including Instagram, Facebook, and LinkedIn campaigns.",
       category: "Digital",
       tools: ["Canva Pro", "Adobe Creative Suite", "Figma"],
       achievements: ["200% engagement increase", "Viral content created", "Brand consistency"],
-      image: null,
       behanceLink: "#",
       category_color: "bg-pink-500",
        gallery: [
@@ -117,12 +118,12 @@ const GraphicDesign = () => {
       ]
     },
     {
+      id: "graphic-illustration-series",
       title: "Illustration Series",
       description: "Custom illustrations for editorial content, websites, and marketing materials with unique artistic style.",
       category: "Illustration",
       tools: ["Procreate", "Adobe Illustrator", "Photoshop"],
       achievements: ["Featured in design blogs", "Licensed artwork", "Client testimonials"],
-      image: null,
       behanceLink: "#",
       category_color: "bg-teal-500",
       gallery: [
@@ -155,66 +156,77 @@ const GraphicDesign = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card overflow-hidden flex flex-col">
-                <div className="aspect-[4/3] bg-gradient-subtle flex items-center justify-center relative overflow-hidden">
-                  {/* Conditionally render image or placeholder icon */}
-                  {project.image ? (
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  ) : (
-                    <Palette className="h-12 w-12 text-muted-foreground" />
-                  )}
-                  <div className={`absolute top-4 left-4 px-3 py-1 rounded-full text-white text-xs font-medium ${project.category_color}`}>
-                    {project.category}
+            {projects.map((project, index) => {
+              // Automatically find the cover image URL by matching the project's ID.
+              const imageUrl = coverImages[project.id];
+              
+              //  Create a new, complete project object that includes the image URL.
+              const completeProject = {
+                ...project,
+                image: imageUrl,
+              };  
+                      
+              return (
+                <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card overflow-hidden flex flex-col">
+                  <div className="aspect-[4/3] bg-gradient-subtle flex items-center justify-center relative overflow-hidden">
+                    {/* Use the dynamically found imageUrl. If it's not found, the placeholder will render. */}
+                    {imageUrl ? (
+                      <img
+                        src={imageUrl}
+                        alt={completeProject.title}
+                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                    ) : (
+                      <Palette className="h-12 w-12 text-muted-foreground" />
+                    )}
+                    <div className={`absolute top-4 left-4 px-3 py-1 rounded-full text-white text-xs font-medium ${completeProject.category_color}`}>
+                      {completeProject.category}
+                    </div>
                   </div>
-                </div>
-                
-                <CardHeader>
-                  <CardTitle className="group-hover:text-primary transition-colors text-lg">
-                    {project.title}
-                  </CardTitle>
-                </CardHeader>
-                
-                <CardContent className="space-y-4 flex-grow">
-                  <p className="text-muted-foreground text-sm">{project.description}</p>
                   
-                  <div className="flex flex-wrap gap-2">
-                    {project.tools.map((tool, toolIndex) => (
-                      <Badge key={toolIndex} variant="outline" className="text-xs">
-                        {tool}
-                      </Badge>
-                    ))}
-                  </div>
+                  <CardHeader>
+                    <CardTitle className="group-hover:text-primary transition-colors text-lg">
+                      {completeProject.title}
+                    </CardTitle>
+                  </CardHeader>
+                  
+                  <CardContent className="space-y-4 flex-grow">
+                    <p className="text-muted-foreground text-sm">{completeProject.description}</p>
+                    
+                    <div className="flex flex-wrap gap-2">
+                      {completeProject.tools.map((tool, toolIndex) => (
+                        <Badge key={toolIndex} variant="outline" className="text-xs">
+                          {tool}
+                        </Badge>
+                      ))}
+                    </div>
 
-                  <div className="space-y-2">
-                    <h4 className="font-medium text-sm">{t("graphicDesign.achievements")}:</h4>
-                    {project.achievements.map((achievement, achievementIndex) => (
-                      <div key={achievementIndex} className="flex items-center text-sm text-muted-foreground">
-                        <Award className="h-3 w-3 mr-2 text-accent" />
-                        {achievement}
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
+                    <div className="space-y-2">
+                      <h4 className="font-medium text-sm">{t("graphicDesign.achievements")}:</h4>
+                      {completeProject.achievements.map((achievement, achievementIndex) => (
+                        <div key={achievementIndex} className="flex items-center text-sm text-muted-foreground">
+                          <Award className="h-3 w-3 mr-2 text-accent" />
+                          {achievement}
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
 
-                <div className="flex gap-2 p-6 pt-0">
-                  <Button size="sm" variant="outline" className="flex-1" onClick={() => setSelectedProject(project)}>
-                    <Eye className="h-4 w-4 mr-2" />
-                    {t("graphicDesign.view")}
-                  </Button>
-                  <a href={project.behanceLink} target="_blank" rel="noopener noreferrer" className="flex-1">
-                    <Button size="sm" variant="outline" className="w-full">
-                      <FaBehance className="h-4 w-4 mr-2" />
-                      Behance
+                  <div className="flex gap-2 p-6 pt-0">
+                    <Button size="sm" variant="outline" className="flex-1" onClick={() => setSelectedProject(completeProject)}>
+                      <Eye className="h-4 w-4 mr-2" />
+                      {t("graphicDesign.view")}
                     </Button>
-                  </a>
-                </div>
-              </Card>
-            ))}
+                    <a href={completeProject.behanceLink} target="_blank" rel="noopener noreferrer" className="flex-1">
+                      <Button size="sm" variant="outline" className="w-full">
+                        <FaBehance className="h-4 w-4 mr-2" />
+                        Behance
+                      </Button>
+                    </a>
+                  </div>
+                </Card>
+              );
+            })}
           </div>
           <div className="relative mt-16">
             <div className="text-center">
