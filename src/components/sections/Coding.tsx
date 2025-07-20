@@ -5,23 +5,28 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import ScrollToTopButton from "@/components/ui/scrollToTopButton";
 import ProjectModal from "@/components/ui/projectModal";
+import { loadCoverImages } from "@/lib/coverImageLoader";
+import { loadGalleryImages } from "@/lib/galleryLoader";
 // Import icons from the lucide-react library for visual elements.
 import { Code2, Github, ExternalLink, Star, Eye, Lock } from "lucide-react";
 // Import the translation hook from react-i18next for internationalization.
 import { useTranslation } from "react-i18next";
 
 interface Project {
+  id: string;
   title: string;
   description: string;
   technologies: string[];
   // githubStars?: number
   features: string[];
-  image: string | null;
   view: string;
   githubLink: string;
   category: string;
   gallery: { src: string; description: string }[];
+  image?: string | null;
 }
+
+const coverImages = loadCoverImages();
 
 // Defines the Coding component which showcases software development projects.
 const Coding = () => {
@@ -34,6 +39,7 @@ const Coding = () => {
   // An array of project objects with content populated by the translation function.
   const projects: Project [] = [
     {
+      id: "coding-portfolio",
       title: t("coding.portfolio.title"),
       description: t("coding.portfolio.description"),
       technologies: ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Tailwind CSS", "Radix UI", "shadcn/ui", "Node.js", "Vite"],
@@ -57,6 +63,7 @@ const Coding = () => {
       ]
     },
     {
+      id: "coding-task-manager",
       title: t("coding.taskManager.title"),
       description: t("coding.taskManager.description"),
       technologies: ["JavaScript", "TypeScript", "React", "Next.js", "Python", "React Native", "Fast API", "Flutter", "Material-UI", "PostgreSQL", "Celery"],
@@ -76,6 +83,7 @@ const Coding = () => {
       gallery: []
     },
     {
+      id: "coding-ecommerce",
       title: t("coding.ecommerce.title"),
       description: t("coding.ecommerce.description"),
       technologies: ["React", "TypeScript", "Next.js", "Node.js", "PostgreSQL", "Stripe API", "Tailwind CSS", "Chakra UI", "Express.js", "Passport.js"],
@@ -95,6 +103,7 @@ const Coding = () => {
       gallery: []
     },
     {
+      id: "coding-CV-Builder",
       title: t("coding.cvBuilder.title"),
       description: t("coding.cvBuilder.description"),
       technologies: ["HTML", "CSS","JavaScript", "React", "Next.js", "TypeScript", "Node.js", "Bootstrap", "Python", "Node.js", "MongoDB", "Puppeteer"],
@@ -114,6 +123,7 @@ const Coding = () => {
       gallery: []
     },
     {
+      id: "coding-game-stats",
       title: t("coding.gameStats.title"),
       description: t("coding.gameStats.description"),
       technologies: ["Python", "React Native", "Flutter", "FastAPI", "PostgreSQL", "Celery", "Redis", "AWS S3", "BigQuery", "Firebase Analytics", "Sentry", "GCP"],
@@ -133,6 +143,7 @@ const Coding = () => {
       gallery: []
     },
     {
+      id: "coding-chat-App",
       title: t("coding.chatApp.title"),
       description: t("coding.chatApp.description"),
       technologies: ["React","TypeScript", "Next.js", "React Native", "Flutter", "Tailwind CSS", "Python", "PostgreSQL", "Scikit-learn", "PyTorch", "Azure", "Docker"],
@@ -189,87 +200,91 @@ const Coding = () => {
           {/* A responsive grid to display the project cards. */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Map over the projects array to render a Card for each project. */}
-            {projects.map((project, index) => (
-              <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card flex flex-col">
-                {/* A consistent image container*/} 
-                <div className="aspect-[4/3] bg-gradient-subtle flex items-center justify-center relative overflow-hidden">
-                  {project.image ? (
-                    <img src={project.image} alt={project.title} className="h-full w-full object-cover"/>
-                  ) : (
-                    <Code2 className="h-12 w-12 text-muted-foreground" /> // Thematic placeholder icon.
-                  )}
-                  <div className={`absolute top-4 left-4 px-3 py-1 rounded-full text-white text-xs font-medium ${getCategoryColor(project.category)}`}>
-                    {project.category}
-                  </div>
-                </div>
+            {projects.map((project, index) => {
+              const imageUrl = coverImages[project.id];
+              const completeProject = { ...project, image: imageUrl };
 
-                <CardHeader>
-                  <div className="flex items-start justify-between">
-                    <CardTitle className="group-hover:text-primary transition-colors text-lg">
-                      {project.title}
-                    </CardTitle>
-                    {/* Category Badge */}
-                  </div>
-                </CardHeader>
-                
-                <CardContent className="space-y-4 flex-grow">
-                  {/* Project Description */}
-                  <p className="text-muted-foreground text-sm">{project.description}</p>
-                  
-                  {/* Technologies Used */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="outline" className="text-xs">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-
-                  {/* Key Features */}
-                  <div className="space-y-2">
-                    <h4 className="font-medium text-sm">{t("coding.keyFeatures")}</h4>
-                    <div className="grid grid-cols-2 gap-1">
-                      {project.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="text-xs text-muted-foreground">
-                          • {feature}
-                        </div>
-                      ))}
+              return (
+                <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card flex flex-col">
+                  {/* A consistent image container*/} 
+                  <div className="aspect-[4/3] bg-gradient-subtle flex items-center justify-center relative overflow-hidden">
+                    {completeProject.image ? (
+                      <img src={completeProject.image} alt={completeProject.title} className="h-full w-full object-cover"/>
+                    ) : (
+                      <Code2 className="h-12 w-12 text-muted-foreground" /> // Thematic placeholder icon.
+                    )}
+                    <div className={`absolute top-4 left-4 px-3 py-1 rounded-full text-white text-xs font-medium ${getCategoryColor(completeProject.category)}`}>
+                      {completeProject.category}
                     </div>
                   </div>
-                </CardContent>
 
-                {/* Action Buttons */}
-                <div className="flex gap-2 p-6 pt-0">
-                  {/* This "View" button handles the modal. It's disabled if the gallery is empty. */}
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="flex-1"
-                    onClick={() => setSelectedProject(project)}
-                    disabled={project.gallery.length === 0}
-                  >
-                    <Eye className="h-4 w-4 mr-2" />
-                    {t("coding.view")}
-                  </Button>
-
-                  {/* Render GitHub or a locked button based on link validity. */}
-                  {project.githubLink !== "#" ? (
-                    <Button size="sm" variant="outline" className="flex-1" asChild>
-                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4 mr-2" />
-                        {t("coding.code")}
-                      </a>
-                    </Button>
-                  ) : (
-                    <Button size="sm" variant="outline" disabled className="flex-1">
-                      <Lock className="h-4 w-4 mr-2" />
-                      {t("coding.code")}
-                    </Button>
-                  )}
+                  <CardHeader>
+                    <div className="flex items-start justify-between">
+                      <CardTitle className="group-hover:text-primary transition-colors text-lg">
+                        {completeProject.title}
+                      </CardTitle>
+                      {/* Category Badge */}
+                    </div>
+                  </CardHeader>
                   
-                </div>
-              </Card>
-            ))}
+                  <CardContent className="space-y-4 flex-grow">
+                    {/* Project Description */}
+                    <p className="text-muted-foreground text-sm">{completeProject.description}</p>
+                    
+                    {/* Technologies Used */}
+                    <div className="flex flex-wrap gap-2">
+                      {completeProject.technologies.map((tech, techIndex) => (
+                        <Badge key={techIndex} variant="outline" className="text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+
+                    {/* Key Features */}
+                    <div className="space-y-2">
+                      <h4 className="font-medium text-sm">{t("coding.keyFeatures")}</h4>
+                      <div className="grid grid-cols-2 gap-1">
+                        {completeProject.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="text-xs text-muted-foreground">
+                            • {feature}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </CardContent>
+
+                  {/* Action Buttons */}
+                  <div className="flex gap-2 p-6 pt-0">
+                    {/* This "View" button handles the modal. It's disabled if the gallery is empty. */}
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="flex-1"
+                      onClick={() => setSelectedProject(completeProject)}
+                      disabled={completeProject.gallery.length === 0}
+                    >
+                      <Eye className="h-4 w-4 mr-2" />
+                      {t("coding.view")}
+                    </Button>
+
+                    {/* Render GitHub or a locked button based on link validity. */}
+                    {project.githubLink !== "#" ? (
+                      <Button size="sm" variant="outline" className="flex-1" asChild>
+                        <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                          <Github className="h-4 w-4 mr-2" />
+                          {t("coding.code")}
+                        </a>
+                      </Button>
+                    ) : (
+                      <Button size="sm" variant="outline" disabled className="flex-1">
+                        <Lock className="h-4 w-4 mr-2" />
+                        {t("coding.code")}
+                      </Button>
+                    )}
+                  </div>
+                </Card>
+              );
+            })}
           </div>
           
           <div className="relative mt-16">
