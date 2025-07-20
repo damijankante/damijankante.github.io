@@ -101,23 +101,11 @@
       "category": "Postprodukcija",
       "achievements": ["Nedestruktivna obdelava fotografij", "Dosledni vizualni standard", "Brezšivna združitev več fotografij"]
     },
-    "uiUxDesign": {
-      "title": "UI/UX dizajn portfolio",
-      "description": "Dizajni uporabniških vmesnikov za mobilne in spletne aplikacije s poudarkom na uporabniški izkušnji in dostopnosti.",
-      "category": "UI/UX",
-      "achievements": ["5 aplikacijskih vmesnikov", "Izvedeno testiranje uporabnikov", "Skladno z dostopnostjo"]
-    },
-    "printDesign": {
-      "title": "Kolekcija tiskanega oblikovanja",
-      "description": "Tiskani materiali vključno z brošurami, plakati in dizajnom embalaže s pozornostjo na tipografijo in postavitev.",
-      "category": "Tiskano",
-      "achievements": ["Priznanje nagrade", "95% zadovoljstvo strank", "Fokus na trajnostni dizajn"]
-    },
-    "socialMedia": {
-      "title": "Grafike za družbena omrežja",
-      "description": "Privlačno oblikovanje vsebin za družbena omrežja za različne platforme vključno z Instagram, Facebook in LinkedIn kampanjami.",
-      "category": "Digitalno",
-      "achievements": ["200% povečanje angažiranosti", "Ustvarjena viralna vsebina", "Doslednost blagovne znamke"]
+    "ads": {
+      "title": "Digitalno in tiskano oglaševanje",
+      "description": "Zbirka oglasnih materialov za digitalne in tiskane platforme, zasnovanih tako, da pritegnejo pozornost, komunicirajo ključna sporočila in spodbujajo uporabnike k akciji.",
+      "category": "Oglaševanje",
+      "achievements": ["Povečanje razmerja med prikazi in kliki za 25%", "Celostne kampanje na več platformah", "20% višja stopnja priklica oglasa"]
     },
     "illustration": {
       "title": "Serija ilustracij",

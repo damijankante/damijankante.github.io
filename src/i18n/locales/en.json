@@ -101,17 +101,11 @@
       "category": "Post-Production",
       "achievements": ["Non-destructive editing workflows", "Consistent visual standard", "Seamless composition of multiple images"]
     },
-    "printDesign": {
-      "title": "Print Design Collection",
-      "description": "Print materials including brochures, posters, and packaging design with attention to typography and layout.",
-      "category": "Print",
-      "achievements": ["Award recognition", "Client satisfaction 95%", "Sustainable design focus"]
-    },
-    "socialMedia": {
-      "title": "Social Media Graphics",
-      "description": "Engaging social media content design for various platforms including Instagram, Facebook, and LinkedIn campaigns.",
-      "category": "Digital",
-      "achievements": ["200% engagement increase", "Viral content created", "Brand consistency"]
+    "ads": {
+      "title": "Digital & Print Advertising",
+      "description": "A collection of advertising materials designed for both digital and print platforms that capture attention, communicate key messages, and drive user action.",
+      "category": "Advertising",
+      "achievements": ["Increased click-trough rate by 25%", "Cohesive campaigns across multiple platforms", "20% higher ad recall rate"]
     },
     "illustration": {
       "title": "Illustration Series",

@@ -101,23 +101,11 @@
       "category": "Postproduktion",
       "achievements": ["Non-destruktiver Bearbeitungs-Workflows", "Konsistentes visuelles Standard", "Nahtloses Composition mehrerer Bilder"]
     },
-    "uiUxDesign": {
-      "title": "UI/UX Design Portfolio",
-      "description": "Benutzeroberflächen-Designs für mobile und Web-Anwendungen mit Fokus auf Benutzererfahrung und Barrierefreiheit.",
-      "category": "UI/UX",
-      "achievements": ["5 App-Interfaces", "Benutzertests durchgeführt", "Barrierefrei konform"]
-    },
-    "printDesign": {
-      "title": "Print-Design-Kollektion",
-      "description": "Printmaterialien einschließlich Broschüren, Plakate und Verpackungsdesign mit Aufmerksamkeit für Typografie und Layout.",
-      "category": "Print",
-      "achievements": ["Auszeichnung erhalten", "95% Kundenzufriedenheit", "Nachhaltigkeits-Designfokus"]
-    },
-    "socialMedia": {
-      "title": "Social Media Grafiken",
-      "description": "Ansprechende Social-Media-Inhaltsdesigns für verschiedene Plattformen einschließlich Instagram, Facebook und LinkedIn-Kampagnen.",
-      "category": "Digital",
-      "achievements": ["200% Engagement-Steigerung", "Viraler Content erstellt", "Markenkonsistenz"]
+    "ads": {
+      "title": "Digital & Print Advertising",
+      "description": "A collection of advertising materials designed for both digital and print platforms that capture attention, communicate key messages, and drive user action.",
+      "category": "Werbung",
+      "achievements": ["Increased click-trough rate by 25%", "Cohesive campaigns across multiple platforms", "20% higher ad recall rate"]
     },
     "illustration": {
       "title": "Illustrationsserie",
