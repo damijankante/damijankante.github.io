@@ -41,7 +41,7 @@ const GraphicDesign = () => {
       title: t("graphicDesign.magazineDesign.title"),
       description: t("graphicDesign.magazineDesign.description"),
       category: t("graphicDesign.magazineDesign.category"),
-      tools: ["InDesign", "Illustrator", "Photoshop", "Acrobat Pro", "InCopy", "Bridge"],
+      tools: ["InDesign", "Illustrator", "Photoshop","InCopy"],
       achievements: [
         t("graphicDesign.magazineDesign.achievements.0"),
         t("graphicDesign.magazineDesign.achievements.1"),
@@ -119,21 +119,18 @@ const GraphicDesign = () => {
     },
     {
       id: "graphic-illustration-series",
-      title: "Illustration Series",
-      description: "Custom illustrations for editorial content, websites, and marketing materials with unique artistic style.",
-      category: "Illustration",
-      tools: ["Procreate", "Adobe Illustrator", "Photoshop"],
-      achievements: ["Featured in design blogs", "Licensed artwork", "Client testimonials"],
-      behanceLink: "#",
+      title: t("graphicDesign.illustration.title"),
+      description: t("graphicDesign.illustration.description"),
+      category: t("graphicDesign.illustration.category"),
+      tools: ["Adobe Illustrator"],
+      achievements: [
+        t("graphicDesign.illustration.achievements.0"),
+        t("graphicDesign.illustration.achievements.1"),
+        t("graphicDesign.illustration.achievements.2"),
+      ],
+      behanceLink: "https://www.behance.net/gallery/230763375/Illustrations",
       category_color: "bg-teal-500",
-      gallery: [
-        { src: "/api/placeholder/800/600?text=Editorial+Illustration", description: "Illustration for a magazine article." },
-        { src: "/api/placeholder/800/600?text=Website+Hero", description: "Hero illustration for a website landing page." },
-        { src: "/api/placeholder/800/600?text=Character+Design", description: "A unique character designed for a brand mascot." },
-        { src: "/api/placeholder/800/600?text=Print+Ad", description: "Magazine advertisement designed for the campaign." },
-        { src: "/api/placeholder/800/600?text=Social+Media+Post", description: "Example of an engaging Instagram post." },
-        { src: "/api/placeholder/800/600?text=Web+Banner", description: "Animated web banner created with After Effects." },
-      ]
+      gallery: loadGalleryImages("illustrations"),
     }
   ];
 
