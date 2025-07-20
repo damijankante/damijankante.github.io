@@ -95,11 +95,11 @@
       "category": "Digital",
       "achievements": ["Verbesserte Interaktivität", "Optimierte Dateigröße", "Professionelle Präsentation"]
     },
-    "marketingCampaign": {
-      "title": "Marketing-Kampagnen-Design",
-      "description": "Multikanal-Marketingmaterialien einschließlich Printanzeigen, Social-Media-Grafiken und Web-Banner für Produktlaunches.",
-      "category": "Marketing",
-      "achievements": ["15% Steigerung des Engagements", "Preisgekrönte Kampagne", "Multiplattform-Design"]
+    "imageRetouching": {
+      "title": "Digitale Bildbearbeitung",
+      "description": "Eine Präsentation fortgeschrittener Fähigkeiten in der digitalen Retusche und Bildverbesserung, angewendet auf kommerzielle und kreative Projekte.",
+      "category": "Postproduktion",
+      "achievements": ["Non-destruktiver Bearbeitungs-Workflows", "Konsistentes visuelles Standard", "Nahtloses Composition mehrerer Bilder"]
     },
     "uiUxDesign": {
       "title": "UI/UX Design Portfolio",

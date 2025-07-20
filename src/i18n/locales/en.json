@@ -95,6 +95,12 @@
       "category": "Digital",
       "achievements": ["Enhanced interactivity", "Optimized file size", "Professional presentation"]
     },
+    "imageRetouching": {
+      "title": "Digital Image Enhancement",
+      "description": "A showcase of advanced digital retouching and image enhancement skills applied to commercial and creative projects.",
+      "category": "Post-Production",
+      "achievements": ["Non-destructive editing workflows", "Consistent visual standard", "Seamless composition of multiple images"]
+    },
     "printDesign": {
       "title": "Print Design Collection",
       "description": "Print materials including brochures, posters, and packaging design with attention to typography and layout.",

@@ -95,11 +95,11 @@
       "category": "Digitalno",
       "achievements": ["Izboljšana interaktivnosst", "Optimizirana velikost datoteke", "Profesionalna predstavitev"]
     },
-    "marketingCampaign": {
-      "title": "Oblikovanje marketinške kampanje",
-      "description": "Večkanalni marketinški materiali vključno s tiskanimi oglasi, grafiko za družbena omrežja in spletnimi transparenti za lansiranje produkta.",
-      "category": "Marketing",
-      "achievements": ["15% povečanje angažiranosti", "Nagrajena kampanja", "Večplatformni dizajn"]
+    "imageRetouching": {
+      "title": "Digitalna obdelava fotografij",
+      "description": "Predstavitev naprednih veščin digitalne retuše in izboljšave fotografij, uporabljenih pri komercialnih in kreativnih projektih.",
+      "category": "Postprodukcija",
+      "achievements": ["Nedestruktivna obdelava fotografij", "Dosledni vizualni standard", "Brezšivna združitev več fotografij"]
     },
     "uiUxDesign": {
       "title": "UI/UX dizajn portfolio",
