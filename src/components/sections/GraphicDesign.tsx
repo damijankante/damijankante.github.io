@@ -161,10 +161,7 @@ const GraphicDesign = () => {
               const imageUrl = coverImages[project.id];
               
               //  Create a new, complete project object that includes the image URL.
-              const completeProject = {
-                ...project,
-                image: imageUrl,
-              };  
+              const completeProject = { ...project, image: imageUrl }; 
                       
               return (
                 <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card overflow-hidden flex flex-col">
