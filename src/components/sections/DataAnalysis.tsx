@@ -1,23 +1,28 @@
 import { useState } from "react";
+import { loadCoverImages } from "@/lib/coverImageLoader";
+import { loadGalleryImages } from "@/lib/galleryLoader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import ProjectModal from "@/components/ui/projectModal";
 import ScrollToTopButton from "@/components/ui/scrollToTopButton";
-import { BarChart3, TrendingUp, Database, ExternalLink, Github, Lock, Eye } from "lucide-react";
+import { BarChart3, TrendingUp, Database, Github, Eye } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 // Define the Project interface.
 interface Project {
+  id: string;
   title: string;
   description: string;
   technologies: string[];
   metrics: string[];
-  image: string | null;
   view: string;
   githubLink: string;
   gallery: { src: string; description: string }[];
+  image?: string | null;
 }
+
+const coverImages = loadCoverImages();
 
 const DataAnalysis = () => {
   // Hook for handling internationalization (i18n)
@@ -29,6 +34,7 @@ const DataAnalysis = () => {
   // An array of project objects
   const projects: Project[] = [
     {
+      id: "data-sales-dashboard",
       title: t("dataAnalysis.salesDashboard.title"),
       description: t("dataAnalysis.salesDashboard.description"),
       technologies: ["Python", "Pandas", "Tableau", "SQL"],
@@ -46,6 +52,7 @@ const DataAnalysis = () => {
       ]
     },
     {
+      id: "data-customer-segmentation",
       title: t("dataAnalysis.customerSegmentation.title"),
       description: t("dataAnalysis.customerSegmentation.description"),
       technologies: ["R", "Machine Learning", "ggplot2", "Power BI"],
@@ -63,6 +70,7 @@ const DataAnalysis = () => {
       ]
     },
     {
+      id: "data-predictive-analytics",
       title: t("dataAnalysis.predictiveAnalytics.title"),
       description: t("dataAnalysis.predictiveAnalytics.description"),
       technologies: ["Python", "Scikit-learn", "TensorFlow", "Jupyter"],
@@ -102,85 +110,87 @@ const DataAnalysis = () => {
 
           {/* Grid container for project cards. */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card overflow-hidden flex flex-col">
-                {/* Image container for the project. */}
-                <div className="aspect-[4/3] bg-gradient-subtle flex items-center justify-center">
-                  {/* Conditionally render the image or a fallback icon if the image is null. */}
-                  {project.image ? (
-                    <img src={project.image} alt={project.title} className="h-full w-full object-cover"/>
-                  ) : (
-                    <Database className="h-12 w-12 text-muted-foreground" />
-                  )}
-                </div>
-                
-                {/* Card header containing the project title. */}
-                <CardHeader>
-                  <CardTitle className="group-hover:text-primary transition-colors">
-                    {project.title}
-                  </CardTitle>
-                </CardHeader>
-                
-                {/* Main content area. `flex-grow` makes it expand, pushing buttons to the bottom. */}
-                <CardContent className="space-y-4 flex-grow">
-                  <p className="text-muted-foreground">{project.description}</p>
-                  
-                  {/* A wrapper for technology badges. */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="outline" className="text-xs">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                  
-                  {/* A wrapper for key metrics/results. */}
-                  <div className="space-y-2">
-                    <h4 className="font-medium text-sm">{t("dataAnalysis.keyResults")}</h4>
-                    {project.metrics.map((metric, metricIndex) => (
-                      <div key={metricIndex} className="flex items-center text-sm text-muted-foreground">
-                        <TrendingUp className="h-3 w-3 mr-2 text-accent" />
-                        {metric}
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-                
-                {/* Button container */}
-                <div className="flex gap-2 p-6 pt-0">
-                  {/* Conditionally render the View button if a valid link exists. */}
-                  {project.view !== "#" && (
-                    <Button size="sm" variant="outline" className="flex-1" onClick={() => setSelectedProject(project)}>
-                      <Eye className="h-4 w-4 mr-2" />
-                      {t("dataAnalysis.view")}
-                    </Button>
-                  )}
+            {projects.map((project, index) => {
 
-                  {/* Conditionally render the GitHub button if a valid link exists. */}
-                  {project.githubLink !== "#" && (
-                    <Button size="sm" variant="outline" className="flex-1" asChild>
-                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+              const imageUrl = coverImages[project.id];
+              const completeProject = { ...project, image: imageUrl };
+              
+              return (
+                <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card overflow-hidden flex flex-col">
+                  {/* Image container for the project. */}
+                  <div className="aspect-[4/3] bg-gradient-subtle flex items-center justify-center">
+                    {/* Conditionally render the image or a fallback icon if the image is null. */}
+                    {completeProject.image ? (
+                      <img src={completeProject.image} alt={project.title} className="h-full w-full object-cover"/>
+                    ) : (
+                      <Database className="h-12 w-12 text-muted-foreground" />
+                    )}
+                  </div>
+                  
+                  {/* Card header containing the project title. */}
+                  <CardHeader>
+                    <CardTitle className="group-hover:text-primary transition-colors">
+                      {completeProject.title}
+                    </CardTitle>
+                  </CardHeader>
+                  
+                  {/* Main content area. `flex-grow` makes it expand, pushing buttons to the bottom. */}
+                  <CardContent className="space-y-4 flex-grow">
+                    <p className="text-muted-foreground">{completeProject.description}</p>
+                    
+                    {/* A wrapper for technology badges. */}
+                    <div className="flex flex-wrap gap-2">
+                      {completeProject.technologies.map((tech, techIndex) => (
+                        <Badge key={techIndex} variant="outline" className="text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                    
+                    {/* A wrapper for key metrics/results. */}
+                    <div className="space-y-2">
+                      <h4 className="font-medium text-sm">{t("dataAnalysis.keyResults")}</h4>
+                      {completeProject.metrics.map((metric, metricIndex) => (
+                        <div key={metricIndex} className="flex items-center text-sm text-muted-foreground">
+                          <TrendingUp className="h-3 w-3 mr-2 text-accent" />
+                          {metric}
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                  
+                  {/* Button container */}
+                  <div className="flex gap-2 p-6 pt-0">
+                    {/* Conditionally render the View button if a valid link exists. */}
+                    {completeProject.view !== "#" && (
+                      <Button size="sm" variant="outline" className="flex-1" onClick={() => setSelectedProject(completeProject)}>
+                        <Eye className="h-4 w-4 mr-2" />
+                        {t("dataAnalysis.view")}
+                      </Button>
+                    )}
+
+                    {/* Conditionally render the GitHub button if a valid link exists. */}
+                    {completeProject.githubLink !== "#" ? (
+                      <Button size="sm" variant="outline" className="flex-1" asChild>
+                        <a href={completeProject.githubLink} target="_blank" rel="noopener noreferrer">
+                          <Github className="h-4 w-4 mr-2" />
+                          {t("dataAnalysis.githubLink")}
+                        </a>
+                      </Button>
+                    ) : (
+                      <Button size="sm" variant="outline" disabled className="flex-1">
                         <Github className="h-4 w-4 mr-2" />
                         {t("dataAnalysis.githubLink")}
-                      </a>
-                    </Button>
-                  )}
-
-                  {/* Fallback "In Progress" button if no valid links exist. */}
-                  {project.view === "#" && project.githubLink === "#" && (
-                    <Button size="sm" variant="outline" disabled className="flex-1">
-                      <Lock className="h-4 w-4 mr-1" />
-                      {t("coding.inProgress")}
-                    </Button>
-                  )}
-                </div>
-              </Card>
-            ))}
+                      </Button>
+                    )}
+                  </div>
+                </Card>
+              );
+            })}
           </div>
 
           <div className="relative mt-16">
-            {/* GitHub Call to Action */}
-            <div className="text-center mt-12">
+            <div className="text-center">
               <Button variant="outline" size="lg" asChild>
               <a
                 href="https://github.com/damijankante?tab=repositories"
@@ -191,16 +201,14 @@ const DataAnalysis = () => {
                 {t("coding.visitGitHub")}
               </a>
               </Button>
-
-              <div className="absolute right-0 top-0 h-full flex items-center">
-                <ScrollToTopButton />
-              </div>
+            </div>
+            <div className="absolute right-0 top-0 h-full flex items-center">
+              <ScrollToTopButton />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Render the modal, passing its state and the selected project data. */}
       <ProjectModal isOpen={!!selectedProject} onClose={() => setSelectedProject(null)} project={selectedProject}/>
     </>
   );
