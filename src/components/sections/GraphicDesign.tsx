@@ -92,7 +92,7 @@ const GraphicDesign = () => {
         t("graphicDesign.imageRetouching.achievements.1"),
         t("graphicDesign.imageRetouching.achievements.2"),
       ],
-      behanceLink: "#",
+      behanceLink: "https://www.behance.net/gallery/230889511/Image-Enhancements",
       category_color: "bg-red-500",
        gallery: loadGalleryImages("image-retouching"),
     },
