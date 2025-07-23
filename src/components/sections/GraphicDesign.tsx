@@ -101,7 +101,7 @@ const GraphicDesign = () => {
       title: t("graphicDesign.ads.title"),
       description: t("graphicDesign.ads.description"),
       category: t("graphicDesign.ads.category"),
-      tools: ["InDesign", "Photoshop", "Illustrator"],
+      tools: ["InDesign", "Photoshop", "Illustrator", "Dreamweaver"],
       achievements: [
         t("graphicDesign.ads.achievements.0"),
         t("graphicDesign.ads.achievements.1"),
