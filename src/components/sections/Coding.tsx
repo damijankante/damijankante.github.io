@@ -56,11 +56,7 @@ const Coding = () => {
       view: "https://damijankante.github.io/",
       githubLink: "https://github.com/damijankante/damijankante.github.io",
       category: "Frontend",
-      gallery: [
-        { src: "/api/placeholder/800/600?text=Home+Page", description: "The main landing page of the portfolio." },
-        { src: "/api/placeholder/800/600?text=Dark+Mode", description: "A preview of the portfolio in dark mode." },
-        { src: "/api/placeholder/800/600?text=Project+Section", description: "A close-up of the project card layout." },
-      ]
+      gallery: loadGalleryImages("portfolio-page"),
     },
     {
       id: "coding-task-manager",
