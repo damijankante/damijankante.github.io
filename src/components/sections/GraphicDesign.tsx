@@ -62,7 +62,7 @@ const GraphicDesign = () => {
         t("graphicDesign.ads.achievements.1"),
         t("graphicDesign.ads.achievements.2"),
       ],
-      behanceLink: "#",
+      behanceLink: "https://www.behance.net/portfolio/editor?project_id=230976533",
       category_color: "bg-purple-500",
        gallery: loadGalleryImages("ads"),
     },
