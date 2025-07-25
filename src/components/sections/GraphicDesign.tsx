@@ -51,6 +51,21 @@ const GraphicDesign = () => {
       category_color: "bg-orange-500",
       gallery: loadGalleryImages("magazine-design"),
     },
+        {
+      id: "graphic-ads",
+      title: t("graphicDesign.ads.title"),
+      description: t("graphicDesign.ads.description"),
+      category: t("graphicDesign.ads.category"),
+      tools: ["InDesign", "Photoshop", "Illustrator", "Dreamweaver"],
+      achievements: [
+        t("graphicDesign.ads.achievements.0"),
+        t("graphicDesign.ads.achievements.1"),
+        t("graphicDesign.ads.achievements.2"),
+      ],
+      behanceLink: "#",
+      category_color: "bg-purple-500",
+       gallery: loadGalleryImages("ads"),
+    },
     { 
       id: "graphic-business-cards",
       title: t("graphicDesign.businessCards.title"),
@@ -65,21 +80,6 @@ const GraphicDesign = () => {
       behanceLink: "https://www.behance.net/gallery/230677923/Business-Cards",
       category_color: "bg-blue-500",
       gallery: loadGalleryImages("business-cards"),
-    },
-    {
-      id: "graphic-interactive-portfolio",
-      title: t("graphicDesign.interactivePortfolio.title"),
-      description: t("graphicDesign.interactivePortfolio.description"),
-      category: t("graphicDesign.interactivePortfolio.category"),
-      tools: ["InDesign", "Photoshop", "Illustrator"],
-      achievements: [
-        t("graphicDesign.interactivePortfolio.achievements.0"),
-        t("graphicDesign.interactivePortfolio.achievements.1"),
-        t("graphicDesign.interactivePortfolio.achievements.2"),
-      ],
-      behanceLink: "https://www.behance.net/gallery/230210571/Interactive-Portfolio",
-      category_color: "bg-pink-500",
-      gallery: loadGalleryImages("interactive-portfolio"),
     },
     {
       id: "graphic-image-retouching",
@@ -97,21 +97,6 @@ const GraphicDesign = () => {
        gallery: loadGalleryImages("image-retouching"),
     },
     {
-      id: "graphic-ads",
-      title: t("graphicDesign.ads.title"),
-      description: t("graphicDesign.ads.description"),
-      category: t("graphicDesign.ads.category"),
-      tools: ["InDesign", "Photoshop", "Illustrator", "Dreamweaver"],
-      achievements: [
-        t("graphicDesign.ads.achievements.0"),
-        t("graphicDesign.ads.achievements.1"),
-        t("graphicDesign.ads.achievements.2"),
-      ],
-      behanceLink: "#",
-      category_color: "bg-purple-500",
-       gallery: loadGalleryImages("ads"),
-    },
-    {
       id: "graphic-illustration-series",
       title: t("graphicDesign.illustration.title"),
       description: t("graphicDesign.illustration.description"),
@@ -125,6 +110,21 @@ const GraphicDesign = () => {
       behanceLink: "https://www.behance.net/gallery/230763375/Illustrations",
       category_color: "bg-teal-500",
       gallery: loadGalleryImages("illustrations"),
+    },
+    {
+      id: "graphic-interactive-portfolio",
+      title: t("graphicDesign.interactivePortfolio.title"),
+      description: t("graphicDesign.interactivePortfolio.description"),
+      category: t("graphicDesign.interactivePortfolio.category"),
+      tools: ["InDesign", "Photoshop", "Illustrator"],
+      achievements: [
+        t("graphicDesign.interactivePortfolio.achievements.0"),
+        t("graphicDesign.interactivePortfolio.achievements.1"),
+        t("graphicDesign.interactivePortfolio.achievements.2"),
+      ],
+      behanceLink: "https://www.behance.net/gallery/230210571/Interactive-Portfolio",
+      category_color: "bg-pink-500",
+      gallery: loadGalleryImages("interactive-portfolio"),
     }
   ];
 
