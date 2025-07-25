@@ -98,8 +98,8 @@ const About = () => {
           </div>         
         </div>
 
-        <div className="relative mt-16">
-          <div className="absolute right-0 top-0 h-full flex items-center">
+        <div className="text-center md:text-right mt-16">
+          <div className="md:absolute md:right-0 md:top-0 md:h-full md:flex md:items-center">
             <ScrollToTopButton />
           </div>
         </div>

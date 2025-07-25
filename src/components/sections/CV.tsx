@@ -199,9 +199,9 @@ const CV = () => {
           ))}
         </div>
 
-        <div className="relative mt-16">
+        <div className="flex flex-col items-center gap-4 mt-16 md:relative md:block">
             {/* CV Call to Action */}
-            <div className="text-center mt-12">
+            <div className="md:text-center">
               <Button variant="outline" size="lg" asChild>
               <a
                 href={t("cv.cvLink")}
@@ -212,10 +212,10 @@ const CV = () => {
                 {t("cv.viewFullCV")}
               </a>
               </Button>
+            </div>
 
-              <div className="absolute right-0 top-0 h-full flex items-center">
-                <ScrollToTopButton />
-              </div>
+            <div className="md:absolute md:right-0 md:top-0 md:h-full md:flex md:items-center">
+              <ScrollToTopButton />
             </div>
           </div>
       </div>

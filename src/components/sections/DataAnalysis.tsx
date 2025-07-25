@@ -189,8 +189,8 @@ const DataAnalysis = () => {
             })}
           </div>
 
-          <div className="relative mt-16">
-            <div className="text-center">
+          <div className="flex flex-col items-center gap-4 mt-16 md:relative md:block">
+            <div className="md:text-center">
               <Button variant="outline" size="lg" asChild>
               <a
                 href="https://github.com/damijankante?tab=repositories"
@@ -202,7 +202,7 @@ const DataAnalysis = () => {
               </a>
               </Button>
             </div>
-            <div className="absolute right-0 top-0 h-full flex items-center">
+            <div className="md:absolute md:right-0 md:top-0 md:h-full md:flex md:items-center">
               <ScrollToTopButton />
             </div>
           </div>

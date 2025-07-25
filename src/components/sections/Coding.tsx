@@ -283,9 +283,9 @@ const Coding = () => {
             })}
           </div>
           
-          <div className="relative mt-16">
+          <div className="flex flex-col items-center gap-4 mt-16 md:relative md:block md:gap-4">
             {/* GitHub Call to Action */}
-            <div className="text-center mt-12">
+            <div className="md:text-center">
               <Button variant="outline" size="lg" asChild>
               <a
                 href="https://github.com/damijankante?tab=repositories"
@@ -296,10 +296,10 @@ const Coding = () => {
                 {t("coding.visitGitHub")}
               </a>
               </Button>
+            </div>
 
-              <div className="absolute right-0 top-0 h-full flex items-center">
-                <ScrollToTopButton />
-              </div>
+            <div className="text-center md:absolute md:right-0 md:top-0 md:h-full md:flex md:items-center">
+               <ScrollToTopButton />
             </div>
           </div>
          </div>
