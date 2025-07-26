@@ -54,8 +54,8 @@
     "description": "Leveraging data to drive business decisions through statistical analysis, machine learning, and compelling visualizations that tell meaningful stories.",
     "coffeeSalesDashboard": {
       "title": "Coffee Sales Dashboard",
-      "description":"Interactive dashboard analyzing coffee sales trends, customer behavior, and revenue optimization using Excel.",
-      "metrics": ["25% increase in revenue insights", "40% faster reporting"]
+      "description": "Interactive dashboard analyzing coffee sales trends, customer behavior, and revenue optimization using Excel.",
+      "metrics": ["Profitability vs. popularity paradox", "Direct value of the loyalty program", "High-value customers for targeted marketing"]
     },
     "salesDashboard": {
       "title": "Sales Performance Dashboard",

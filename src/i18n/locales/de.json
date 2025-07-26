@@ -52,6 +52,11 @@
     "title": "Datenanalyse &",
     "science": "Data Science",
     "description": "Nutze Daten zur Förderung von Geschäftsentscheidungen durch statistische Analyse, maschinelles Lernen und überzeugende Visualisierungen, die aussagekräftige Geschichten erzählen.",
+    "coffeeSalesDashboard": {
+      "title": "Kaffee-Verkaufsdashboard",
+      "description":"Interaktives Dashboard zur Analyse von Kaffeeverkaufstrends, Kundenverhalten und Umsatzoptimierung mithilfe von Excel.",
+      "metrics": ["Das Paradoxon von Profitabilität vs. Popularität", "Direkter Wert des Treueprogramms", "Top-Kunden für gezieltes Marketing"]
+    },
     "salesDashboard": {
       "title": "Verkaufsleistungs-Dashboard",
       "description": "Interaktives Dashboard zur Analyse von Verkaufstrends, Kundenverhalten und Umsatzoptimierung mit Python und Tableau.",

@@ -52,6 +52,11 @@
     "title": "Analiza podatkov in",
     "science": "podatkovna znanost",
     "description": "Uporabljam podatke za sprejemanje poslovnih odločitev z uporabo statistične analize, strojnega učenja in prepričljivih vizualizacij, ki pripovedujejo pomembne zgodbe.",
+    "coffeeSalesDashboard": {
+      "title": "Nadzorna plošča prodaje kave",
+      "description":"Interaktivna nadzorna plošča za analizo trendov prodaje kave, vedenja strank in optimizacijo prihodkov z uporabo Excela.",
+      "metrics": ["Paradoks med dobičkonosnostjo in priljubljenostjo", "Neposredna vrednost programa zvestobe", "Najvrednejše stranke za ciljno trženje"]
+    },
     "salesDashboard": {
       "title": "Nadzorna plošča prodajne uspešnosti",
       "description": "Interaktivna nadzorna plošča za analizo prodajnih trendov, vedenja strank in optimizacije prihodkov z uporabo Python in Tableau.",
