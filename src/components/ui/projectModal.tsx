@@ -88,21 +88,21 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
 
     return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="max-w-[95vw] w-[95vw] h-[95vh] max-h-[95vh] bg-card p-0 border-border flex flex-col">
-        <DialogHeader className="p-4 md:p-6 pb-2 flex-shrink-0">
+      <DialogContent className="max-w-[95vw] w-[95vw] h-[95vh] max-h-[95vh] bg-card p-4 md:p-6 border-border flex flex-col">
+        <DialogHeader className="pb-4 border-b flex-shrink-0">
           {/* Conditionally render the title or a Back button */}
           {fullscreenImage ? (
-            <Button variant="ghost" size="sm" onClick={() => setFullscreenImage(null)} className="mr-auto">
+            <Button variant="ghost" size="sm" onClick={() => setFullscreenImage(null)} className="mr-auto -ml-3">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Gallery
             </Button>
           ) : (
-            <DialogTitle className="text-2xl text-foreground">{project.title}</DialogTitle>
+            <DialogTitle className="text-xl md:text-2xl text-foreground">{project.title}</DialogTitle>
           )}
         </DialogHeader>
         
         {/* min-h-0: Allows a flex item to shrink and enables overflow to work correctly */}
-        <div className="p-4 md:p-6 pt-0 flex-grow overflow-y-auto min-h-0"> 
+        <div className="pt-4 flex-grow overflow-y-auto min-h-0">
           {hasEmbed ? (
             // If there's an embed URL, render the iframe.
             <iframe
