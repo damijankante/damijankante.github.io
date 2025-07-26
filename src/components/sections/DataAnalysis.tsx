@@ -20,6 +20,7 @@ interface Project {
   githubLink: string;
   gallery: { src: string; description: string }[];
   image?: string | null;
+  embedUrl?: string | null;
 }
 
 const coverImages = loadCoverImages();
@@ -34,6 +35,18 @@ const DataAnalysis = () => {
   // An array of project objects
   const projects: Project[] = [
     {
+      id: "coffee-sales-dashboard",
+      title: t("dataAnalysis.coffeeSalesDashboard.title"),
+      description: t("dataAnalysis.salesDashboard.description"),
+      technologies: ["Excel", "Pivot Charts", "Slicers", "Timelines"],
+      metrics: t("dataAnalysis.salesDashboard.metrics", { returnObjects: true }) as string[],
+      image: null,
+      view: "#",
+      githubLink: "https://github.com/damijankante/excel-coffee-sales-analysis",
+      gallery: [],
+      embedUrl: "https://1drv.ms/x/c/fa3f0ea2daf0e4f7/IQS0uItpfp6HRZg4IoYD7Dt8AYr_I60zb3TJAc99YSb_2Kc"
+    },
+    {
       id: "data-sales-dashboard",
       title: t("dataAnalysis.salesDashboard.title"),
       description: t("dataAnalysis.salesDashboard.description"),
@@ -42,14 +55,7 @@ const DataAnalysis = () => {
       image: null,
       view: "#",
       githubLink: "#",
-      gallery: [
-        { src: "/api/placeholder/800/600?text=Dashboard+Overview", description: "Main dashboard view showing key KPIs like total revenue, units sold, and profit margin." },
-        { src: "/api/placeholder/800/600?text=Sales+Trend+Chart", description: "A time-series analysis of sales performance, allowing drill-down by month, quarter, or year." },
-        { src: "/api/placeholder/800/600?text=Geographic+Data", description: "An interactive map visualization (heatmap) showing sales distribution by region or state." },
-        { src: "/api/placeholder/800/600?text=Product+Performance", description: "A detailed table breaking down the performance of individual products or categories." },
-        { src: "/api/placeholder/800/600?text=Sales+Rep+Leaderboard", description: "Leaderboard ranking top sales representatives by revenue generated and deals closed." },
-        { src: "/api/placeholder/800/600?text=Interactive+Filters", description: "Close-up on the interactive filters for date ranges, regions, and product categories." },
-      ]
+      gallery: []
     },
     {
       id: "data-customer-segmentation",
@@ -60,14 +66,7 @@ const DataAnalysis = () => {
       image: null,
       view: "#",
       githubLink: "#",
-      gallery: [
-        { src: "/api/placeholder/800/600?text=Customer+Clusters", description: "Visualization of distinct customer segments using a K-Means clustering scatter plot." },
-        { src: "/api/placeholder/800/600?text=Segment+Profiles", description: "Detailed profiles for each segment, including demographics and purchasing behavior." },
-        { src: "/api/placeholder/800/600?text=Data+Preprocessing", description: "A snippet from the R script showing data cleaning and feature scaling before modeling." },
-        { src: "/api/placeholder/800/600?text=Elbow+Method", description: "The elbow method plot used to determine the optimal number of clusters (K) for the model." },
-        { src: "/api/placeholder/800/600?text=Segment+Spending", description: "Bar chart comparing the average spending habits across the identified customer segments." },
-        { src: "/api/placeholder/800/600?text=Marketing+Strategies", description: "A summary slide of actionable marketing strategies tailored to each specific segment." },
-      ]
+      gallery: []
     },
     {
       id: "data-predictive-analytics",
@@ -78,14 +77,7 @@ const DataAnalysis = () => {
       image: null,
       view: "#",
       githubLink: "#",
-      gallery: [
-        { src: "/api/placeholder/800/600?text=Model+Accuracy", description: "A confusion matrix and key accuracy metrics (Precision, Recall, F1-Score) for the model." },
-        { src: "/api/placeholder/800/600?text=Feature+Importance", description: "A bar chart showing the most influential features used by the model for its predictions." },
-        { src: "/api/placeholder/800/600?text=ROC+Curve", description: "The Receiver Operating Characteristic (ROC) curve, visualizing the model's diagnostic ability." },
-        { src: "/api/placeholder/800/600?text=Time-Series+Forecast", description: "A plot showing historical data alongside the model's future value predictions." },
-        { src: "/api/placeholder/800/600?text=Jupyter+Notebook", description: "A screenshot of the Jupyter Notebook environment where the model was developed and tested." },
-        { src: "/api/placeholder/800/600?text=Model+Comparison", description: "A table comparing the performance of different algorithms (e.g., Logistic Regression vs. Random Forest)." },
-      ]
+      gallery: []
     }
   ];
 
@@ -163,7 +155,13 @@ const DataAnalysis = () => {
                   <div className="flex gap-2 p-6 pt-0">
                     {/* Conditionally render the View button if a valid link exists. */}
                     {completeProject.view !== "#" && (
-                      <Button size="sm" variant="outline" className="flex-1" onClick={() => setSelectedProject(completeProject)}>
+                      <Button 
+                        size="sm" 
+                        variant="outline" 
+                        className="flex-1" 
+                        onClick={() => setSelectedProject(completeProject)}
+                        disabled={completeProject.gallery.length === 0 && !completeProject.embedUrl}
+                      >
                         <Eye className="h-4 w-4 mr-2" />
                         {t("dataAnalysis.view")}
                       </Button>

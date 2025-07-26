@@ -24,6 +24,7 @@ interface Project {
   category: string;
   gallery: { src: string; description: string }[];
   image?: string | null;
+  embedUrl?: string | null;
 }
 
 const coverImages = loadCoverImages();

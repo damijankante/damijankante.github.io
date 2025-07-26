@@ -26,6 +26,7 @@ interface Project {
   category_color: string;
   gallery: GalleryImage[];
   image?: string | null;
+  embedUrl?: string | null;
 }
 
 const coverImages = loadCoverImages();
@@ -201,7 +202,13 @@ const GraphicDesign = () => {
                   </CardContent>
 
                   <div className="flex gap-2 p-6 pt-0">
-                    <Button size="sm" variant="outline" className="flex-1" onClick={() => setSelectedProject(completeProject)}>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="flex-1"
+                      onClick={() => setSelectedProject(completeProject)}
+                      disabled={completeProject.gallery.length === 0 && !completeProject.embedUrl}
+                    >
                       <Eye className="h-4 w-4 mr-2" />
                       {t("graphicDesign.view")}
                     </Button>

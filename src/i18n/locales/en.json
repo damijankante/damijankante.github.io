@@ -52,6 +52,11 @@
     "title": "Data Analysis &",
     "science": "Science",
     "description": "Leveraging data to drive business decisions through statistical analysis, machine learning, and compelling visualizations that tell meaningful stories.",
+    "coffeeSalesDashboard": {
+      "title": "Coffee Sales Dashboard",
+      "description":"Interactive dashboard analyzing coffee sales trends, customer behavior, and revenue optimization using Excel.",
+      "metrics": ["25% increase in revenue insights", "40% faster reporting"]
+    },
     "salesDashboard": {
       "title": "Sales Performance Dashboard",
       "description": "Interactive dashboard analyzing sales trends, customer behavior, and revenue optimization using Python and Tableau.",

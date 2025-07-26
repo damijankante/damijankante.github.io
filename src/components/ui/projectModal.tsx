@@ -14,6 +14,7 @@ interface GalleryImage {
 interface Project {
   title: string;
   gallery: GalleryImage[];
+  embedUrl?: string | null;
 }
 
 // Defines the props accepted by the ProjectModal component.
@@ -76,6 +77,9 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
     return null;
   }
 
+  // Check if the project has an embed URL.
+  const hasEmbed = project.embedUrl && project.embedUrl.length > 0;
+
   // When the modal is closed from the outside, we must also reset the fullscreen view.
   const handleClose = () => {
     setFullscreenImage(null);
@@ -84,8 +88,8 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
 
     return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="max-w-7xl w-[95%] bg-card p-0 border-border">
-        <DialogHeader className="p-6 pb-4">
+      <DialogContent className="max-w-[95vw] w-[95vw] h-[95vh] max-h-[95vh] bg-card p-0 border-border flex flex-col">
+        <DialogHeader className="p-4 md:p-6 pb-2 flex-shrink-0">
           {/* Conditionally render the title or a Back button */}
           {fullscreenImage ? (
             <Button variant="ghost" size="sm" onClick={() => setFullscreenImage(null)} className="mr-auto">
@@ -97,10 +101,19 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
           )}
         </DialogHeader>
         
-        <div className="p-6 pt-0 max-h-[80vh] overflow-y-auto">
-          {/* Conditionally render the fullscreen image or the grid view */}
-          {fullscreenImage ? (
-            <div className="flex items-center justify-center h-[70vh]">
+        {/* min-h-0: Allows a flex item to shrink and enables overflow to work correctly */}
+        <div className="p-4 md:p-6 pt-0 flex-grow overflow-y-auto min-h-0"> 
+          {hasEmbed ? (
+            // If there's an embed URL, render the iframe.
+            <iframe
+              title={project.title}
+              src={project.embedUrl!}
+              allowFullScreen={true}
+              className="w-full h-full border-0 rounded-lg"
+            ></iframe>
+          ) : fullscreenImage ? (
+            // If there's a fullscreen image, show it.
+            <div className="flex items-center justify-center h-full">
               <img
                 src={fullscreenImage.src}
                 alt={fullscreenImage.description}
@@ -108,14 +121,15 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
               />
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            // Otherwise, render the image gallery as before.
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
               {project.gallery.map((image, index) => (
                 <GalleryImageItem
                   key={index}
                   image={image}
                   projectTitle={project.title}
                   index={index}
-                  onImageClick={() => setFullscreenImage(image)} // Set the image to fullscreen on click
+                  onImageClick={() => setFullscreenImage(image)}
                 />
               ))}
             </div>
