@@ -153,19 +153,16 @@ const DataAnalysis = () => {
                   
                   {/* Button container */}
                   <div className="flex gap-2 p-6 pt-0">
-                    {/* Conditionally render the View button if a valid link exists. */}
-                    {completeProject.view !== "#" && (
-                      <Button 
-                        size="sm" 
-                        variant="outline" 
-                        className="flex-1" 
-                        onClick={() => setSelectedProject(completeProject)}
-                        disabled={completeProject.gallery.length === 0 && !completeProject.embedUrl}
-                      >
-                        <Eye className="h-4 w-4 mr-2" />
-                        {t("dataAnalysis.view")}
-                      </Button>
-                    )}
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      className="flex-1" 
+                      onClick={() => setSelectedProject(completeProject)}
+                      disabled={completeProject.gallery.length === 0 && !completeProject.embedUrl}
+                    >
+                      <Eye className="h-4 w-4 mr-2" />
+                      {t("dataAnalysis.view")}
+                    </Button>
 
                     {/* Conditionally render the GitHub button if a valid link exists. */}
                     {completeProject.githubLink !== "#" ? (
