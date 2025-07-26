@@ -37,9 +37,9 @@ const DataAnalysis = () => {
     {
       id: "coffee-sales-dashboard",
       title: t("dataAnalysis.coffeeSalesDashboard.title"),
-      description: t("dataAnalysis.salesDashboard.description"),
+      description: t("dataAnalysis.coffeeSalesDashboard.description"),
       technologies: ["Excel", "Pivot Charts", "Slicers", "Timelines"],
-      metrics: t("dataAnalysis.salesDashboard.metrics", { returnObjects: true }) as string[],
+      metrics: t("dataAnalysis.coffeeSalesDashboard.metrics", { returnObjects: true }) as string[],
       image: null,
       view: "#",
       githubLink: "https://github.com/damijankante/excel-coffee-sales-analysis",
