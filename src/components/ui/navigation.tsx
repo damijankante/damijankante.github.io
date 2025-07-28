@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle"
 import { LanguageSelector } from "@/components/ui/language-selector";
+import PalettePicker from "@/components/ui/palettePicker"; 
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
@@ -99,6 +100,7 @@ const Navigation = () => {
               ))}
             </div>
             <LanguageSelector />
+            <PalettePicker />
             <ThemeToggle />
           </div>
 
@@ -106,6 +108,7 @@ const Navigation = () => {
           {/* This block is visible only on small screens. */}
           <div className="md:hidden flex items-center space-x-2">
             <LanguageSelector />
+            <PalettePicker />
             <ThemeToggle />
             <Button
               variant="ghost"
