@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { PaletteProvider } from "@/contexts/PaletteContext";
 import SEO from "./components/SEO";
 import { ToastProvider } from "@/hooks/use-toast";
 import Index from "./pages/Index";
@@ -20,6 +21,7 @@ const App = () => (
       disableTransitionOnChange={false}
       themes={["light", "low-light", "dark"]}
     >
+      <PaletteProvider>
         <TooltipProvider>
         <ToastProvider> 
             <Toaster />
@@ -34,6 +36,7 @@ const App = () => (
             </BrowserRouter>
         </ToastProvider>
         </TooltipProvider>
+      </PaletteProvider>        
     </ThemeProvider>
   </QueryClientProvider>
 );
