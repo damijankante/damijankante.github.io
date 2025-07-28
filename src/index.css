@@ -2,158 +2,120 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. All colors MUST be HSL. */
-
 @layer base {
+  /* --- BASE THEMES (MODE + DEFAULT PALETTE) --- */
   :root {
+    /* Light Mode */
     --background: 0 0% 100%;
     --foreground: 215 25% 15%;
-
     --card: 0 0% 100%;
     --card-foreground: 215 25% 15%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 15%;
-
-    --primary: 215 95% 45%;
-    --primary-foreground: 0 0% 98%;
-    --primary-hover: 215 95% 40%;
-
     --secondary: 215 15% 95%;
     --secondary-foreground: 215 25% 15%;
-
     --muted: 215 15% 96%;
     --muted-foreground: 215 15% 45%;
-
-    --accent: 265 85% 65%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
     --border: 215 15% 90%;
     --input: 215 15% 90%;
-    --ring: 215 95% 45%;
-
-    --gradient-primary: linear-gradient(135deg, hsl(215 95% 45%), hsl(265 85% 65%));
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
     --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(215 15% 98%));
-    --shadow-elegant: 0 10px 40px -10px hsl(215 95% 45% / 0.2);
-    --shadow-glow: 0 0 30px hsl(215 95% 45% / 0.15);
 
+    /* Default Palette (Ocean Blue) for Light Mode */
+    --primary: 215 95% 45%;
+    --primary-foreground: 0 0% 98%;
+    --accent: 265 85% 65%;
+    --accent-foreground: 0 0% 98%;
+    --ring: 215 95% 45%;
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --shadow-elegant: 0 10px 40px -10px hsl(var(--primary) / 0.2);
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.15);
+    
     --radius: 0.75rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
+    /* Dark Mode */
     --background: 215 30% 8%;
     --foreground: 215 15% 95%;
-
     --card: 215 25% 10%;
     --card-foreground: 215 15% 95%;
-
     --popover: 215 25% 10%;
     --popover-foreground: 215 15% 95%;
-
-    --primary: 215 95% 55%;
-    --primary-foreground: 215 30% 8%;
-    --primary-hover: 215 95% 60%;
-
     --secondary: 215 20% 15%;
     --secondary-foreground: 215 15% 95%;
-
     --muted: 215 20% 12%;
     --muted-foreground: 215 15% 60%;
-
-    --accent: 265 85% 70%;
-    --accent-foreground: 215 30% 8%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
     --border: 215 20% 18%;
     --input: 215 20% 18%;
-    --ring: 215 95% 55%;
-
-    --gradient-primary: linear-gradient(135deg, hsl(215 95% 55%), hsl(265 85% 70%));
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
     --gradient-subtle: linear-gradient(180deg, hsl(215 30% 8%), hsl(215 25% 10%));
-    --shadow-elegant: 0 10px 40px -10px hsl(215 95% 55% / 0.3);
-    --shadow-glow: 0 0 30px hsl(215 95% 55% / 0.2);
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Default Palette (Ocean Blue) for Dark Mode */
+    --primary: 215 95% 55%;
+    --primary-foreground: 215 30% 8%;
+    --accent: 265 85% 70%;
+    --accent-foreground: 215 30% 8%;
+    --ring: 215 95% 55%;
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --shadow-elegant: 0 10px 40px -10px hsl(var(--primary) / 0.3);
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.2);
   }
 
   .low-light {
+    /* Low-Light Mode */
     --background: 215 15% 18%;
     --foreground: 215 10% 88%;
-
     --card: 215 20% 22%;
     --card-foreground: 215 10% 88%;
-
     --popover: 215 20% 22%;
     --popover-foreground: 215 10% 88%;
-
-    --primary: 215 95% 50%;
-    --primary-foreground: 0 0% 98%;
-    --primary-hover: 215 95% 45%;
-
     --secondary: 215 15% 25%;
     --secondary-foreground: 215 10% 88%;
-
     --muted: 215 15% 20%;
     --muted-foreground: 215 10% 65%;
-
-    --accent: 265 85% 65%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 62.8% 50%;
-    --destructive-foreground: 210 40% 98%;
-
     --border: 215 15% 28%;
     --input: 215 15% 28%;
-    --ring: 215 95% 50%;
-
-    --gradient-primary: linear-gradient(135deg, hsl(215 95% 50%), hsl(265 85% 65%));
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 210 40% 98%;
     --gradient-subtle: linear-gradient(180deg, hsl(215 15% 18%), hsl(215 20% 22%));
-    --shadow-elegant: 0 10px 40px -10px hsl(215 95% 50% / 0.25);
-    --shadow-glow: 0 0 30px hsl(215 95% 50% / 0.18);
-    --sidebar-background: 215 15% 18%;
-    --sidebar-foreground: 215 10% 88%;
-    --sidebar-primary: 215 95% 50%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 215 15% 25%;
-    --sidebar-accent-foreground: 215 10% 88%;
-    --sidebar-border: 215 15% 28%;
-    --sidebar-ring: 215 95% 50%;
+
+    /* Default Palette (Ocean Blue) for Low-Light Mode */
+    --primary: 215 95% 50%;
+    --primary-foreground: 0 0% 98%;
+    --accent: 265 85% 65%;
+    --accent-foreground: 0 0% 98%;
+    --ring: 215 95% 50%;
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --shadow-elegant: 0 10px 40px -10px hsl(var(--primary) / 0.25);
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.18);
   }
+
+  /* --- PALETTE OVERRIDES --- */
+  /* These blocks override the palette variables for each mode. */
+
+  /* Light Mode Palette Overrides */
+  .theme-sunset { --primary: 20 95% 55%; --accent: 35 90% 65%; --ring: 20 95% 55%; }
+  .theme-forest { --primary: 155 70% 35%; --accent: 155 60% 55%; --ring: 155 70% 35%; }
+  .theme-royal { --primary: 260 85% 55%; --accent: 270 75% 70%; --ring: 260 85% 55%; }
+  .theme-rose { --primary: 340 75% 55%; --accent: 350 65% 70%; --ring: 340 75% 55%; }
+  
+  /* Dark Mode Palette Overrides (Lighter colors for contrast) */
+  .dark.theme-sunset { --primary: 25 95% 60%; --accent: 40 90% 68%; --ring: 25 95% 60%; }
+  .dark.theme-forest { --primary: 155 65% 45%; --accent: 155 55% 58%; --ring: 155 65% 45%; }
+  .dark.theme-royal { --primary: 260 80% 65%; --accent: 270 70% 72%; --ring: 260 80% 65%; }
+  .dark.theme-rose { --primary: 340 80% 65%; --accent: 350 70% 72%; --ring: 340 80% 65%; }
+
+  /* Low-Light Mode Palette Overrides (Slightly more saturated than dark mode) */
+  .low-light.theme-sunset { --primary: 22 95% 58%; --accent: 38 90% 66%; --ring: 22 95% 58%; }
+  .low-light.theme-forest { --primary: 155 70% 40%; --accent: 155 60% 55%; --ring: 155 70% 40%; }
+  .low-light.theme-royal { --primary: 260 85% 60%; --accent: 270 75% 70%; --ring: 260 85% 60%; }
+  .low-light.theme-rose { --primary: 340 85% 60%; --accent: 350 75% 70%; --ring: 340 85% 60%; }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
 }
