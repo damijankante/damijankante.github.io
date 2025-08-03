@@ -38,7 +38,7 @@ const DataAnalysis = () => {
       id: "coffee-sales-dashboard",
       title: t("dataAnalysis.coffeeSalesDashboard.title"),
       description: t("dataAnalysis.coffeeSalesDashboard.description"),
-      technologies: ["Excel", "Power Query", "Pivot Charts", "Slicers", "Timelines", "Python"],
+      technologies: ["Excel", "Power Query", "Power BI", "Pivot Charts", "Slicers", "Timelines", "Python"],
       metrics: t("dataAnalysis.coffeeSalesDashboard.metrics", { returnObjects: true }) as string[],
       image: null,
       view: "#",
