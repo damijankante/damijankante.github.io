@@ -44,7 +44,7 @@ const DataAnalysis = () => {
       view: "#",
       githubLink: "https://github.com/damijankante/excel-coffee-sales-analysis",
       gallery: [],
-      embedUrl: "https://1drv.ms/x/c/fa3f0ea2daf0e4f7/IQQr2-VqJcXCQYBx6jrxxxONAX1ZmK4tdDNT3QSLk_hn12E"
+      embedUrl: "https://1drv.ms/x/c/fa3f0ea2daf0e4f7/IQQxkb4IXyc5QYAVyjTGIb-MAfvMcm16P1llBicbmCjhrSc"
     },
     {
       id: "data-sales-dashboard",
